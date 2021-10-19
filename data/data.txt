@@ -1,0 +1,62 @@
+//Data Table: People Infected
+//Source: RKI
+//State,Total number of cases,Difference to previous day,Cases last 7 days,Incidence 7 days,Cases of death,total hospitalization cases,hospitalization cases age 00-04,hospitalization cases age 05-14,hospitalization cases age 15-34,hospitalization cases age 35-59,hospitalization cases age 60-79,hospitalization cases age 80+,total hospitalization incidence,hospitalization incidence age 00-04,hospitalization incidence age 05-14,hospitalization incidence age 15-34,hospitalization incidence age 35-59,hospitalization incidence age 60-79,hospitalization incidence age 80+
+const data = [["Baden-Württemberg",593546,2014,9829,88.5,10806,244,5,7,32,75,73,52,2.2,0.91,0.69,1.2,1.96,3.19,6.91],
+			  ["Bayern",757233,2656,13167,100.2,15844,289,6,4,43,76,80,80,2.2,0.93,0.34,1.39,1.65,2.91,9.18],
+			  ["Berlin",212894,709,3102,84.7,3663,80,1,2,13,21,21,22,2.18,0.52,0.6,1.37,1.65,3.02,9.94],
+			  ["Brandenburg",118983,250,1354,53.5,3870,35,0,0,3,6,11,15,1.38,0,0,0.69,0.66,1.72,7.19],
+			  ["Bremen",34202,75,540,79.4,521,25,0,0,6,11,4,4,3.68,0,0,3.47,4.88,2.85,8.44],
+			  ["Hamburg",94000,162,948,51.2,1761,18,1,0,2,7,5,3,0.97,1.01,0,0.41,1.07,1.53,2.67],
+			  ["Hessen",341238,646,3399,54.0,7794,144,5,6,20,49,35,29,2.29,1.64,1.04,1.36,2.23,2.65,6.87],
+			  ["Mecklenburg-Vorpommern",50669,158,894,55.5,1211,45,2,3,2,12,16,10,2.79,3.02,2.14,0.68,2.17,3.8,7.5],
+			  ["Niedersachsen",308070,695,3637,45.4,6019,105,4,1,21,24,29,26,1.31,1.05,0.14,1.16,0.88,1.64,4.48],
+			  ["Nordrhein-Westfalen",978762,1647,8692,48.5,18006,305,12,7,42,64,101,79,1.7,1.38,0.43,1,1.04,2.64,6.25],
+			  ["Rheinland-Pfalz",185521,446,2248,54.9,4036,66,1,3,14,20,16,12,1.61,0.51,0.82,1.52,1.43,1.73,4.09],
+			  ["Saarland",48491,89,611,62.1,1059,14,1,0,2,4,5,2,1.42,2.42,0,0.94,1.21,2.06,2.56],
+			  ["Sachsen",305704,874,4012,98.9,10243,138,2,1,16,16,54,49,3.4,1.11,0.27,2.03,1.18,5.34,13.54],
+			  ["Sachsen-Anhalt",106650,299,1299,59.6,3557,59,1,3,4,11,22,18,2.71,1.14,1.64,1.02,1.48,3.77,9.41],
+			  ["Schleswig-Holstein",77960,150,809,27.8,1701,38,0,2,6,11,11,8,1.31,0,0.77,0.95,1.09,1.66,3.63],
+			  ["Thüringen",140235,648,2545,120.0,4435,76,0,3,4,9,26,34,3.58,0,1.63,1.03,1.25,4.65,18.98],
+			  ["Total",4354158,11518,57086,68.7,94526,1681,41,42,230,416,509,443,2.17,0.98,0.66,1.26,1.61,2.82,7.60]]
+			 
+//Data Table: People Vaccinated
+//Source: RKI
+//State,total number of people vaccinated,number of people vaccinated once,number of people vaccinated completely,number of people with booster vaccination,total vaccination rate (once),vaccination rate (once) 12-17 years old,vaccination rate (once) 18+ years old,vaccination rate (once) 18-59 years old,vaccination rate (once) 60+ years old,total vaccination rate (completely),vaccination rate (completely) 12-17 years old,vaccination rate (completely) 18+ years old,vaccination rate (completely) 18-59 years old,vaccination rate (completely) 60+ years old
+const data = [["Baden-Württemberg",14174420,7328255,7084790,180951,66,40.3,76.7,69,85.1,63.8,35.4,74.5,70.1,83.3],
+				["Bayern",16655013,8620326,8319788,157501,65.6,40.2,76,68.5,84.2,63.3,34.7,73.7,69.3,82.4],
+				["Berlin",4900744,2506923,2405901,97685,68.4,40.7,79.6,71.9,88.7,65.7,36.5,76.6,72,87.3],
+				["Brandenburg",3004945,1576239,1508431,21964,62.3,31.2,71.8,60,79.8,59.6,26.1,69.3,62,80.3],
+				["Bremen",1040508,545824,522454,15105,80.3,48.4,93,88.7,94,76.8,42.1,89.3,88,92],
+				["Hamburg",2583147,1351746,1297620,19481,73,43.4,85.1,79.3,87.8,70,36.8,82.1,80.5,85.9],
+				["Hessen",8255562,4313432,4078209,91823,68.5,44.4,79.5,72,86.5,64.8,38.1,75.4,71.3,83.5],
+				["Mecklenburg-Vorpommern",2056880,1069555,1030856,15829,66.4,30.1,76.6,66.3,85.1,64,24.6,74.1,67,84.4],
+				["Niedersachsen",10787319,5712142,5415753,68218,71.4,51.9,82.2,72.1,89.8,67.7,45.1,78.2,73.2,87.4],
+				["Nordrhein-Westfalen",25082704,13136562,12392885,306809,73.3,52.1,84.6,76.5,90.1,69.1,46,80,76,87.8],
+				["Rheinland-Pfalz",5491803,2886340,2688285,68809,70.4,46.5,81.2,71.9,89.3,65.6,37.9,76,70.8,85.5],
+				["Saarland",1420271,738966,711363,13570,75.1,47.6,85.4,76.4,90.5,72.3,40.7,82.5,78.2,89.5],
+				["Sachsen",4573617,2370615,2268445,29798,58.4,26.8,67.8,57.7,77.9,55.9,23.1,65.1,56.3,78.1],
+				["Sachsen-Anhalt",2682425,1397649,1353497,31019,64.1,28.3,73.6,61.6,82.3,62.1,22.7,71.6,63.1,83.4],
+				["Schleswig-Holstein",4123228,2133781,2050714,67054,73.3,57.9,85.2,78.3,89.5,70.5,51.7,82.1,78.2,88.8],
+				["Thüringen",2522770,1301178,1265448,29869,61.4,28.9,70.7,59.7,80.8,59.7,25.6,68.9,60.3,81.3],
+				["Total",109725662,57182706,54579415,1215759,68.8,44,79.5,71.4,86.5,65.6,38.2,76.2,71.6,84.8]]
+				
+//Data Table: Vaccination Types
+//Source: RKI
+//State,total number of people vaccinated once,number of people vaccinated once with BioNTech,number of people vaccinated once with Moderna,number of people vaccinated once with AstraZeneca,number of people vaccinated once with Janssen,total number of people vaccinated completely,number of people vaccinated completely with BioNTech,number of people vaccinated completely with Moderna,number of people vaccinated completely with AstraZeneca,total number of people with booster vaccination,number of people with booster vaccination with BioNTech,number of people with booster vaccination with Moderna,number of people with booster vaccination with Janssen
+const data = [["Baden-Württemberg",7328255,5181661,552583,1174435,419576,6665214,5611244,655804,398166,180951,175906,5040,5],
+			["Bayern",8620326,6173443,672197,1332084,442602,7877186,6493439,828139,555608,157501,150221,7229,4],
+			["Berlin",2506923,1762323,290849,343986,109765,2296136,1849773,323613,122750,97685,93508,4177,0],
+			["Brandenburg",1576239,1092171,132003,250376,101689,1406742,1151750,137858,117134,21964,21697,266,1],
+			["Bremen",545824,370291,35187,97471,42875,479579,403277,52939,23363,15105,12555,2550,0],
+			["Hamburg",1351746,955874,118656,191516,85700,1211920,1000413,168883,42624,19481,15625,3848,7],
+			["Hessen",4313432,3020024,345267,720239,227902,3850307,3165253,405586,279468,91823,85269,6514,39],
+			["Mecklenburg-Vorpommern",1069555,781860,82632,145703,59360,971496,814059,88129,69308,15829,15653,162,13],
+			["Niedersachsen",5712142,3702409,471015,1129924,408794,5006959,4078272,588189,340498,68218,67506,711,1],
+			["Nordrhein-Westfalen",13136562,9305138,792957,2284915,753552,11639333,9947744,898483,793106,306809,301959,4357,448],
+			["Rheinland-Pfalz",2886340,2079069,214110,441530,151631,2536654,2123298,232990,180366,68809,68003,747,56],
+			["Saarland",738966,554884,57357,83097,43628,667735,581796,57850,28089,13570,13483,76,11],
+			["Sachsen",2370615,1757469,210163,307742,95241,2173204,1780279,209953,182972,29798,28529,1259,10],
+			["Sachsen-Anhalt",1397649,986746,119224,191939,99740,1253757,1035364,132109,86284,31019,27985,3032,2],
+			["Schleswig-Holstein",2133781,1479289,168598,357573,128321,1922393,1577937,193140,151316,67054,63274,3612,164],
+			["Thüringen",1301178,932093,126491,168869,73725,1191723,972436,142142,77145,29869,28704,1165,0],
+			["Total",57182706,40217197,4471957,9241334,3252218,51327197,42668073,5201092,3458032,1215759,1170123,44773,761]]
