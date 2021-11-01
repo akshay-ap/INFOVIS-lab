@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="./favicon.png" sizes="200x200">
 	<link href="./css/style.css" rel="stylesheet" />
 </head>
-<body>
+<body> 
     <nav>
         <div>
             <b>PCIV</b>
@@ -18,10 +18,61 @@
         <span id="name">{your name}</span>
     </nav>
     <main>
-
+        <div id="total-vaccinations" class="centered"></div>
+        <p class="paragraph">
+            For the COVID-19 vaccination drive, each person is might be required to get one or multiple vaccine shots, <br/>
+            it is important to consider vaccination rate by follwoing categories: <b><i>Vaccinated once</i></b> and <b><i>Vaccinated completely</i></b>
+        </p>
+        <p class="paragraph">
+            The pictogram below represents the total percentage of popluation vaccinated in Germany. <br/>
+            The two pictograms shows the portion of popluation vaccinated in blue. Each figure stands for 10% of total population. <br/>
+            The light blue color indicates the partial count less than 10%.
+        </p>
+        <div id="pictogram" class="conatiner" >
+            <div id="fig-1" class="centered" style="margin-right: 0px;">Vaccinated once
+                <div id="pictogram-vaccinated-once"></div>
+            </div>
+            <div id="fig-2" class="centered"  style="margin-left: 0px;">Vaccinated completely
+                <div id="pictogram-vaccinated-completely"></div>
+            </div>
+        </div>
+        <p class="paragraph">
+            The bar-charts below shows the total percentage of popluation vaccinated in Germany in each state.<br/>
+            <b>Y</b>-axis is the state name and <b>X</b>-axis is the rate of vaccination. The states are sorted by decreasing rate of vaccination.<br/>
+            It can be concluded that in both categories (<i>Vaccinated once</i> and <i>Vaccinated completely</i>) <b>Bremen</b> is the most vaccinated region in Germany.
+        </p>
+        <div id="barchart" class="conatiner" >
+            
+            <div id="fig-1" class="centered">Vaccinated once
+                <div id="state-vaccination-rate-once" class="centered"></div>
+            </div>
+            <div id="fig-2" class="centered">Vaccinated completely
+                <div id="state-vaccination-rate-completely" class="centered"></div>
+            </div>
+        </div>
+        <p class="paragraph">
+            The donut-chart below shows the total percentage of adult popluation vaccinated in the <b>Bremen</b> region.<br/> The blue color visually indicates the portion of value vaccinated. 
+            The data consists of vaccination rate for 18+ age.
+        </p>
+        <div id="donutCharts" class="conatiner" >
+            <div id="fig-1" class="centered">Vaccinated once
+                <div class="centered"></div>
+            </div>
+            <div id="fig-2" class="centered">Vaccinated completely
+                <div class="centered"></div>
+            </div>
+        </div>
+        </div>
     </main>
     <script src="./js/d3.js"></script>
+    <script type="text/javascript" src="./data/data.js"></script> 
+    
     <script src="./src/app.js"></script>
     <script src="./src/index.js"></script>
+    <script src="./src/totalVaccinations.js"></script>
+    <script src="./src/bargraph-state-vaccination-rate.js"></script>
+    <script src="./src/pictogram.js"></script>
+    <script src="./src/donut-chart.js"></script>
+
 </body>
 </html>

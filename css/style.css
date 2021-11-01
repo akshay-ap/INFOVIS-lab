@@ -14,3 +14,81 @@ nav {
 .divider {
     flex-grow: 1;
 }
+
+.totalVaccinations {
+    font-size:40px;
+
+}
+
+.paragraph{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+
+.centered {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.conatiner {
+    display: block;
+    margin : 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    font-size: large;
+    display: flex;
+}
+
+.svgPictogram {
+    overflow:none;
+    padding:10px;
+    float:left;
+    width:400px;
+    height:400px;
+}
+
+.textPictogram    {
+    text-anchor:left;
+    font-size:12px;
+    font-family:sans-serif,Helvetica,Arial;
+    font-weight:bold;
+}
+
+.titlePictogram {
+    text-anchor:left;
+    font-size:11px;
+    font-family:sans-serif,Helvetica,Arial;
+}
+
+
+.iconPlain  {
+    fill:#a7a59b;   
+}
+
+.iconSelected  {
+    fill:#0069c0;   
+}
+
+.iconPartial  {
+    fill: #0069c0;
+    fill-opacity: 0.6;
+}
+
+
+.pictogramBackground {
+    fill: rgb(255, 255, 255);
+}
+
+#sliderDiv  {
+    margin:10px;
+    margin-top:30px;
+    height:15px;
+    width:300px;
+}
+
+.barGraphLeftAxis {
+    font-size: 14px;
+}
