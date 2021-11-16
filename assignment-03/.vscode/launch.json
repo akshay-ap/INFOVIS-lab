@@ -1,0 +1,27 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "command": "npm run dev",
+            "name": "Start Server (dev)",
+            "request": "launch",
+            "type": "node-terminal",
+            "serverReadyAction":{
+                "action": "openExternally", // change to "openExternally" to use your default browser
+                "pattern": "Your application is ready",
+                "uriFormat": "http://localhost:5000"
+            }
+        },
+        {
+            "command": "npm run start",
+            "name": "Start Server (prod)",
+            "request": "launch",
+            "type": "node-terminal",
+            "serverReadyAction":{
+                "action": "debugWithChrome", // change to "openExternally" to use your default browser
+                "pattern": "Your application is ready",
+                "uriFormat": "http://localhost:5000"
+            }
+        }
+    ]
+}
