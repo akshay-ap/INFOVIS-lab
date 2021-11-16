@@ -2,6 +2,10 @@
 
 This folder contains all files for assignment 2.
 
+## Result
+
+![Image](./Assignment-2.png)
+
 ## Folders and Files
 
 | folder/file | contents |

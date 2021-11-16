@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
 	<title>PCIV - Assignment</title>
     <link rel="icon" type="image/png" href="./favicon.png" sizes="200x200">
 	<link href="./css/style.css" rel="stylesheet" />
+    <link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-<body>
+<body> 
+    <script src="./popper.min.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
     <nav>
         <div>
             <b>PCIV</b>
@@ -18,8 +25,110 @@
         <span id="name">{your name}</span>
     </nav>
     <main>
+       
+        
+        <div class="container" align="center" style="margin-top:10px;margin-bottom: 10px">
+            <div class="row align-items-start">
+                <div class="col-12"><h3><b>Historical Weather Germany 1981–2010</b></h4></div>
+                <div class="col-12">Show the comparison between various weather parameter values measured from different locations in Germany.
+                </div>
+                <div class="col-12"><h4>Select station</h4></div>
+                <div class="col-3">
+                    <select id="station-0">
+                    </select>
+                </div>
+                <div class="col-3">
+                    <select id="station-1">
+                       
+                    </select>
+                </div>
+                <div class="col-3">
+                    <select id="station-2">
+                      
+                    </select>
+                </div>
+                <div class="col-3">
+                    <select id="station-3">
+                    </select>
+                </div>
+            </div>
+        </div>
 
+        <div class="container" align="center" style="margin-top:20px;" id="yearly-data">
+            <div class="row align-items-start">
+            <div class="col-12"><h4><b>Yearly data</b></h4></div>
+            <div class="col card" style="margin-right: 5px; min-height: 250px;" id="ice-days"><i class="bi bi-box-arrow-left"></i></div>
+            <div class="col card" style="margin-right: 5px; min-height: 250px;" id="frost-days"></div>
+            <div class="col card" style="margin-right: 5px; min-height: 250px;" id="hot-days"></div>
+            <div class="col card" style="margin-right: 5px; min-height: 250px;"  id="summer-days"></div>
+            <div class="col card" style="margin-right: 5px; min-height: 250px;"  id="percipitation"></div>
+            <div class="col card" style="margin-right: 5px; min-height: 250px; "  id="sunshine-duration"></div>
+            <div class="col card" style="margin-right: 5px; min-height: 250px;"  id="temperature"></div>
+            </div>
+        </div>
+
+
+        <div class="container" >
+            <div class="row align-items-start" style="margin-top:20px;" >
+                <div class="col-6">
+                    <h3><b>Ice days</b></h3>
+                    <p>Number of days with daily maximum temperature &lt;0 ° C</p>
+                </div>
+                <div class="col-6">
+                    <h3><b>Hot days</b></h3>
+                    <p>Number of days with daily maximum temperature &ge;30 ° C</p></div>
+            </div>
+            <div class="row align-items-start">
+                <div class="col-6" id="graph-ice-days"></div>
+                <div class="col-6" id="graph-hot-days"></div>
+            </div>
+
+            <div class="row align-items-start" style="margin-top:20px;" >
+                <div class="col-6">
+                    <h3><b>Frost days</b></h3>
+                    <p>Number of days with daily minimum temperature &ge;0 ° C</p>
+                </div>
+                <div class="col-6">
+                    <h3><b>Summer days</b></h3>
+                    <p>Number of days with daily maximum temperature &ge;25 ° C</p>
+                </div>
+            </div>
+
+            <div class="row align-items-start">
+                <div class="col-6" id="graph-frost-days"></div>
+                <div class="col-6" id="graph-summer-days"></div>
+            </div>
+
+            <div class="row align-items-start" style="margin-top:20px;" >
+                <div class="col-6">
+                    <h3><b>Temperature</b></h3>
+                    <p>Temperature 2 m above ground in Celsius (°C)</p>
+                </div>
+                <div class="col-6">
+                    <h3><b>Sunshine duration</b></h3>
+                    <p>Sum of sunshine duration in hours (h)</p>
+                </div>
+            </div>
+
+            <div class="row align-items-start" >
+                <div class="col-6" id="graph-temperature"></div>
+                <div class="col-4" id="graph-sunshine"></div>
+            </div>
+
+            <div class="row align-items-start" style="margin-top:20px;" >
+                <div class="col-6">
+                    <h3><b>Percipitation</b></h3>
+                    <p>Sum of precipitation height in millimeter (mm)</p>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-6" id="graph-percipitation"></div>
+            </div>
+        </div>
+        </div>
     </main>
     <script src="./build/bundle.js"></script>
+
 </body>
 </html>
