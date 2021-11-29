@@ -1,0 +1,5421 @@
+{
+  "children": [
+    {
+      "all": "Accounting",
+      "children": [
+        {
+          "all": "Accounting,Animation & Modeling",
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Accounting,Animation & Modeling,Audio Production",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Audio Production",
+              "negative_ratings_mean": 7.0,
+              "positive_ratings_mean": 5.0,
+              "price_mean": 11.39
+            }
+          ],
+          "count": 0,
+          "name": "Animation & Modeling"
+        },
+        {
+          "all": "Accounting,Education",
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Accounting,Education,Software Training",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Software Training",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 9.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 0,
+          "name": "Education"
+        }
+      ],
+      "count": 0,
+      "name": "Accounting"
+    },
+    {
+      "achievements_mean": 24.202846975088967,
+      "all": "Action",
+      "average_playtime_mean": 263.29774614472126,
+      "children": [
+        {
+          "achievements_mean": 63.375,
+          "all": "Action,Free to Play",
+          "average_playtime_mean": 1125.85,
+          "children": [
+            {
+              "achievements_mean": 25.454545454545453,
+              "all": "Action,Free to Play,Strategy",
+              "average_playtime_mean": 2332.090909090909,
+              "count": 11,
+              "median_playtime_mean": 273.27272727272725,
+              "name": "Strategy",
+              "negative_ratings_mean": 13142.363636363636,
+              "positive_ratings_mean": 79302.54545454546,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 17.357142857142858,
+              "all": "Action,Free to Play,Massively Multiplayer",
+              "average_playtime_mean": 748.0357142857143,
+              "count": 56,
+              "median_playtime_mean": 131.35714285714286,
+              "name": "Massively Multiplayer",
+              "negative_ratings_mean": 2389.0714285714284,
+              "positive_ratings_mean": 6165.160714285715,
+              "price_mean": 0.20339285714285715
+            },
+            {
+              "achievements_mean": 17.285714285714285,
+              "all": "Action,Free to Play,Indie",
+              "average_playtime_mean": 366.0408163265306,
+              "count": 196,
+              "median_playtime_mean": 41.326530612244895,
+              "name": "Indie",
+              "negative_ratings_mean": 870.1173469387755,
+              "positive_ratings_mean": 3006.6428571428573,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 53.0,
+              "all": "Action,Free to Play,RPG",
+              "average_playtime_mean": 113.0,
+              "count": 5,
+              "median_playtime_mean": 98.8,
+              "name": "RPG",
+              "negative_ratings_mean": 394.4,
+              "positive_ratings_mean": 1230.2,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 15.454545454545455,
+              "all": "Action,Free to Play,Early Access",
+              "average_playtime_mean": 320.27272727272725,
+              "count": 11,
+              "median_playtime_mean": 39.18181818181818,
+              "name": "Early Access",
+              "negative_ratings_mean": 4182.818181818182,
+              "positive_ratings_mean": 8349.727272727272,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 7.0,
+              "all": "Action,Free to Play,Simulation",
+              "average_playtime_mean": 60.875,
+              "count": 8,
+              "median_playtime_mean": 60.875,
+              "name": "Simulation",
+              "negative_ratings_mean": 101.625,
+              "positive_ratings_mean": 199.75,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 1.2,
+              "all": "Action,Free to Play,Sports",
+              "average_playtime_mean": 18.4,
+              "count": 5,
+              "median_playtime_mean": 19.4,
+              "name": "Sports",
+              "negative_ratings_mean": 172.2,
+              "positive_ratings_mean": 528.6,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 67.0,
+              "all": "Action,Free to Play,Racing",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Racing",
+              "negative_ratings_mean": 121.0,
+              "positive_ratings_mean": 264.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 40,
+          "median_playtime_mean": 258.125,
+          "name": "Free to Play",
+          "negative_ratings_mean": 13679.175,
+          "positive_ratings_mean": 93925.475,
+          "price_mean": 0.0
+        },
+        {
+          "achievements_mean": 19.316804407713498,
+          "all": "Action,Adventure",
+          "average_playtime_mean": 318.3278236914601,
+          "children": [
+            {
+              "achievements_mean": 7.6875,
+              "all": "Action,Adventure,Racing",
+              "average_playtime_mean": 46.0,
+              "count": 16,
+              "median_playtime_mean": 43.875,
+              "name": "Racing",
+              "negative_ratings_mean": 149.5,
+              "positive_ratings_mean": 1019.3125,
+              "price_mean": 8.146249999999998
+            },
+            {
+              "achievements_mean": 62.5609756097561,
+              "all": "Action,Adventure,RPG",
+              "average_playtime_mean": 269.4552845528455,
+              "count": 123,
+              "median_playtime_mean": 263.2032520325203,
+              "name": "RPG",
+              "negative_ratings_mean": 675.0243902439024,
+              "positive_ratings_mean": 2644.430894308943,
+              "price_mean": 11.908048780487807
+            },
+            {
+              "achievements_mean": 24.68,
+              "all": "Action,Adventure,Strategy",
+              "average_playtime_mean": 117.2,
+              "count": 25,
+              "median_playtime_mean": 112.8,
+              "name": "Strategy",
+              "negative_ratings_mean": 181.88,
+              "positive_ratings_mean": 941.04,
+              "price_mean": 6.974000000000001
+            },
+            {
+              "achievements_mean": 72.90057995028998,
+              "all": "Action,Adventure,Casual",
+              "average_playtime_mean": 92.92874896437448,
+              "count": 1207,
+              "median_playtime_mean": 86.85169842584921,
+              "name": "Casual",
+              "negative_ratings_mean": 107.16072908036455,
+              "positive_ratings_mean": 665.135874067937,
+              "price_mean": 4.280140845070424
+            },
+            {
+              "achievements_mean": 12.443478260869565,
+              "all": "Action,Adventure,Free to Play",
+              "average_playtime_mean": 369.4782608695652,
+              "count": 115,
+              "median_playtime_mean": 191.22608695652173,
+              "name": "Free to Play",
+              "negative_ratings_mean": 1420.9130434782608,
+              "positive_ratings_mean": 2756.939130434783,
+              "price_mean": 0.1945217391304348
+            },
+            {
+              "achievements_mean": 23.88093145869947,
+              "all": "Action,Adventure,Indie",
+              "average_playtime_mean": 131.37521968365553,
+              "count": 2276,
+              "median_playtime_mean": 127.59182776801406,
+              "name": "Indie",
+              "negative_ratings_mean": 171.27943760984184,
+              "positive_ratings_mean": 879.420474516696,
+              "price_mean": 6.635751318101934
+            },
+            {
+              "achievements_mean": 5.319148936170213,
+              "all": "Action,Adventure,Simulation",
+              "average_playtime_mean": 137.0212765957447,
+              "count": 47,
+              "median_playtime_mean": 172.85106382978722,
+              "name": "Simulation",
+              "negative_ratings_mean": 150.85106382978722,
+              "positive_ratings_mean": 381.97872340425533,
+              "price_mean": 6.441276595744681
+            },
+            {
+              "achievements_mean": 10.193548387096774,
+              "all": "Action,Adventure,Massively Multiplayer",
+              "average_playtime_mean": 1938.8387096774193,
+              "count": 31,
+              "median_playtime_mean": 1034.225806451613,
+              "name": "Massively Multiplayer",
+              "negative_ratings_mean": 19888.90322580645,
+              "positive_ratings_mean": 22331.709677419356,
+              "price_mean": 12.375161290322582
+            },
+            {
+              "achievements_mean": 4.333333333333333,
+              "all": "Action,Adventure,Early Access",
+              "average_playtime_mean": 1.0952380952380953,
+              "count": 21,
+              "median_playtime_mean": 1.0952380952380953,
+              "name": "Early Access",
+              "negative_ratings_mean": 27.0,
+              "positive_ratings_mean": 42.0,
+              "price_mean": 9.176190476190474
+            },
+            {
+              "achievements_mean": 22.25,
+              "all": "Action,Adventure,Sports",
+              "average_playtime_mean": 1.75,
+              "count": 4,
+              "median_playtime_mean": 1.75,
+              "name": "Sports",
+              "negative_ratings_mean": 62.0,
+              "positive_ratings_mean": 129.5,
+              "price_mean": 10.540000000000001
+            }
+          ],
+          "count": 363,
+          "median_playtime_mean": 295.1404958677686,
+          "name": "Adventure",
+          "negative_ratings_mean": 1381.374655647383,
+          "positive_ratings_mean": 5558.873278236914,
+          "price_mean": 12.245426997245179
+        },
+        {
+          "achievements_mean": 40.5,
+          "all": "Action,RPG",
+          "average_playtime_mean": 918.0204081632653,
+          "children": [
+            {
+              "achievements_mean": 4.333333333333333,
+              "all": "Action,RPG,Indie",
+              "average_playtime_mean": 17.666666666666668,
+              "count": 3,
+              "median_playtime_mean": 17.666666666666668,
+              "name": "Indie",
+              "negative_ratings_mean": 68.33333333333333,
+              "positive_ratings_mean": 219.66666666666666,
+              "price_mean": 6.156666666666666
+            },
+            {
+              "achievements_mean": 24.416666666666668,
+              "all": "Action,RPG,Strategy",
+              "average_playtime_mean": 283.9166666666667,
+              "count": 12,
+              "median_playtime_mean": 319.9166666666667,
+              "name": "Strategy",
+              "negative_ratings_mean": 206.91666666666666,
+              "positive_ratings_mean": 1174.0,
+              "price_mean": 14.857500000000002
+            },
+            {
+              "achievements_mean": 28.77777777777778,
+              "all": "Action,RPG,Simulation",
+              "average_playtime_mean": 157.77777777777777,
+              "count": 9,
+              "median_playtime_mean": 185.66666666666666,
+              "name": "Simulation",
+              "negative_ratings_mean": 379.6666666666667,
+              "positive_ratings_mean": 1134.2222222222222,
+              "price_mean": 12.257777777777777
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Action,RPG,Early Access",
+              "average_playtime_mean": 14.714285714285714,
+              "count": 7,
+              "median_playtime_mean": 15.428571428571429,
+              "name": "Early Access",
+              "negative_ratings_mean": 72.0,
+              "positive_ratings_mean": 153.85714285714286,
+              "price_mean": 7.548571428571429
+            },
+            {
+              "achievements_mean": 25.0,
+              "all": "Action,RPG,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 2.0,
+              "positive_ratings_mean": 8.0,
+              "price_mean": 11.39
+            }
+          ],
+          "count": 98,
+          "median_playtime_mean": 792.8775510204082,
+          "name": "RPG",
+          "negative_ratings_mean": 1660.1326530612246,
+          "positive_ratings_mean": 10522.397959183674,
+          "price_mean": 15.155816326530612
+        },
+        {
+          "achievements_mean": 27.998380129589634,
+          "all": "Action,Indie",
+          "average_playtime_mean": 79.99784017278618,
+          "children": [
+            {
+              "achievements_mean": 29.10828025477707,
+              "all": "Action,Indie,RPG",
+              "average_playtime_mean": 120.18152866242038,
+              "count": 314,
+              "median_playtime_mean": 128.8535031847134,
+              "name": "RPG",
+              "negative_ratings_mean": 129.98407643312103,
+              "positive_ratings_mean": 776.3853503184713,
+              "price_mean": 7.381815286624203
+            },
+            {
+              "achievements_mean": 23.681647940074907,
+              "all": "Action,Indie,Strategy",
+              "average_playtime_mean": 116.97752808988764,
+              "count": 267,
+              "median_playtime_mean": 134.4307116104869,
+              "name": "Strategy",
+              "negative_ratings_mean": 157.2808988764045,
+              "positive_ratings_mean": 1008.1685393258427,
+              "price_mean": 7.0854681647940065
+            },
+            {
+              "achievements_mean": 17.78048780487805,
+              "all": "Action,Indie,Sports",
+              "average_playtime_mean": 38.91463414634146,
+              "count": 82,
+              "median_playtime_mean": 42.853658536585364,
+              "name": "Sports",
+              "negative_ratings_mean": 50.75609756097561,
+              "positive_ratings_mean": 309.0243902439024,
+              "price_mean": 7.531097560975609
+            },
+            {
+              "achievements_mean": 10.335714285714285,
+              "all": "Action,Indie,Early Access",
+              "average_playtime_mean": 43.30357142857143,
+              "count": 280,
+              "median_playtime_mean": 50.475,
+              "name": "Early Access",
+              "negative_ratings_mean": 59.55357142857143,
+              "positive_ratings_mean": 298.5392857142857,
+              "price_mean": 7.446500000000001
+            },
+            {
+              "achievements_mean": 21.94039735099338,
+              "all": "Action,Indie,Racing",
+              "average_playtime_mean": 83.23841059602648,
+              "count": 151,
+              "median_playtime_mean": 63.4635761589404,
+              "name": "Racing",
+              "negative_ratings_mean": 200.96026490066225,
+              "positive_ratings_mean": 1875.6225165562914,
+              "price_mean": 7.62026490066225
+            },
+            {
+              "achievements_mean": 25.25,
+              "all": "Action,Indie,Casual",
+              "average_playtime_mean": 64.25,
+              "count": 4,
+              "median_playtime_mean": 64.25,
+              "name": "Casual",
+              "negative_ratings_mean": 37.0,
+              "positive_ratings_mean": 164.5,
+              "price_mean": 5.1899999999999995
+            },
+            {
+              "achievements_mean": 13.602409638554217,
+              "all": "Action,Indie,Simulation",
+              "average_playtime_mean": 140.35341365461846,
+              "count": 249,
+              "median_playtime_mean": 149.26104417670683,
+              "name": "Simulation",
+              "negative_ratings_mean": 126.570281124498,
+              "positive_ratings_mean": 664.4859437751004,
+              "price_mean": 6.938072289156626
+            },
+            {
+              "achievements_mean": 10.727272727272727,
+              "all": "Action,Indie,Massively Multiplayer",
+              "average_playtime_mean": 318.23636363636365,
+              "count": 55,
+              "median_playtime_mean": 469.7090909090909,
+              "name": "Massively Multiplayer",
+              "negative_ratings_mean": 355.23636363636365,
+              "positive_ratings_mean": 520.1818181818181,
+              "price_mean": 6.9799999999999995
+            }
+          ],
+          "count": 1852,
+          "median_playtime_mean": 75.3255939524838,
+          "name": "Indie",
+          "negative_ratings_mean": 65.65712742980561,
+          "positive_ratings_mean": 414.8644708423326,
+          "price_mean": 5.0175053995680345
+        },
+        {
+          "achievements_mean": 11.492307692307692,
+          "all": "Action,Simulation",
+          "average_playtime_mean": 144.03076923076924,
+          "children": [
+            {
+              "achievements_mean": 24.424242424242426,
+              "all": "Action,Simulation,Strategy",
+              "average_playtime_mean": 1091.5454545454545,
+              "count": 33,
+              "median_playtime_mean": 507.5151515151515,
+              "name": "Strategy",
+              "negative_ratings_mean": 712.8484848484849,
+              "positive_ratings_mean": 4506.787878787879,
+              "price_mean": 18.436060606060607
+            },
+            {
+              "achievements_mean": 8.333333333333334,
+              "all": "Action,Simulation,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 12,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 8.083333333333334,
+              "positive_ratings_mean": 14.75,
+              "price_mean": 3.740833333333333
+            },
+            {
+              "achievements_mean": 1.5833333333333333,
+              "all": "Action,Simulation,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 12,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 41.583333333333336,
+              "positive_ratings_mean": 173.41666666666666,
+              "price_mean": 9.313333333333334
+            }
+          ],
+          "count": 65,
+          "median_playtime_mean": 183.2153846153846,
+          "name": "Simulation",
+          "negative_ratings_mean": 165.15384615384616,
+          "positive_ratings_mean": 315.2,
+          "price_mean": 9.931846153846152
+        },
+        {
+          "achievements_mean": 371.31531531531533,
+          "all": "Action,Casual",
+          "average_playtime_mean": 28.135135135135137,
+          "children": [
+            {
+              "achievements_mean": 109.02615933412604,
+              "all": "Action,Casual,Indie",
+              "average_playtime_mean": 60.35909631391201,
+              "count": 1682,
+              "median_playtime_mean": 66.9013079667063,
+              "name": "Indie",
+              "negative_ratings_mean": 34.57134363852556,
+              "positive_ratings_mean": 170.9922711058264,
+              "price_mean": 4.007419738406658
+            },
+            {
+              "achievements_mean": 1004.4,
+              "all": "Action,Casual,Simulation",
+              "average_playtime_mean": 17.49230769230769,
+              "count": 65,
+              "median_playtime_mean": 21.307692307692307,
+              "name": "Simulation",
+              "negative_ratings_mean": 17.276923076923076,
+              "positive_ratings_mean": 50.36923076923077,
+              "price_mean": 6.966615384615385
+            },
+            {
+              "achievements_mean": 19.4,
+              "all": "Action,Casual,RPG",
+              "average_playtime_mean": 50.8,
+              "count": 5,
+              "median_playtime_mean": 92.4,
+              "name": "RPG",
+              "negative_ratings_mean": 37.6,
+              "positive_ratings_mean": 232.8,
+              "price_mean": 5.890000000000001
+            },
+            {
+              "achievements_mean": 43.62698412698413,
+              "all": "Action,Casual,Free to Play",
+              "average_playtime_mean": 118.34126984126983,
+              "count": 126,
+              "median_playtime_mean": 76.07142857142857,
+              "name": "Free to Play",
+              "negative_ratings_mean": 244.70634920634922,
+              "positive_ratings_mean": 648.1825396825396,
+              "price_mean": 0.1884920634920635
+            },
+            {
+              "achievements_mean": 560.0555555555555,
+              "all": "Action,Casual,Strategy",
+              "average_playtime_mean": 16.333333333333332,
+              "count": 18,
+              "median_playtime_mean": 18.444444444444443,
+              "name": "Strategy",
+              "negative_ratings_mean": 13.11111111111111,
+              "positive_ratings_mean": 26.11111111111111,
+              "price_mean": 3.991666666666668
+            },
+            {
+              "achievements_mean": 14.454545454545455,
+              "all": "Action,Casual,Racing",
+              "average_playtime_mean": 0.0,
+              "count": 11,
+              "median_playtime_mean": 0.0,
+              "name": "Racing",
+              "negative_ratings_mean": 11.818181818181818,
+              "positive_ratings_mean": 35.45454545454545,
+              "price_mean": 6.844545454545455
+            },
+            {
+              "achievements_mean": 23.333333333333332,
+              "all": "Action,Casual,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 12,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 3.3333333333333335,
+              "positive_ratings_mean": 20.916666666666668,
+              "price_mean": 6.89
+            },
+            {
+              "achievements_mean": 22.166666666666668,
+              "all": "Action,Casual,Massively Multiplayer",
+              "average_playtime_mean": 0.0,
+              "count": 6,
+              "median_playtime_mean": 0.0,
+              "name": "Massively Multiplayer",
+              "negative_ratings_mean": 11.0,
+              "positive_ratings_mean": 29.666666666666668,
+              "price_mean": 3.9933333333333336
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Action,Casual,Early Access",
+              "average_playtime_mean": 1.0,
+              "count": 5,
+              "median_playtime_mean": 1.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 2.8,
+              "positive_ratings_mean": 9.6,
+              "price_mean": 2.332
+            }
+          ],
+          "count": 111,
+          "median_playtime_mean": 29.063063063063062,
+          "name": "Casual",
+          "negative_ratings_mean": 20.2972972972973,
+          "positive_ratings_mean": 75.85585585585585,
+          "price_mean": 4.527387387387388
+        },
+        {
+          "achievements_mean": 22.789473684210527,
+          "all": "Action,Strategy",
+          "average_playtime_mean": 229.8684210526316,
+          "children": [
+            {
+              "achievements_mean": 34.0,
+              "all": "Action,Strategy,Indie",
+              "average_playtime_mean": 33.666666666666664,
+              "count": 3,
+              "median_playtime_mean": 33.666666666666664,
+              "name": "Indie",
+              "negative_ratings_mean": 90.33333333333333,
+              "positive_ratings_mean": 262.3333333333333,
+              "price_mean": 3.69
+            },
+            {
+              "achievements_mean": 59.0,
+              "all": "Action,Strategy,Casual",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Casual",
+              "negative_ratings_mean": 53.0,
+              "positive_ratings_mean": 268.0,
+              "price_mean": 6.99
+            },
+            {
+              "achievements_mean": 9.0,
+              "all": "Action,Strategy,Early Access",
+              "average_playtime_mean": 4.875,
+              "count": 8,
+              "median_playtime_mean": 4.875,
+              "name": "Early Access",
+              "negative_ratings_mean": 6.5,
+              "positive_ratings_mean": 15.625,
+              "price_mean": 7.49
+            }
+          ],
+          "count": 76,
+          "median_playtime_mean": 237.85526315789474,
+          "name": "Strategy",
+          "negative_ratings_mean": 301.82894736842104,
+          "positive_ratings_mean": 991.8421052631579,
+          "price_mean": 8.410000000000002
+        },
+        {
+          "achievements_mean": 13.45,
+          "all": "Action,Racing",
+          "average_playtime_mean": 56.325,
+          "children": [
+            {
+              "achievements_mean": 5.0,
+              "all": "Action,Racing,Simulation",
+              "average_playtime_mean": 66.28571428571429,
+              "count": 14,
+              "median_playtime_mean": 70.21428571428571,
+              "name": "Simulation",
+              "negative_ratings_mean": 62.785714285714285,
+              "positive_ratings_mean": 136.07142857142858,
+              "price_mean": 5.097142857142858
+            },
+            {
+              "achievements_mean": 19.857142857142858,
+              "all": "Action,Racing,Sports",
+              "average_playtime_mean": 89.28571428571429,
+              "count": 7,
+              "median_playtime_mean": 104.0,
+              "name": "Sports",
+              "negative_ratings_mean": 103.42857142857143,
+              "positive_ratings_mean": 530.1428571428571,
+              "price_mean": 10.304285714285713
+            },
+            {
+              "achievements_mean": 10.4,
+              "all": "Action,Racing,Early Access",
+              "average_playtime_mean": 1.6,
+              "count": 5,
+              "median_playtime_mean": 1.6,
+              "name": "Early Access",
+              "negative_ratings_mean": 16.0,
+              "positive_ratings_mean": 22.4,
+              "price_mean": 5.37
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Action,Racing,RPG",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "RPG",
+              "negative_ratings_mean": 251.0,
+              "positive_ratings_mean": 996.0,
+              "price_mean": 5.59
+            },
+            {
+              "achievements_mean": 7.0,
+              "all": "Action,Racing,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 8.0,
+              "positive_ratings_mean": 20.0,
+              "price_mean": 1.59
+            }
+          ],
+          "count": 40,
+          "median_playtime_mean": 59.875,
+          "name": "Racing",
+          "negative_ratings_mean": 95.3,
+          "positive_ratings_mean": 253.2,
+          "price_mean": 6.8705
+        },
+        {
+          "achievements_mean": 21.833333333333332,
+          "all": "Action,Massively Multiplayer",
+          "average_playtime_mean": 44.5,
+          "children": [
+            {
+              "achievements_mean": 30.22222222222222,
+              "all": "Action,Massively Multiplayer,Simulation",
+              "average_playtime_mean": 301.77777777777777,
+              "count": 9,
+              "median_playtime_mean": 226.88888888888889,
+              "name": "Simulation",
+              "negative_ratings_mean": 825.3333333333334,
+              "positive_ratings_mean": 5056.555555555556,
+              "price_mean": 13.013333333333332
+            },
+            {
+              "achievements_mean": 26.4,
+              "all": "Action,Massively Multiplayer,Racing",
+              "average_playtime_mean": 605.8,
+              "count": 5,
+              "median_playtime_mean": 550.6,
+              "name": "Racing",
+              "negative_ratings_mean": 1744.0,
+              "positive_ratings_mean": 2740.4,
+              "price_mean": 18.131999999999998
+            },
+            {
+              "achievements_mean": 3.3333333333333335,
+              "all": "Action,Massively Multiplayer,RPG",
+              "average_playtime_mean": 1.8333333333333333,
+              "count": 6,
+              "median_playtime_mean": 1.8333333333333333,
+              "name": "RPG",
+              "negative_ratings_mean": 47.833333333333336,
+              "positive_ratings_mean": 49.166666666666664,
+              "price_mean": 4.208333333333334
+            },
+            {
+              "achievements_mean": 8.0,
+              "all": "Action,Massively Multiplayer,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 12.5,
+              "positive_ratings_mean": 18.0,
+              "price_mean": 11.24
+            },
+            {
+              "achievements_mean": 8.0,
+              "all": "Action,Massively Multiplayer,Early Access",
+              "average_playtime_mean": 91.28571428571429,
+              "count": 7,
+              "median_playtime_mean": 120.85714285714286,
+              "name": "Early Access",
+              "negative_ratings_mean": 606.0,
+              "positive_ratings_mean": 625.2857142857143,
+              "price_mean": 7.607142857142857
+            }
+          ],
+          "count": 6,
+          "median_playtime_mean": 45.5,
+          "name": "Massively Multiplayer",
+          "negative_ratings_mean": 41.166666666666664,
+          "positive_ratings_mean": 86.5,
+          "price_mean": 5.7749999999999995
+        },
+        {
+          "achievements_mean": 3.6470588235294117,
+          "all": "Action,Sports",
+          "average_playtime_mean": 299.47058823529414,
+          "children": [
+            {
+              "achievements_mean": 16.0,
+              "all": "Action,Sports,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 4.5,
+              "price_mean": 10.49
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Action,Sports,Early Access",
+              "average_playtime_mean": 13.333333333333334,
+              "count": 3,
+              "median_playtime_mean": 13.333333333333334,
+              "name": "Early Access",
+              "negative_ratings_mean": 19.333333333333332,
+              "positive_ratings_mean": 284.3333333333333,
+              "price_mean": 8.656666666666666
+            }
+          ],
+          "count": 17,
+          "median_playtime_mean": 459.52941176470586,
+          "name": "Sports",
+          "negative_ratings_mean": 344.52941176470586,
+          "positive_ratings_mean": 1378.5882352941176,
+          "price_mean": 9.684705882352942
+        },
+        {
+          "achievements_mean": 8.291666666666666,
+          "all": "Action,Early Access",
+          "average_playtime_mean": 88.77083333333333,
+          "count": 48,
+          "median_playtime_mean": 93.5,
+          "name": "Early Access",
+          "negative_ratings_mean": 240.3125,
+          "positive_ratings_mean": 640.75,
+          "price_mean": 8.255833333333333
+        }
+      ],
+      "count": 843,
+      "median_playtime_mean": 189.0723606168446,
+      "name": "Action",
+      "negative_ratings_mean": 639.6714116251483,
+      "positive_ratings_mean": 3611.361803084223,
+      "price_mean": 9.981174377224198
+    },
+    {
+      "achievements_mean": 9.31588785046729,
+      "all": "Adventure",
+      "average_playtime_mean": 83.00560747663552,
+      "children": [
+        {
+          "achievements_mean": 7.383399209486166,
+          "all": "Adventure,Casual",
+          "average_playtime_mean": 36.55335968379447,
+          "children": [
+            {
+              "achievements_mean": 43.862947658402206,
+              "all": "Adventure,Casual,Indie",
+              "average_playtime_mean": 96.92561983471074,
+              "count": 1452,
+              "median_playtime_mean": 100.50619834710744,
+              "name": "Indie",
+              "negative_ratings_mean": 41.03443526170799,
+              "positive_ratings_mean": 218.56542699724517,
+              "price_mean": 4.608154269972451
+            },
+            {
+              "achievements_mean": 21.130434782608695,
+              "all": "Adventure,Casual,Strategy",
+              "average_playtime_mean": 35.91304347826087,
+              "count": 23,
+              "median_playtime_mean": 27.695652173913043,
+              "name": "Strategy",
+              "negative_ratings_mean": 45.17391304347826,
+              "positive_ratings_mean": 356.4782608695652,
+              "price_mean": 6.576956521739131
+            },
+            {
+              "achievements_mean": 22.774647887323944,
+              "all": "Adventure,Casual,Simulation",
+              "average_playtime_mean": 57.521126760563384,
+              "count": 71,
+              "median_playtime_mean": 57.521126760563384,
+              "name": "Simulation",
+              "negative_ratings_mean": 12.52112676056338,
+              "positive_ratings_mean": 112.11267605633803,
+              "price_mean": 6.945211267605635
+            },
+            {
+              "achievements_mean": 12.902439024390244,
+              "all": "Adventure,Casual,Free to Play",
+              "average_playtime_mean": 1019.3739837398374,
+              "count": 123,
+              "median_playtime_mean": 1677.0731707317073,
+              "name": "Free to Play",
+              "negative_ratings_mean": 209.2520325203252,
+              "positive_ratings_mean": 1548.3739837398373,
+              "price_mean": 0.01926829268292683
+            },
+            {
+              "achievements_mean": 14.0,
+              "all": "Adventure,Casual,RPG",
+              "average_playtime_mean": 194.71428571428572,
+              "count": 28,
+              "median_playtime_mean": 201.92857142857142,
+              "name": "RPG",
+              "negative_ratings_mean": 58.42857142857143,
+              "positive_ratings_mean": 297.85714285714283,
+              "price_mean": 6.583214285714284
+            },
+            {
+              "achievements_mean": 0.25,
+              "all": "Adventure,Casual,Early Access",
+              "average_playtime_mean": 162.0,
+              "count": 4,
+              "median_playtime_mean": 161.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 828.75,
+              "positive_ratings_mean": 769.0,
+              "price_mean": 5.442499999999999
+            },
+            {
+              "achievements_mean": 16.5,
+              "all": "Adventure,Casual,Racing",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Racing",
+              "negative_ratings_mean": 23.0,
+              "positive_ratings_mean": 33.0,
+              "price_mean": 4.245
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Adventure,Casual,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 0.0,
+              "price_mean": 3.99
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Adventure,Casual,Massively Multiplayer",
+              "average_playtime_mean": 25.0,
+              "count": 2,
+              "median_playtime_mean": 25.0,
+              "name": "Massively Multiplayer",
+              "negative_ratings_mean": 41.5,
+              "positive_ratings_mean": 135.5,
+              "price_mean": 4.44
+            }
+          ],
+          "count": 506,
+          "median_playtime_mean": 37.440711462450594,
+          "name": "Casual",
+          "negative_ratings_mean": 16.40909090909091,
+          "positive_ratings_mean": 83.66403162055336,
+          "price_mean": 6.7492490118577075
+        },
+        {
+          "achievements_mean": 17.34285714285714,
+          "all": "Adventure,RPG",
+          "average_playtime_mean": 132.57142857142858,
+          "children": [
+            {
+              "achievements_mean": 28.785714285714285,
+              "all": "Adventure,RPG,Strategy",
+              "average_playtime_mean": 257.14285714285717,
+              "count": 28,
+              "median_playtime_mean": 221.96428571428572,
+              "name": "Strategy",
+              "negative_ratings_mean": 158.07142857142858,
+              "positive_ratings_mean": 1898.7142857142858,
+              "price_mean": 10.701428571428574
+            },
+            {
+              "achievements_mean": 19.7,
+              "all": "Adventure,RPG,Simulation",
+              "average_playtime_mean": 62.1,
+              "count": 10,
+              "median_playtime_mean": 62.1,
+              "name": "Simulation",
+              "negative_ratings_mean": 68.2,
+              "positive_ratings_mean": 235.3,
+              "price_mean": 5.720999999999999
+            },
+            {
+              "achievements_mean": 25.5,
+              "all": "Adventure,RPG,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 1.5,
+              "positive_ratings_mean": 13.5,
+              "price_mean": 9.74
+            }
+          ],
+          "count": 70,
+          "median_playtime_mean": 146.54285714285714,
+          "name": "RPG",
+          "negative_ratings_mean": 91.95714285714286,
+          "positive_ratings_mean": 545.7285714285714,
+          "price_mean": 9.280999999999999
+        },
+        {
+          "achievements_mean": 18.99059829059829,
+          "all": "Adventure,Indie",
+          "average_playtime_mean": 96.16581196581197,
+          "children": [
+            {
+              "achievements_mean": 59.693396226415096,
+              "all": "Adventure,Indie,RPG",
+              "average_playtime_mean": 91.49213836477988,
+              "count": 636,
+              "median_playtime_mean": 104.21698113207547,
+              "name": "RPG",
+              "negative_ratings_mean": 63.89150943396226,
+              "positive_ratings_mean": 420.77672955974845,
+              "price_mean": 5.967641509433962
+            },
+            {
+              "achievements_mean": 18.13186813186813,
+              "all": "Adventure,Indie,Strategy",
+              "average_playtime_mean": 62.747252747252745,
+              "count": 91,
+              "median_playtime_mean": 70.25274725274726,
+              "name": "Strategy",
+              "negative_ratings_mean": 65.21978021978022,
+              "positive_ratings_mean": 283.15384615384613,
+              "price_mean": 5.548351648351649
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Adventure,Indie,Casual",
+              "average_playtime_mean": 7.0,
+              "count": 1,
+              "median_playtime_mean": 7.0,
+              "name": "Casual",
+              "negative_ratings_mean": 182.0,
+              "positive_ratings_mean": 402.0,
+              "price_mean": 4.39
+            },
+            {
+              "achievements_mean": 15.074074074074074,
+              "all": "Adventure,Indie,Simulation",
+              "average_playtime_mean": 71.8395061728395,
+              "count": 162,
+              "median_playtime_mean": 71.98148148148148,
+              "name": "Simulation",
+              "negative_ratings_mean": 173.2962962962963,
+              "positive_ratings_mean": 1706.7283950617284,
+              "price_mean": 6.592222222222222
+            },
+            {
+              "achievements_mean": 6.672727272727273,
+              "all": "Adventure,Indie,Early Access",
+              "average_playtime_mean": 41.58181818181818,
+              "count": 55,
+              "median_playtime_mean": 46.61818181818182,
+              "name": "Early Access",
+              "negative_ratings_mean": 140.14545454545456,
+              "positive_ratings_mean": 444.0,
+              "price_mean": 9.077272727272728
+            },
+            {
+              "achievements_mean": 6.5,
+              "all": "Adventure,Indie,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 9.0,
+              "positive_ratings_mean": 64.0,
+              "price_mean": 3.99
+            },
+            {
+              "achievements_mean": 33.27272727272727,
+              "all": "Adventure,Indie,Racing",
+              "average_playtime_mean": 23.727272727272727,
+              "count": 11,
+              "median_playtime_mean": 23.727272727272727,
+              "name": "Racing",
+              "negative_ratings_mean": 11.363636363636363,
+              "positive_ratings_mean": 60.63636363636363,
+              "price_mean": 5.899090909090909
+            },
+            {
+              "achievements_mean": 17.818181818181817,
+              "all": "Adventure,Indie,Massively Multiplayer",
+              "average_playtime_mean": 250.72727272727272,
+              "count": 11,
+              "median_playtime_mean": 245.27272727272728,
+              "name": "Massively Multiplayer",
+              "negative_ratings_mean": 238.63636363636363,
+              "positive_ratings_mean": 954.3636363636364,
+              "price_mean": 8.427272727272726
+            }
+          ],
+          "count": 1170,
+          "median_playtime_mean": 87.52307692307693,
+          "name": "Indie",
+          "negative_ratings_mean": 83.28888888888889,
+          "positive_ratings_mean": 569.9547008547008,
+          "price_mean": 5.848324786324787
+        },
+        {
+          "achievements_mean": 5.4,
+          "all": "Adventure,Simulation",
+          "average_playtime_mean": 12.0,
+          "children": [
+            {
+              "achievements_mean": 16.6,
+              "all": "Adventure,Simulation,Strategy",
+              "average_playtime_mean": 8.9,
+              "count": 10,
+              "median_playtime_mean": 8.1,
+              "name": "Strategy",
+              "negative_ratings_mean": 129.1,
+              "positive_ratings_mean": 1023.3,
+              "price_mean": 5.211
+            },
+            {
+              "achievements_mean": 2.857142857142857,
+              "all": "Adventure,Simulation,Early Access",
+              "average_playtime_mean": 7.857142857142857,
+              "count": 7,
+              "median_playtime_mean": 7.857142857142857,
+              "name": "Early Access",
+              "negative_ratings_mean": 7.285714285714286,
+              "positive_ratings_mean": 10.571428571428571,
+              "price_mean": 5.05
+            },
+            {
+              "achievements_mean": 44.0,
+              "all": "Adventure,Simulation,Sports",
+              "average_playtime_mean": 352.25,
+              "count": 4,
+              "median_playtime_mean": 216.75,
+              "name": "Sports",
+              "negative_ratings_mean": 1112.25,
+              "positive_ratings_mean": 3952.75,
+              "price_mean": 14.139999999999999
+            }
+          ],
+          "count": 30,
+          "median_playtime_mean": 13.366666666666667,
+          "name": "Simulation",
+          "negative_ratings_mean": 39.5,
+          "positive_ratings_mean": 105.96666666666667,
+          "price_mean": 8.070333333333334
+        },
+        {
+          "achievements_mean": 7.125,
+          "all": "Adventure,Free to Play",
+          "average_playtime_mean": 8100.333333333333,
+          "children": [
+            {
+              "achievements_mean": 23.846153846153847,
+              "all": "Adventure,Free to Play,Massively Multiplayer",
+              "average_playtime_mean": 1116.6923076923076,
+              "count": 13,
+              "median_playtime_mean": 1345.6923076923076,
+              "name": "Massively Multiplayer",
+              "negative_ratings_mean": 1108.3076923076924,
+              "positive_ratings_mean": 2521.769230769231,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 7.89622641509434,
+              "all": "Adventure,Free to Play,Indie",
+              "average_playtime_mean": 464.77358490566036,
+              "count": 106,
+              "median_playtime_mean": 665.6132075471698,
+              "name": "Indie",
+              "negative_ratings_mean": 121.64150943396227,
+              "positive_ratings_mean": 487.0566037735849,
+              "price_mean": 0.03188679245283019
+            },
+            {
+              "achievements_mean": 5.2727272727272725,
+              "all": "Adventure,Free to Play,RPG",
+              "average_playtime_mean": 425.90909090909093,
+              "count": 11,
+              "median_playtime_mean": 624.0909090909091,
+              "name": "RPG",
+              "negative_ratings_mean": 141.63636363636363,
+              "positive_ratings_mean": 262.27272727272725,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 11.75,
+              "all": "Adventure,Free to Play,Simulation",
+              "average_playtime_mean": 0.75,
+              "count": 8,
+              "median_playtime_mean": 0.75,
+              "name": "Simulation",
+              "negative_ratings_mean": 35.625,
+              "positive_ratings_mean": 80.375,
+              "price_mean": 0.49875
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Adventure,Free to Play,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 4.0,
+              "positive_ratings_mean": 9.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 24,
+          "median_playtime_mean": 8168.458333333333,
+          "name": "Free to Play",
+          "negative_ratings_mean": 85.70833333333333,
+          "positive_ratings_mean": 470.9583333333333,
+          "price_mean": 0.0
+        },
+        {
+          "achievements_mean": 19.40909090909091,
+          "all": "Adventure,Strategy",
+          "average_playtime_mean": 49.59090909090909,
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Adventure,Strategy,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 2.0,
+              "positive_ratings_mean": 20.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 22,
+          "median_playtime_mean": 58.36363636363637,
+          "name": "Strategy",
+          "negative_ratings_mean": 139.22727272727272,
+          "positive_ratings_mean": 774.6818181818181,
+          "price_mean": 8.699545454545456
+        },
+        {
+          "achievements_mean": 24.0,
+          "all": "Adventure,Massively Multiplayer",
+          "average_playtime_mean": 367.0,
+          "children": [
+            {
+              "achievements_mean": 362.0,
+              "all": "Adventure,Massively Multiplayer,RPG",
+              "average_playtime_mean": 61.0,
+              "count": 4,
+              "median_playtime_mean": 61.0,
+              "name": "RPG",
+              "negative_ratings_mean": 213.0,
+              "positive_ratings_mean": 192.25,
+              "price_mean": 8.52
+            },
+            {
+              "achievements_mean": 17.0,
+              "all": "Adventure,Massively Multiplayer,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 2.0,
+              "positive_ratings_mean": 2.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 1,
+          "median_playtime_mean": 386.0,
+          "name": "Massively Multiplayer",
+          "negative_ratings_mean": 136.0,
+          "positive_ratings_mean": 292.0,
+          "price_mean": 0.79
+        },
+        {
+          "achievements_mean": 1.0,
+          "all": "Adventure,Racing",
+          "average_playtime_mean": 0.0,
+          "children": [
+            {
+              "achievements_mean": 54.0,
+              "all": "Adventure,Racing,Simulation",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Simulation",
+              "negative_ratings_mean": 152.0,
+              "positive_ratings_mean": 251.0,
+              "price_mean": 39.99
+            },
+            {
+              "achievements_mean": 8.0,
+              "all": "Adventure,Racing,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 10.0,
+              "positive_ratings_mean": 5.0,
+              "price_mean": 7.19
+            }
+          ],
+          "count": 3,
+          "median_playtime_mean": 0.0,
+          "name": "Racing",
+          "negative_ratings_mean": 28.666666666666668,
+          "positive_ratings_mean": 68.0,
+          "price_mean": 11.656666666666666
+        },
+        {
+          "achievements_mean": 4.7,
+          "all": "Adventure,Early Access",
+          "average_playtime_mean": 34.5,
+          "count": 10,
+          "median_playtime_mean": 34.5,
+          "name": "Early Access",
+          "negative_ratings_mean": 26.7,
+          "positive_ratings_mean": 292.2,
+          "price_mean": 6.090000000000001
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Adventure,Sports",
+          "average_playtime_mean": 0.0,
+          "count": 2,
+          "median_playtime_mean": 0.0,
+          "name": "Sports",
+          "negative_ratings_mean": 26.5,
+          "positive_ratings_mean": 70.5,
+          "price_mean": 6.29
+        }
+      ],
+      "count": 535,
+      "median_playtime_mean": 95.88971962616823,
+      "name": "Adventure",
+      "negative_ratings_mean": 60.8411214953271,
+      "positive_ratings_mean": 422.37757009345796,
+      "price_mean": 8.733850467289718
+    },
+    {
+      "achievements_mean": 0.0,
+      "all": "Animation & Modeling",
+      "average_playtime_mean": 0.0,
+      "children": [
+        {
+          "achievements_mean": 19.0,
+          "all": "Animation & Modeling,Video Production",
+          "average_playtime_mean": 352.5,
+          "count": 2,
+          "median_playtime_mean": 394.5,
+          "name": "Video Production",
+          "negative_ratings_mean": 948.0,
+          "positive_ratings_mean": 9462.0,
+          "price_mean": 6.495
+        },
+        {
+          "all": "Animation & Modeling,Education",
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Animation & Modeling,Education,Utilities",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Utilities",
+              "negative_ratings_mean": 71.0,
+              "positive_ratings_mean": 616.0,
+              "price_mean": 69.99
+            }
+          ],
+          "count": 0,
+          "name": "Education"
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Animation & Modeling,Design & Illustration",
+          "average_playtime_mean": 0.0,
+          "children": [
+            {
+              "achievements_mean": 2.4444444444444446,
+              "all": "Animation & Modeling,Design & Illustration,Education",
+              "average_playtime_mean": 120.61111111111111,
+              "count": 18,
+              "median_playtime_mean": 130.88888888888889,
+              "name": "Education",
+              "negative_ratings_mean": 47.833333333333336,
+              "positive_ratings_mean": 129.94444444444446,
+              "price_mean": 57.84055555555556
+            },
+            {
+              "achievements_mean": 7.0,
+              "all": "Animation & Modeling,Design & Illustration,Web Publishing",
+              "average_playtime_mean": 86.0,
+              "count": 2,
+              "median_playtime_mean": 86.0,
+              "name": "Web Publishing",
+              "negative_ratings_mean": 85.5,
+              "positive_ratings_mean": 385.0,
+              "price_mean": 17.39
+            },
+            {
+              "achievements_mean": 3.642857142857143,
+              "all": "Animation & Modeling,Design & Illustration,Utilities",
+              "average_playtime_mean": 123.64285714285714,
+              "count": 14,
+              "median_playtime_mean": 38.714285714285715,
+              "name": "Utilities",
+              "negative_ratings_mean": 155.14285714285714,
+              "positive_ratings_mean": 4589.714285714285,
+              "price_mean": 10.775714285714283
+            },
+            {
+              "achievements_mean": 2.5,
+              "all": "Animation & Modeling,Design & Illustration,Photo Editing",
+              "average_playtime_mean": 532.25,
+              "count": 4,
+              "median_playtime_mean": 532.25,
+              "name": "Photo Editing",
+              "negative_ratings_mean": 52.75,
+              "positive_ratings_mean": 94.25,
+              "price_mean": 8.2175
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Animation & Modeling,Design & Illustration,Game Development",
+              "average_playtime_mean": 0.0,
+              "count": 3,
+              "median_playtime_mean": 0.0,
+              "name": "Game Development",
+              "negative_ratings_mean": 7.0,
+              "positive_ratings_mean": 32.333333333333336,
+              "price_mean": 81.59
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Animation & Modeling,Design & Illustration,Video Production",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Video Production",
+              "negative_ratings_mean": 2.0,
+              "positive_ratings_mean": 30.0,
+              "price_mean": 154.99
+            }
+          ],
+          "count": 2,
+          "median_playtime_mean": 0.0,
+          "name": "Design & Illustration",
+          "negative_ratings_mean": 13.0,
+          "positive_ratings_mean": 21.0,
+          "price_mean": 21.39
+        },
+        {
+          "all": "Animation & Modeling,Audio Production",
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Animation & Modeling,Audio Production,Software Training",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Software Training",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 0.0,
+              "price_mean": 22.99
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Animation & Modeling,Audio Production,Design & Illustration",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Design & Illustration",
+              "negative_ratings_mean": 4.0,
+              "positive_ratings_mean": 52.5,
+              "price_mean": 10.99
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Animation & Modeling,Audio Production,Utilities",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Utilities",
+              "negative_ratings_mean": 9.0,
+              "positive_ratings_mean": 12.0,
+              "price_mean": 2.09
+            }
+          ],
+          "count": 0,
+          "name": "Audio Production"
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Animation & Modeling,Early Access",
+          "average_playtime_mean": 0.0,
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Early Access",
+          "negative_ratings_mean": 2.0,
+          "positive_ratings_mean": 5.0,
+          "price_mean": 7.19
+        },
+        {
+          "achievements_mean": 1.5,
+          "all": "Animation & Modeling,Utilities",
+          "average_playtime_mean": 0.0,
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Animation & Modeling,Utilities,Video Production",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Video Production",
+              "negative_ratings_mean": 6.0,
+              "positive_ratings_mean": 5.0,
+              "price_mean": 1.445
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Animation & Modeling,Utilities,Early Access",
+              "average_playtime_mean": 13.75,
+              "count": 4,
+              "median_playtime_mean": 13.75,
+              "name": "Early Access",
+              "negative_ratings_mean": 23.25,
+              "positive_ratings_mean": 172.0,
+              "price_mean": 3.7150000000000003
+            }
+          ],
+          "count": 4,
+          "median_playtime_mean": 0.0,
+          "name": "Utilities",
+          "negative_ratings_mean": 3.0,
+          "positive_ratings_mean": 14.25,
+          "price_mean": 27.24
+        },
+        {
+          "all": "Animation & Modeling,Software Training",
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Animation & Modeling,Software Training,Utilities",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Utilities",
+              "negative_ratings_mean": 54.0,
+              "positive_ratings_mean": 121.0,
+              "price_mean": 2.09
+            }
+          ],
+          "count": 0,
+          "name": "Software Training"
+        }
+      ],
+      "count": 3,
+      "median_playtime_mean": 0.0,
+      "name": "Animation & Modeling",
+      "negative_ratings_mean": 6.333333333333333,
+      "positive_ratings_mean": 38.0,
+      "price_mean": 57.32666666666666
+    },
+    {
+      "achievements_mean": 5.0,
+      "all": "Audio Production",
+      "average_playtime_mean": 0.0,
+      "children": [
+        {
+          "achievements_mean": 3.25,
+          "all": "Audio Production,Utilities",
+          "average_playtime_mean": 2.375,
+          "children": [
+            {
+              "achievements_mean": 2.0,
+              "all": "Audio Production,Utilities,Early Access",
+              "average_playtime_mean": 38.0,
+              "count": 1,
+              "median_playtime_mean": 38.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 6.0,
+              "positive_ratings_mean": 66.0,
+              "price_mean": 22.99
+            }
+          ],
+          "count": 8,
+          "median_playtime_mean": 2.375,
+          "name": "Utilities",
+          "negative_ratings_mean": 34.25,
+          "positive_ratings_mean": 68.5,
+          "price_mean": 9.765
+        },
+        {
+          "all": "Audio Production,Education",
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Audio Production,Education,Software Training",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Software Training",
+              "negative_ratings_mean": 53.0,
+              "positive_ratings_mean": 41.0,
+              "price_mean": 14.99
+            }
+          ],
+          "count": 0,
+          "name": "Education"
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Audio Production,Early Access",
+          "average_playtime_mean": 0.0,
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Early Access",
+          "negative_ratings_mean": 15.0,
+          "positive_ratings_mean": 23.0,
+          "price_mean": 4.79
+        },
+        {
+          "all": "Audio Production,Design & Illustration",
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Audio Production,Design & Illustration,Utilities",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Utilities",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 4.0,
+              "price_mean": 7.99
+            }
+          ],
+          "count": 0,
+          "name": "Design & Illustration"
+        }
+      ],
+      "count": 4,
+      "median_playtime_mean": 0.0,
+      "name": "Audio Production",
+      "negative_ratings_mean": 9.0,
+      "positive_ratings_mean": 20.5,
+      "price_mean": 26.4425
+    },
+    {
+      "achievements_mean": 46.01428571428571,
+      "all": "Casual",
+      "average_playtime_mean": 29.041071428571428,
+      "children": [
+        {
+          "achievements_mean": 70.13292847503374,
+          "all": "Casual,Indie",
+          "average_playtime_mean": 46.64642375168691,
+          "children": [
+            {
+              "achievements_mean": 15.851485148514852,
+              "all": "Casual,Indie,Racing",
+              "average_playtime_mean": 19.88118811881188,
+              "count": 101,
+              "median_playtime_mean": 20.88118811881188,
+              "name": "Racing",
+              "negative_ratings_mean": 48.277227722772274,
+              "positive_ratings_mean": 104.0,
+              "price_mean": 3.434653465346535
+            },
+            {
+              "achievements_mean": 136.0128755364807,
+              "all": "Casual,Indie,Strategy",
+              "average_playtime_mean": 65.63090128755364,
+              "count": 466,
+              "median_playtime_mean": 70.10944206008584,
+              "name": "Strategy",
+              "negative_ratings_mean": 21.390557939914164,
+              "positive_ratings_mean": 110.01287553648069,
+              "price_mean": 3.8741845493562233
+            },
+            {
+              "achievements_mean": 108.75740479548661,
+              "all": "Casual,Indie,Simulation",
+              "average_playtime_mean": 94.08039492242595,
+              "count": 709,
+              "median_playtime_mean": 92.04795486600847,
+              "name": "Simulation",
+              "negative_ratings_mean": 45.69675599435825,
+              "positive_ratings_mean": 337.4795486600846,
+              "price_mean": 4.846516220028208
+            },
+            {
+              "achievements_mean": 41.36196319018405,
+              "all": "Casual,Indie,RPG",
+              "average_playtime_mean": 324.7484662576687,
+              "count": 163,
+              "median_playtime_mean": 500.1165644171779,
+              "name": "RPG",
+              "negative_ratings_mean": 56.19631901840491,
+              "positive_ratings_mean": 386.8773006134969,
+              "price_mean": 4.25159509202454
+            },
+            {
+              "achievements_mean": 12.67605633802817,
+              "all": "Casual,Indie,Sports",
+              "average_playtime_mean": 28.619718309859156,
+              "count": 71,
+              "median_playtime_mean": 30.47887323943662,
+              "name": "Sports",
+              "negative_ratings_mean": 38.54929577464789,
+              "positive_ratings_mean": 265.1830985915493,
+              "price_mean": 3.7667605633802825
+            },
+            {
+              "achievements_mean": 6.24,
+              "all": "Casual,Indie,Early Access",
+              "average_playtime_mean": 11.98,
+              "count": 50,
+              "median_playtime_mean": 13.22,
+              "name": "Early Access",
+              "negative_ratings_mean": 6.28,
+              "positive_ratings_mean": 10.18,
+              "price_mean": 4.0188
+            },
+            {
+              "achievements_mean": 51.72222222222222,
+              "all": "Casual,Indie,Massively Multiplayer",
+              "average_playtime_mean": 70.27777777777777,
+              "count": 18,
+              "median_playtime_mean": 74.27777777777777,
+              "name": "Massively Multiplayer",
+              "negative_ratings_mean": 41.22222222222222,
+              "positive_ratings_mean": 49.666666666666664,
+              "price_mean": 3.1744444444444446
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Casual,Indie,Audio Production",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Audio Production",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 42.0,
+              "price_mean": 10.99
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Casual,Indie,Utilities",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Utilities",
+              "negative_ratings_mean": 0.0,
+              "positive_ratings_mean": 6.0,
+              "price_mean": 10.99
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Casual,Indie,Education",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Education",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 3.0,
+              "price_mean": 39.99
+            },
+            {
+              "achievements_mean": 1.0,
+              "all": "Casual,Indie,Accounting",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Accounting",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 1.0,
+              "price_mean": 3.98
+            }
+          ],
+          "count": 1482,
+          "median_playtime_mean": 48.58974358974359,
+          "name": "Indie",
+          "negative_ratings_mean": 16.39676113360324,
+          "positive_ratings_mean": 101.95681511470985,
+          "price_mean": 2.5776788124156544
+        },
+        {
+          "achievements_mean": 161.95,
+          "all": "Casual,Strategy",
+          "average_playtime_mean": 219.26,
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Casual,Strategy,Indie",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Indie",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 4.0,
+              "price_mean": 5.99
+            },
+            {
+              "achievements_mean": 83.0,
+              "all": "Casual,Strategy,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 4,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 7.0,
+              "positive_ratings_mean": 16.25,
+              "price_mean": 0.845
+            }
+          ],
+          "count": 100,
+          "median_playtime_mean": 222.43,
+          "name": "Strategy",
+          "negative_ratings_mean": 31.96,
+          "positive_ratings_mean": 103.87,
+          "price_mean": 6.346399999999999
+        },
+        {
+          "achievements_mean": 56.984375,
+          "all": "Casual,Simulation",
+          "average_playtime_mean": 166.1953125,
+          "children": [
+            {
+              "achievements_mean": 221.89583333333334,
+              "all": "Casual,Simulation,Strategy",
+              "average_playtime_mean": 38.791666666666664,
+              "count": 48,
+              "median_playtime_mean": 40.229166666666664,
+              "name": "Strategy",
+              "negative_ratings_mean": 29.354166666666668,
+              "positive_ratings_mean": 61.416666666666664,
+              "price_mean": 6.942708333333333
+            },
+            {
+              "achievements_mean": 108.22222222222223,
+              "all": "Casual,Simulation,Sports",
+              "average_playtime_mean": 9.63888888888889,
+              "count": 36,
+              "median_playtime_mean": 16.333333333333332,
+              "name": "Sports",
+              "negative_ratings_mean": 21.694444444444443,
+              "positive_ratings_mean": 80.80555555555556,
+              "price_mean": 8.435
+            },
+            {
+              "achievements_mean": 5.142857142857143,
+              "all": "Casual,Simulation,Early Access",
+              "average_playtime_mean": 18.142857142857142,
+              "count": 14,
+              "median_playtime_mean": 18.428571428571427,
+              "name": "Early Access",
+              "negative_ratings_mean": 5.214285714285714,
+              "positive_ratings_mean": 7.714285714285714,
+              "price_mean": 4.247857142857143
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Casual,Simulation,Animation & Modeling",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Animation & Modeling",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 10.0,
+              "price_mean": 2.09
+            }
+          ],
+          "count": 128,
+          "median_playtime_mean": 175.3515625,
+          "name": "Simulation",
+          "negative_ratings_mean": 51.5390625,
+          "positive_ratings_mean": 198.3046875,
+          "price_mean": 5.491796875
+        },
+        {
+          "achievements_mean": 4.75,
+          "all": "Casual,RPG",
+          "average_playtime_mean": 44.916666666666664,
+          "children": [
+            {
+              "achievements_mean": 8.461538461538462,
+              "all": "Casual,RPG,Simulation",
+              "average_playtime_mean": 53.76923076923077,
+              "count": 13,
+              "median_playtime_mean": 53.84615384615385,
+              "name": "Simulation",
+              "negative_ratings_mean": 65.3076923076923,
+              "positive_ratings_mean": 155.53846153846155,
+              "price_mean": 6.351538461538462
+            },
+            {
+              "achievements_mean": 28.666666666666668,
+              "all": "Casual,RPG,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 3,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 0.3333333333333333,
+              "positive_ratings_mean": 5.666666666666667,
+              "price_mean": 5.656666666666666
+            },
+            {
+              "achievements_mean": 3.0,
+              "all": "Casual,RPG,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 3.0,
+              "price_mean": 1.89
+            }
+          ],
+          "count": 12,
+          "median_playtime_mean": 63.916666666666664,
+          "name": "RPG",
+          "negative_ratings_mean": 58.25,
+          "positive_ratings_mean": 179.91666666666666,
+          "price_mean": 5.14
+        },
+        {
+          "achievements_mean": 16.285714285714285,
+          "all": "Casual,Free to Play",
+          "average_playtime_mean": 22.357142857142858,
+          "children": [
+            {
+              "achievements_mean": 50.69444444444444,
+              "all": "Casual,Free to Play,Indie",
+              "average_playtime_mean": 108.36574074074075,
+              "count": 216,
+              "median_playtime_mean": 66.17592592592592,
+              "name": "Indie",
+              "negative_ratings_mean": 153.30092592592592,
+              "positive_ratings_mean": 1187.75,
+              "price_mean": 0.0961574074074074
+            },
+            {
+              "achievements_mean": 10.5,
+              "all": "Casual,Free to Play,Massively Multiplayer",
+              "average_playtime_mean": 242.5,
+              "count": 18,
+              "median_playtime_mean": 310.1111111111111,
+              "name": "Massively Multiplayer",
+              "negative_ratings_mean": 386.0,
+              "positive_ratings_mean": 941.3333333333334,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 12.285714285714286,
+              "all": "Casual,Free to Play,RPG",
+              "average_playtime_mean": 108.0,
+              "count": 7,
+              "median_playtime_mean": 89.14285714285714,
+              "name": "RPG",
+              "negative_ratings_mean": 213.42857142857142,
+              "positive_ratings_mean": 948.1428571428571,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 56.4,
+              "all": "Casual,Free to Play,Strategy",
+              "average_playtime_mean": 25.7,
+              "count": 10,
+              "median_playtime_mean": 25.7,
+              "name": "Strategy",
+              "negative_ratings_mean": 67.3,
+              "positive_ratings_mean": 152.9,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 11.909090909090908,
+              "all": "Casual,Free to Play,Simulation",
+              "average_playtime_mean": 13.666666666666666,
+              "count": 33,
+              "median_playtime_mean": 24.78787878787879,
+              "name": "Simulation",
+              "negative_ratings_mean": 43.54545454545455,
+              "positive_ratings_mean": 143.93939393939394,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 19.5,
+              "all": "Casual,Free to Play,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 4,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 78.5,
+              "positive_ratings_mean": 109.25,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 9.0,
+              "all": "Casual,Free to Play,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 9.5,
+              "positive_ratings_mean": 19.5,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 28,
+          "median_playtime_mean": 28.535714285714285,
+          "name": "Free to Play",
+          "negative_ratings_mean": 62.07142857142857,
+          "positive_ratings_mean": 271.92857142857144,
+          "price_mean": 0.0
+        },
+        {
+          "achievements_mean": 9.285714285714286,
+          "all": "Casual,Sports",
+          "average_playtime_mean": 0.047619047619047616,
+          "count": 21,
+          "median_playtime_mean": 0.047619047619047616,
+          "name": "Sports",
+          "negative_ratings_mean": 17.142857142857142,
+          "positive_ratings_mean": 36.142857142857146,
+          "price_mean": 5.44904761904762
+        },
+        {
+          "achievements_mean": 5.7272727272727275,
+          "all": "Casual,Racing",
+          "average_playtime_mean": 36.63636363636363,
+          "children": [
+            {
+              "achievements_mean": 15.333333333333334,
+              "all": "Casual,Racing,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 3,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 16.0,
+              "positive_ratings_mean": 21.333333333333332,
+              "price_mean": 8.656666666666666
+            },
+            {
+              "achievements_mean": 19.333333333333332,
+              "all": "Casual,Racing,Simulation",
+              "average_playtime_mean": 0.0,
+              "count": 6,
+              "median_playtime_mean": 0.0,
+              "name": "Simulation",
+              "negative_ratings_mean": 14.333333333333334,
+              "positive_ratings_mean": 10.333333333333334,
+              "price_mean": 8.191666666666666
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Casual,Racing,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 4.0,
+              "positive_ratings_mean": 4.0,
+              "price_mean": 0.79
+            }
+          ],
+          "count": 11,
+          "median_playtime_mean": 42.18181818181818,
+          "name": "Racing",
+          "negative_ratings_mean": 86.72727272727273,
+          "positive_ratings_mean": 147.36363636363637,
+          "price_mean": 4.1445454545454545
+        },
+        {
+          "achievements_mean": 4.578947368421052,
+          "all": "Casual,Early Access",
+          "average_playtime_mean": 11.894736842105264,
+          "count": 19,
+          "median_playtime_mean": 13.105263157894736,
+          "name": "Early Access",
+          "negative_ratings_mean": 10.68421052631579,
+          "positive_ratings_mean": 13.105263157894736,
+          "price_mean": 5.48578947368421
+        },
+        {
+          "all": "Casual,Massively Multiplayer",
+          "children": [
+            {
+              "achievements_mean": 50.4,
+              "all": "Casual,Massively Multiplayer,Simulation",
+              "average_playtime_mean": 0.0,
+              "count": 5,
+              "median_playtime_mean": 0.0,
+              "name": "Simulation",
+              "negative_ratings_mean": 10.2,
+              "positive_ratings_mean": 6.6,
+              "price_mean": 9.09
+            },
+            {
+              "achievements_mean": 4.0,
+              "all": "Casual,Massively Multiplayer,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 8.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 0,
+          "name": "Massively Multiplayer"
+        },
+        {
+          "all": "Casual,Animation & Modeling",
+          "children": [
+            {
+              "achievements_mean": 3.0,
+              "all": "Casual,Animation & Modeling,Design & Illustration",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Design & Illustration",
+              "negative_ratings_mean": 0.0,
+              "positive_ratings_mean": 9.0,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Casual,Animation & Modeling,Video Production",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Video Production",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 9.0,
+              "price_mean": 0.79
+            }
+          ],
+          "count": 0,
+          "name": "Animation & Modeling"
+        }
+      ],
+      "count": 560,
+      "median_playtime_mean": 30.96607142857143,
+      "name": "Casual",
+      "negative_ratings_mean": 18.180357142857144,
+      "positive_ratings_mean": 56.042857142857144,
+      "price_mean": 4.684464285714286
+    },
+    {
+      "achievements_mean": 9.6,
+      "all": "Design & Illustration",
+      "average_playtime_mean": 18.4,
+      "children": [
+        {
+          "achievements_mean": 0.0,
+          "all": "Design & Illustration,Web Publishing",
+          "average_playtime_mean": 245.33333333333334,
+          "count": 3,
+          "median_playtime_mean": 265.3333333333333,
+          "name": "Web Publishing",
+          "negative_ratings_mean": 183.0,
+          "positive_ratings_mean": 1948.6666666666667,
+          "price_mean": 55.656666666666666
+        },
+        {
+          "achievements_mean": 3.2,
+          "all": "Design & Illustration,Utilities",
+          "average_playtime_mean": 0.0,
+          "children": [
+            {
+              "achievements_mean": 8.5,
+              "all": "Design & Illustration,Utilities,Web Publishing",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Web Publishing",
+              "negative_ratings_mean": 29.5,
+              "positive_ratings_mean": 147.0,
+              "price_mean": 3.495
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Design & Illustration,Utilities,Video Production",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Video Production",
+              "negative_ratings_mean": 3.0,
+              "positive_ratings_mean": 3.0,
+              "price_mean": 2.79
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Design & Illustration,Utilities,Game Development",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Game Development",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 37.0,
+              "price_mean": 46.49
+            }
+          ],
+          "count": 5,
+          "median_playtime_mean": 0.0,
+          "name": "Utilities",
+          "negative_ratings_mean": 27.0,
+          "positive_ratings_mean": 54.0,
+          "price_mean": 10.99
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Design & Illustration,Photo Editing",
+          "average_playtime_mean": 911.0,
+          "count": 3,
+          "median_playtime_mean": 911.0,
+          "name": "Photo Editing",
+          "negative_ratings_mean": 34.333333333333336,
+          "positive_ratings_mean": 187.33333333333334,
+          "price_mean": 34.99333333333333
+        },
+        {
+          "all": "Design & Illustration,Education",
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Design & Illustration,Education,Utilities",
+              "average_playtime_mean": 0.0,
+              "count": 4,
+              "median_playtime_mean": 0.0,
+              "name": "Utilities",
+              "negative_ratings_mean": 2.75,
+              "positive_ratings_mean": 11.25,
+              "price_mean": 25.839999999999996
+            }
+          ],
+          "count": 0,
+          "name": "Education"
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Design & Illustration,Early Access",
+          "average_playtime_mean": 0.0,
+          "count": 4,
+          "median_playtime_mean": 0.0,
+          "name": "Early Access",
+          "negative_ratings_mean": 29.5,
+          "positive_ratings_mean": 114.25,
+          "price_mean": 9.2425
+        }
+      ],
+      "count": 5,
+      "median_playtime_mean": 18.4,
+      "name": "Design & Illustration",
+      "negative_ratings_mean": 6.4,
+      "positive_ratings_mean": 166.6,
+      "price_mean": 11.998000000000001
+    },
+    {
+      "achievements_mean": 2.3333333333333335,
+      "all": "Early Access",
+      "average_playtime_mean": 0.7777777777777778,
+      "count": 9,
+      "median_playtime_mean": 1.0,
+      "name": "Early Access",
+      "negative_ratings_mean": 39.0,
+      "positive_ratings_mean": 43.44444444444444,
+      "price_mean": 7.224444444444444
+    },
+    {
+      "achievements_mean": 0.0,
+      "all": "Education",
+      "average_playtime_mean": 0.0,
+      "children": [
+        {
+          "achievements_mean": 0.0,
+          "all": "Education,Software Training",
+          "average_playtime_mean": 10.0,
+          "children": [
+            {
+              "achievements_mean": 4.0,
+              "all": "Education,Software Training,Utilities",
+              "average_playtime_mean": 0.0,
+              "count": 3,
+              "median_playtime_mean": 0.0,
+              "name": "Utilities",
+              "negative_ratings_mean": 46.0,
+              "positive_ratings_mean": 84.33333333333333,
+              "price_mean": 4.996666666666667
+            }
+          ],
+          "count": 2,
+          "median_playtime_mean": 10.0,
+          "name": "Software Training",
+          "negative_ratings_mean": 9.0,
+          "positive_ratings_mean": 60.5,
+          "price_mean": 8.49
+        },
+        {
+          "achievements_mean": 7.0,
+          "all": "Education,Early Access",
+          "average_playtime_mean": 0.0,
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Early Access",
+          "negative_ratings_mean": 14.0,
+          "positive_ratings_mean": 24.0,
+          "price_mean": 6.99
+        }
+      ],
+      "count": 8,
+      "median_playtime_mean": 0.0,
+      "name": "Education",
+      "negative_ratings_mean": 3.375,
+      "positive_ratings_mean": 15.75,
+      "price_mean": 2.03375
+    },
+    {
+      "achievements_mean": 10.46875,
+      "all": "Free to Play",
+      "average_playtime_mean": 431.9375,
+      "children": [
+        {
+          "achievements_mean": 4.0,
+          "all": "Free to Play,Massively Multiplayer",
+          "average_playtime_mean": 0.2,
+          "children": [
+            {
+              "achievements_mean": 51.41860465116279,
+              "all": "Free to Play,Massively Multiplayer,RPG",
+              "average_playtime_mean": 1925.4186046511627,
+              "count": 43,
+              "median_playtime_mean": 1505.0697674418604,
+              "name": "RPG",
+              "negative_ratings_mean": 681.3488372093024,
+              "positive_ratings_mean": 1269.6744186046512,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 32.1875,
+              "all": "Free to Play,Massively Multiplayer,Strategy",
+              "average_playtime_mean": 362.375,
+              "count": 16,
+              "median_playtime_mean": 538.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 314.9375,
+              "positive_ratings_mean": 518.4375,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 31.11111111111111,
+              "all": "Free to Play,Massively Multiplayer,Simulation",
+              "average_playtime_mean": 105.77777777777777,
+              "count": 9,
+              "median_playtime_mean": 96.44444444444444,
+              "name": "Simulation",
+              "negative_ratings_mean": 685.7777777777778,
+              "positive_ratings_mean": 1797.2222222222222,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 30.0,
+              "all": "Free to Play,Massively Multiplayer,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 27.0,
+              "positive_ratings_mean": 46.0,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Free to Play,Massively Multiplayer,Early Access",
+              "average_playtime_mean": 208.5,
+              "count": 2,
+              "median_playtime_mean": 208.5,
+              "name": "Early Access",
+              "negative_ratings_mean": 22.5,
+              "positive_ratings_mean": 39.5,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 13.0,
+              "all": "Free to Play,Massively Multiplayer,Racing",
+              "average_playtime_mean": 18.0,
+              "count": 1,
+              "median_playtime_mean": 29.0,
+              "name": "Racing",
+              "negative_ratings_mean": 123.0,
+              "positive_ratings_mean": 149.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 5,
+          "median_playtime_mean": 0.2,
+          "name": "Massively Multiplayer",
+          "negative_ratings_mean": 79.0,
+          "positive_ratings_mean": 60.0,
+          "price_mean": 0.0
+        },
+        {
+          "achievements_mean": 4.795454545454546,
+          "all": "Free to Play,Indie",
+          "average_playtime_mean": 384.52272727272725,
+          "children": [
+            {
+              "achievements_mean": 15.875,
+              "all": "Free to Play,Indie,RPG",
+              "average_playtime_mean": 4008.0416666666665,
+              "count": 24,
+              "median_playtime_mean": 7997.458333333333,
+              "name": "RPG",
+              "negative_ratings_mean": 114.20833333333333,
+              "positive_ratings_mean": 350.2083333333333,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 38.54054054054054,
+              "all": "Free to Play,Indie,Massively Multiplayer",
+              "average_playtime_mean": 51.054054054054056,
+              "count": 37,
+              "median_playtime_mean": 54.486486486486484,
+              "name": "Massively Multiplayer",
+              "negative_ratings_mean": 216.35135135135135,
+              "positive_ratings_mean": 594.7027027027027,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 9.7,
+              "all": "Free to Play,Indie,Simulation",
+              "average_playtime_mean": 362.06666666666666,
+              "count": 30,
+              "median_playtime_mean": 93.86666666666666,
+              "name": "Simulation",
+              "negative_ratings_mean": 254.93333333333334,
+              "positive_ratings_mean": 1078.0333333333333,
+              "price_mean": 0.6663333333333333
+            },
+            {
+              "achievements_mean": 0.7,
+              "all": "Free to Play,Indie,Racing",
+              "average_playtime_mean": 23.3,
+              "count": 10,
+              "median_playtime_mean": 24.6,
+              "name": "Racing",
+              "negative_ratings_mean": 116.2,
+              "positive_ratings_mean": 151.6,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 13.634146341463415,
+              "all": "Free to Play,Indie,Strategy",
+              "average_playtime_mean": 377.8048780487805,
+              "count": 41,
+              "median_playtime_mean": 736.1463414634146,
+              "name": "Strategy",
+              "negative_ratings_mean": 100.09756097560975,
+              "positive_ratings_mean": 348.2439024390244,
+              "price_mean": 0.01926829268292683
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Free to Play,Indie,Sports",
+              "average_playtime_mean": 11.75,
+              "count": 4,
+              "median_playtime_mean": 14.0,
+              "name": "Sports",
+              "negative_ratings_mean": 176.5,
+              "positive_ratings_mean": 465.0,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 2.25,
+              "all": "Free to Play,Indie,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 4,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 7.5,
+              "positive_ratings_mean": 24.0,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Free to Play,Indie,Animation & Modeling",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Animation & Modeling",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 47.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 44,
+          "median_playtime_mean": 24.09090909090909,
+          "name": "Indie",
+          "negative_ratings_mean": 104.95454545454545,
+          "positive_ratings_mean": 725.0227272727273,
+          "price_mean": 0.0
+        },
+        {
+          "achievements_mean": 8.857142857142858,
+          "all": "Free to Play,RPG",
+          "average_playtime_mean": 94.0,
+          "children": [
+            {
+              "achievements_mean": 19.0,
+              "all": "Free to Play,RPG,Strategy",
+              "average_playtime_mean": 214.375,
+              "count": 8,
+              "median_playtime_mean": 245.875,
+              "name": "Strategy",
+              "negative_ratings_mean": 149.375,
+              "positive_ratings_mean": 740.375,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Free to Play,RPG,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 8.5,
+              "positive_ratings_mean": 36.0,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 35.0,
+              "all": "Free to Play,RPG,Simulation",
+              "average_playtime_mean": 1116.0,
+              "count": 1,
+              "median_playtime_mean": 93.0,
+              "name": "Simulation",
+              "negative_ratings_mean": 3569.0,
+              "positive_ratings_mean": 21481.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 7,
+          "median_playtime_mean": 142.28571428571428,
+          "name": "RPG",
+          "negative_ratings_mean": 221.57142857142858,
+          "positive_ratings_mean": 588.0,
+          "price_mean": 0.0
+        },
+        {
+          "all": "Free to Play,Racing",
+          "children": [
+            {
+              "achievements_mean": 14.75,
+              "all": "Free to Play,Racing,Simulation",
+              "average_playtime_mean": 134.5,
+              "count": 4,
+              "median_playtime_mean": 80.0,
+              "name": "Simulation",
+              "negative_ratings_mean": 1584.25,
+              "positive_ratings_mean": 2101.5,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 0,
+          "name": "Racing"
+        },
+        {
+          "achievements_mean": 25.625,
+          "all": "Free to Play,Strategy",
+          "average_playtime_mean": 367.5833333333333,
+          "children": [
+            {
+              "achievements_mean": 12.428571428571429,
+              "all": "Free to Play,Strategy,Early Access",
+              "average_playtime_mean": 7.714285714285714,
+              "count": 7,
+              "median_playtime_mean": 9.285714285714286,
+              "name": "Early Access",
+              "negative_ratings_mean": 183.0,
+              "positive_ratings_mean": 337.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 24,
+          "median_playtime_mean": 121.75,
+          "name": "Strategy",
+          "negative_ratings_mean": 666.0416666666666,
+          "positive_ratings_mean": 1623.25,
+          "price_mean": 0.0
+        },
+        {
+          "achievements_mean": 21.238095238095237,
+          "all": "Free to Play,Simulation",
+          "average_playtime_mean": 147.85714285714286,
+          "children": [
+            {
+              "achievements_mean": 47.0,
+              "all": "Free to Play,Simulation,Strategy",
+              "average_playtime_mean": 81.75,
+              "count": 4,
+              "median_playtime_mean": 114.75,
+              "name": "Strategy",
+              "negative_ratings_mean": 440.75,
+              "positive_ratings_mean": 945.75,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Free to Play,Simulation,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 3,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 15.666666666666666,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 56.25,
+              "all": "Free to Play,Simulation,Sports",
+              "average_playtime_mean": 8.5,
+              "count": 4,
+              "median_playtime_mean": 8.75,
+              "name": "Sports",
+              "negative_ratings_mean": 51.25,
+              "positive_ratings_mean": 122.25,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Free to Play,Simulation,Animation & Modeling",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Animation & Modeling",
+              "negative_ratings_mean": 2.0,
+              "positive_ratings_mean": 2.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 21,
+          "median_playtime_mean": 191.76190476190476,
+          "name": "Simulation",
+          "negative_ratings_mean": 264.3333333333333,
+          "positive_ratings_mean": 910.5238095238095,
+          "price_mean": 0.0
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Free to Play,Sports",
+          "average_playtime_mean": 162.0,
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Free to Play,Sports,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 15.0,
+              "positive_ratings_mean": 43.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 1,
+          "median_playtime_mean": 244.0,
+          "name": "Sports",
+          "negative_ratings_mean": 169.0,
+          "positive_ratings_mean": 367.0,
+          "price_mean": 0.0
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Free to Play,Design & Illustration",
+          "average_playtime_mean": 0.0,
+          "count": 2,
+          "median_playtime_mean": 0.0,
+          "name": "Design & Illustration",
+          "negative_ratings_mean": 8.0,
+          "positive_ratings_mean": 73.0,
+          "price_mean": 0.0
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Free to Play,Early Access",
+          "average_playtime_mean": 0.0,
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Early Access",
+          "negative_ratings_mean": 13.0,
+          "positive_ratings_mean": 244.0,
+          "price_mean": 0.0
+        }
+      ],
+      "count": 32,
+      "median_playtime_mean": 129.375,
+      "name": "Free to Play",
+      "negative_ratings_mean": 168.1875,
+      "positive_ratings_mean": 465.75,
+      "price_mean": 0.0
+    },
+    {
+      "achievements_mean": 57.0,
+      "all": "Gore",
+      "average_playtime_mean": 168.0,
+      "children": [
+        {
+          "achievements_mean": 5.666666666666667,
+          "all": "Gore,Action",
+          "average_playtime_mean": 0.0,
+          "children": [
+            {
+              "achievements_mean": 19.545454545454547,
+              "all": "Gore,Action,Adventure",
+              "average_playtime_mean": 73.5,
+              "count": 22,
+              "median_playtime_mean": 79.9090909090909,
+              "name": "Adventure",
+              "negative_ratings_mean": 31.954545454545453,
+              "positive_ratings_mean": 110.5909090909091,
+              "price_mean": 6.399545454545454
+            },
+            {
+              "achievements_mean": 10.4,
+              "all": "Gore,Action,Casual",
+              "average_playtime_mean": 30.2,
+              "count": 5,
+              "median_playtime_mean": 30.2,
+              "name": "Casual",
+              "negative_ratings_mean": 10.2,
+              "positive_ratings_mean": 57.4,
+              "price_mean": 2.75
+            },
+            {
+              "achievements_mean": 8.0,
+              "all": "Gore,Action,Free to Play",
+              "average_playtime_mean": 9.0,
+              "count": 1,
+              "median_playtime_mean": 9.0,
+              "name": "Free to Play",
+              "negative_ratings_mean": 143.0,
+              "positive_ratings_mean": 290.0,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 36.75,
+              "all": "Gore,Action,Indie",
+              "average_playtime_mean": 25.5,
+              "count": 12,
+              "median_playtime_mean": 25.5,
+              "name": "Indie",
+              "negative_ratings_mean": 15.666666666666666,
+              "positive_ratings_mean": 30.583333333333332,
+              "price_mean": 5.383333333333333
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Gore,Action,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 8.0,
+              "positive_ratings_mean": 2.0,
+              "price_mean": 3.99
+            }
+          ],
+          "count": 3,
+          "median_playtime_mean": 0.0,
+          "name": "Action",
+          "negative_ratings_mean": 4.333333333333333,
+          "positive_ratings_mean": 7.666666666666667,
+          "price_mean": 11.656666666666666
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Gore,Indie",
+          "average_playtime_mean": 162.0,
+          "children": [
+            {
+              "achievements_mean": 27.0,
+              "all": "Gore,Indie,Simulation",
+              "average_playtime_mean": 120.0,
+              "count": 2,
+              "median_playtime_mean": 141.5,
+              "name": "Simulation",
+              "negative_ratings_mean": 245.0,
+              "positive_ratings_mean": 2146.5,
+              "price_mean": 5.890000000000001
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Gore,Indie,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 280.0,
+              "positive_ratings_mean": 152.0,
+              "price_mean": 3.99
+            }
+          ],
+          "count": 3,
+          "median_playtime_mean": 169.66666666666666,
+          "name": "Indie",
+          "negative_ratings_mean": 64.0,
+          "positive_ratings_mean": 73.33333333333333,
+          "price_mean": 3.59
+        },
+        {
+          "achievements_mean": 17.0,
+          "all": "Gore,Adventure",
+          "average_playtime_mean": 0.5,
+          "children": [
+            {
+              "achievements_mean": 6.6875,
+              "all": "Gore,Adventure,Indie",
+              "average_playtime_mean": 40.625,
+              "count": 16,
+              "median_playtime_mean": 40.8125,
+              "name": "Indie",
+              "negative_ratings_mean": 18.875,
+              "positive_ratings_mean": 37.6875,
+              "price_mean": 2.934375
+            },
+            {
+              "achievements_mean": 89.5,
+              "all": "Gore,Adventure,Casual",
+              "average_playtime_mean": 0.0,
+              "count": 6,
+              "median_playtime_mean": 0.0,
+              "name": "Casual",
+              "negative_ratings_mean": 49.5,
+              "positive_ratings_mean": 57.833333333333336,
+              "price_mean": 2.1249999999999996
+            },
+            {
+              "achievements_mean": 17.0,
+              "all": "Gore,Adventure,Simulation",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Simulation",
+              "negative_ratings_mean": 3.0,
+              "positive_ratings_mean": 23.0,
+              "price_mean": 2.09
+            }
+          ],
+          "count": 2,
+          "median_playtime_mean": 0.5,
+          "name": "Adventure",
+          "negative_ratings_mean": 9.5,
+          "positive_ratings_mean": 28.0,
+          "price_mean": 11.889999999999999
+        },
+        {
+          "all": "Gore,Casual",
+          "children": [
+            {
+              "achievements_mean": 16.25,
+              "all": "Gore,Casual,Indie",
+              "average_playtime_mean": 0.0,
+              "count": 4,
+              "median_playtime_mean": 0.0,
+              "name": "Indie",
+              "negative_ratings_mean": 7.5,
+              "positive_ratings_mean": 23.25,
+              "price_mean": 3.6900000000000004
+            }
+          ],
+          "count": 0,
+          "name": "Casual"
+        },
+        {
+          "all": "Gore,Simulation",
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Gore,Simulation,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 26.0,
+              "price_mean": 10.29
+            }
+          ],
+          "count": 0,
+          "name": "Simulation"
+        }
+      ],
+      "count": 1,
+      "median_playtime_mean": 179.0,
+      "name": "Gore",
+      "negative_ratings_mean": 318.0,
+      "positive_ratings_mean": 1072.0,
+      "price_mean": 14.99
+    },
+    {
+      "achievements_mean": 31.023715415019762,
+      "all": "Indie",
+      "average_playtime_mean": 33.33201581027668,
+      "children": [
+        {
+          "achievements_mean": 21.546703296703296,
+          "all": "Indie,Strategy",
+          "average_playtime_mean": 120.39010989010988,
+          "children": [
+            {
+              "achievements_mean": 13.566666666666666,
+              "all": "Indie,Strategy,Early Access",
+              "average_playtime_mean": 19.333333333333332,
+              "count": 60,
+              "median_playtime_mean": 23.366666666666667,
+              "name": "Early Access",
+              "negative_ratings_mean": 23.866666666666667,
+              "positive_ratings_mean": 56.0,
+              "price_mean": 7.197500000000001
+            }
+          ],
+          "count": 364,
+          "median_playtime_mean": 121.76648351648352,
+          "name": "Strategy",
+          "negative_ratings_mean": 69.67857142857143,
+          "positive_ratings_mean": 354.4423076923077,
+          "price_mean": 7.12804945054945
+        },
+        {
+          "achievements_mean": 14.646788990825687,
+          "all": "Indie,Simulation",
+          "average_playtime_mean": 308.91284403669727,
+          "children": [
+            {
+              "achievements_mean": 19.756410256410255,
+              "all": "Indie,Simulation,Strategy",
+              "average_playtime_mean": 145.21794871794873,
+              "count": 312,
+              "median_playtime_mean": 137.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 161.7852564102564,
+              "positive_ratings_mean": 956.9775641025641,
+              "price_mean": 9.776538461538461
+            },
+            {
+              "achievements_mean": 19.25,
+              "all": "Indie,Simulation,Sports",
+              "average_playtime_mean": 26.321428571428573,
+              "count": 84,
+              "median_playtime_mean": 31.321428571428573,
+              "name": "Sports",
+              "negative_ratings_mean": 38.666666666666664,
+              "positive_ratings_mean": 199.92857142857142,
+              "price_mean": 10.924999999999999
+            },
+            {
+              "achievements_mean": 4.321428571428571,
+              "all": "Indie,Simulation,Early Access",
+              "average_playtime_mean": 100.33928571428571,
+              "count": 56,
+              "median_playtime_mean": 92.44642857142857,
+              "name": "Early Access",
+              "negative_ratings_mean": 93.53571428571429,
+              "positive_ratings_mean": 908.3035714285714,
+              "price_mean": 8.522142857142857
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Indie,Simulation,Web Publishing",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Web Publishing",
+              "negative_ratings_mean": 22.0,
+              "positive_ratings_mean": 35.0,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 4.0,
+              "all": "Indie,Simulation,Audio Production",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Audio Production",
+              "negative_ratings_mean": 6.5,
+              "positive_ratings_mean": 61.0,
+              "price_mean": 8.34
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Indie,Simulation,Education",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Education",
+              "negative_ratings_mean": 3.0,
+              "positive_ratings_mean": 10.0,
+              "price_mean": 3.99
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Indie,Simulation,Animation & Modeling",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Animation & Modeling",
+              "negative_ratings_mean": 4.0,
+              "positive_ratings_mean": 7.0,
+              "price_mean": 11.39
+            }
+          ],
+          "count": 218,
+          "median_playtime_mean": 219.05045871559633,
+          "name": "Simulation",
+          "negative_ratings_mean": 234.93577981651376,
+          "positive_ratings_mean": 3366.376146788991,
+          "price_mean": 7.212201834862387
+        },
+        {
+          "achievements_mean": 10.26086956521739,
+          "all": "Indie,Casual",
+          "average_playtime_mean": 27.130434782608695,
+          "children": [
+            {
+              "achievements_mean": 30.0,
+              "all": "Indie,Casual,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 10.0,
+              "positive_ratings_mean": 6.0,
+              "price_mean": 13.99
+            }
+          ],
+          "count": 23,
+          "median_playtime_mean": 35.391304347826086,
+          "name": "Casual",
+          "negative_ratings_mean": 55.08695652173913,
+          "positive_ratings_mean": 235.43478260869566,
+          "price_mean": 4.686086956521739
+        },
+        {
+          "achievements_mean": 44.5,
+          "all": "Indie,Racing",
+          "average_playtime_mean": 67.75,
+          "children": [
+            {
+              "achievements_mean": 9.473684210526315,
+              "all": "Indie,Racing,Sports",
+              "average_playtime_mean": 20.105263157894736,
+              "count": 19,
+              "median_playtime_mean": 20.105263157894736,
+              "name": "Sports",
+              "negative_ratings_mean": 15.842105263157896,
+              "positive_ratings_mean": 44.473684210526315,
+              "price_mean": 6.695263157894737
+            },
+            {
+              "achievements_mean": 27.318181818181817,
+              "all": "Indie,Racing,Simulation",
+              "average_playtime_mean": 136.13636363636363,
+              "count": 44,
+              "median_playtime_mean": 187.25,
+              "name": "Simulation",
+              "negative_ratings_mean": 121.47727272727273,
+              "positive_ratings_mean": 758.75,
+              "price_mean": 7.645000000000001
+            },
+            {
+              "achievements_mean": 26.0,
+              "all": "Indie,Racing,RPG",
+              "average_playtime_mean": 235.5,
+              "count": 2,
+              "median_playtime_mean": 240.0,
+              "name": "RPG",
+              "negative_ratings_mean": 29.5,
+              "positive_ratings_mean": 176.5,
+              "price_mean": 3.89
+            },
+            {
+              "achievements_mean": 3.0,
+              "all": "Indie,Racing,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 9,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 7.222222222222222,
+              "positive_ratings_mean": 31.22222222222222,
+              "price_mean": 5.301111111111111
+            },
+            {
+              "achievements_mean": 20.0,
+              "all": "Indie,Racing,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 3.0,
+              "positive_ratings_mean": 5.0,
+              "price_mean": 10.99
+            }
+          ],
+          "count": 40,
+          "median_playtime_mean": 68.45,
+          "name": "Racing",
+          "negative_ratings_mean": 38.875,
+          "positive_ratings_mean": 65.0,
+          "price_mean": 5.325
+        },
+        {
+          "achievements_mean": 26.57547169811321,
+          "all": "Indie,RPG",
+          "average_playtime_mean": 76.04716981132076,
+          "children": [
+            {
+              "achievements_mean": 27.059880239520957,
+              "all": "Indie,RPG,Strategy",
+              "average_playtime_mean": 453.1317365269461,
+              "count": 167,
+              "median_playtime_mean": 719.2694610778443,
+              "name": "Strategy",
+              "negative_ratings_mean": 143.22155688622755,
+              "positive_ratings_mean": 727.2874251497007,
+              "price_mean": 8.556287425149701
+            },
+            {
+              "achievements_mean": 24.53488372093023,
+              "all": "Indie,RPG,Simulation",
+              "average_playtime_mean": 246.65116279069767,
+              "count": 86,
+              "median_playtime_mean": 256.8837209302326,
+              "name": "Simulation",
+              "negative_ratings_mean": 201.48837209302326,
+              "positive_ratings_mean": 2243.8837209302324,
+              "price_mean": 8.410232558139535
+            },
+            {
+              "achievements_mean": 3.1666666666666665,
+              "all": "Indie,RPG,Early Access",
+              "average_playtime_mean": 15.833333333333334,
+              "count": 18,
+              "median_playtime_mean": 16.333333333333332,
+              "name": "Early Access",
+              "negative_ratings_mean": 4.222222222222222,
+              "positive_ratings_mean": 16.944444444444443,
+              "price_mean": 6.755
+            },
+            {
+              "achievements_mean": 45.0,
+              "all": "Indie,RPG,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 26.0,
+              "positive_ratings_mean": 65.0,
+              "price_mean": 15.49
+            }
+          ],
+          "count": 212,
+          "median_playtime_mean": 82.82075471698113,
+          "name": "RPG",
+          "negative_ratings_mean": 59.014150943396224,
+          "positive_ratings_mean": 682.2311320754717,
+          "price_mean": 5.349009433962264
+        },
+        {
+          "achievements_mean": 2.5,
+          "all": "Indie,Massively Multiplayer",
+          "average_playtime_mean": 131.5,
+          "children": [
+            {
+              "achievements_mean": 38.42857142857143,
+              "all": "Indie,Massively Multiplayer,RPG",
+              "average_playtime_mean": 270.4761904761905,
+              "count": 21,
+              "median_playtime_mean": 273.6666666666667,
+              "name": "RPG",
+              "negative_ratings_mean": 200.95238095238096,
+              "positive_ratings_mean": 433.95238095238096,
+              "price_mean": 11.191428571428574
+            },
+            {
+              "achievements_mean": 6.125,
+              "all": "Indie,Massively Multiplayer,Strategy",
+              "average_playtime_mean": 4855.375,
+              "count": 8,
+              "median_playtime_mean": 4855.375,
+              "name": "Strategy",
+              "negative_ratings_mean": 42.875,
+              "positive_ratings_mean": 122.25,
+              "price_mean": 9.139999999999999
+            },
+            {
+              "achievements_mean": 3.375,
+              "all": "Indie,Massively Multiplayer,Simulation",
+              "average_playtime_mean": 0.0,
+              "count": 8,
+              "median_playtime_mean": 0.0,
+              "name": "Simulation",
+              "negative_ratings_mean": 56.875,
+              "positive_ratings_mean": 194.375,
+              "price_mean": 13.09
+            },
+            {
+              "achievements_mean": 4.333333333333333,
+              "all": "Indie,Massively Multiplayer,Racing",
+              "average_playtime_mean": 0.0,
+              "count": 3,
+              "median_playtime_mean": 0.0,
+              "name": "Racing",
+              "negative_ratings_mean": 57.333333333333336,
+              "positive_ratings_mean": 77.33333333333333,
+              "price_mean": 4.256666666666667
+            }
+          ],
+          "count": 2,
+          "median_playtime_mean": 132.5,
+          "name": "Massively Multiplayer",
+          "negative_ratings_mean": 2.0,
+          "positive_ratings_mean": 11.5,
+          "price_mean": 1.24
+        },
+        {
+          "achievements_mean": 13.6,
+          "all": "Indie,Sports",
+          "average_playtime_mean": 8.8,
+          "children": [
+            {
+              "achievements_mean": 9.285714285714286,
+              "all": "Indie,Sports,Strategy",
+              "average_playtime_mean": 33.857142857142854,
+              "count": 7,
+              "median_playtime_mean": 39.285714285714285,
+              "name": "Strategy",
+              "negative_ratings_mean": 26.714285714285715,
+              "positive_ratings_mean": 58.285714285714285,
+              "price_mean": 7.97
+            },
+            {
+              "achievements_mean": 2.75,
+              "all": "Indie,Sports,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 4,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 7.75,
+              "positive_ratings_mean": 54.25,
+              "price_mean": 7.165
+            }
+          ],
+          "count": 30,
+          "median_playtime_mean": 9.966666666666667,
+          "name": "Sports",
+          "negative_ratings_mean": 39.53333333333333,
+          "positive_ratings_mean": 130.66666666666666,
+          "price_mean": 6.21
+        },
+        {
+          "achievements_mean": 6.821428571428571,
+          "all": "Indie,Early Access",
+          "average_playtime_mean": 32.19642857142857,
+          "count": 56,
+          "median_playtime_mean": 34.57142857142857,
+          "name": "Early Access",
+          "negative_ratings_mean": 21.910714285714285,
+          "positive_ratings_mean": 225.89285714285714,
+          "price_mean": 5.897321428571429
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Indie,Animation & Modeling",
+          "average_playtime_mean": 0.0,
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Animation & Modeling",
+          "negative_ratings_mean": 3.0,
+          "positive_ratings_mean": 5.0,
+          "price_mean": 23.79
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Indie,Audio Production",
+          "average_playtime_mean": 8.0,
+          "children": [
+            {
+              "achievements_mean": 10.0,
+              "all": "Indie,Audio Production,Utilities",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Utilities",
+              "negative_ratings_mean": 2.0,
+              "positive_ratings_mean": 1.0,
+              "price_mean": 4.79
+            }
+          ],
+          "count": 1,
+          "median_playtime_mean": 8.0,
+          "name": "Audio Production",
+          "negative_ratings_mean": 12.0,
+          "positive_ratings_mean": 296.0,
+          "price_mean": 0.0
+        }
+      ],
+      "count": 759,
+      "median_playtime_mean": 35.931488801054016,
+      "name": "Indie",
+      "negative_ratings_mean": 31.177865612648223,
+      "positive_ratings_mean": 193.2437417654809,
+      "price_mean": 3.9695256916996047
+    },
+    {
+      "all": "Massively Multiplayer",
+      "children": [
+        {
+          "achievements_mean": 0.0,
+          "all": "Massively Multiplayer,RPG",
+          "average_playtime_mean": 19778.0,
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Massively Multiplayer,RPG,Early Access",
+              "average_playtime_mean": 8.0,
+              "count": 2,
+              "median_playtime_mean": 8.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 156.5,
+              "positive_ratings_mean": 191.0,
+              "price_mean": 4.995
+            },
+            {
+              "achievements_mean": 55.0,
+              "all": "Massively Multiplayer,RPG,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 32.0,
+              "positive_ratings_mean": 25.0,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Massively Multiplayer,RPG,Utilities",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Utilities",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 6.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 2,
+          "median_playtime_mean": 6233.5,
+          "name": "RPG",
+          "negative_ratings_mean": 6889.5,
+          "positive_ratings_mean": 21763.5,
+          "price_mean": 12.49
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Massively Multiplayer,Racing",
+          "average_playtime_mean": 8159.0,
+          "children": [
+            {
+              "achievements_mean": 14.5,
+              "all": "Massively Multiplayer,Racing,Simulation",
+              "average_playtime_mean": 153.0,
+              "count": 4,
+              "median_playtime_mean": 153.0,
+              "name": "Simulation",
+              "negative_ratings_mean": 132.5,
+              "positive_ratings_mean": 950.25,
+              "price_mean": 8.0675
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Massively Multiplayer,Racing,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 25.0,
+              "positive_ratings_mean": 34.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 1,
+          "median_playtime_mean": 8159.0,
+          "name": "Racing",
+          "negative_ratings_mean": 441.0,
+          "positive_ratings_mean": 742.0,
+          "price_mean": 33.99
+        },
+        {
+          "all": "Massively Multiplayer,Simulation",
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Massively Multiplayer,Simulation,Early Access",
+              "average_playtime_mean": 13.0,
+              "count": 1,
+              "median_playtime_mean": 13.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 21.0,
+              "positive_ratings_mean": 364.0,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Massively Multiplayer,Simulation,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 48.0,
+              "positive_ratings_mean": 117.0,
+              "price_mean": 0.79
+            }
+          ],
+          "count": 0,
+          "name": "Simulation"
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Massively Multiplayer,Strategy",
+          "average_playtime_mean": 0.0,
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Strategy",
+          "negative_ratings_mean": 6.0,
+          "positive_ratings_mean": 12.0,
+          "price_mean": 7.19
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Massively Multiplayer,Early Access",
+          "average_playtime_mean": 0.0,
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Early Access",
+          "negative_ratings_mean": 34.0,
+          "positive_ratings_mean": 62.0,
+          "price_mean": 5.34
+        }
+      ],
+      "count": 0,
+      "name": "Massively Multiplayer"
+    },
+    {
+      "all": "Nudity",
+      "children": [
+        {
+          "all": "Nudity,Violent",
+          "children": [
+            {
+              "achievements_mean": 3.5555555555555554,
+              "all": "Nudity,Violent,Action",
+              "average_playtime_mean": 79.0,
+              "count": 9,
+              "median_playtime_mean": 95.55555555555556,
+              "name": "Action",
+              "negative_ratings_mean": 141.22222222222223,
+              "positive_ratings_mean": 250.55555555555554,
+              "price_mean": 5.178888888888888
+            },
+            {
+              "achievements_mean": 61.0,
+              "all": "Nudity,Violent,RPG",
+              "average_playtime_mean": 327.0,
+              "count": 1,
+              "median_playtime_mean": 403.0,
+              "name": "RPG",
+              "negative_ratings_mean": 2051.0,
+              "positive_ratings_mean": 3054.0,
+              "price_mean": 14.99
+            },
+            {
+              "achievements_mean": 13.696969696969697,
+              "all": "Nudity,Violent,Gore",
+              "average_playtime_mean": 163.27272727272728,
+              "count": 33,
+              "median_playtime_mean": 97.63636363636364,
+              "name": "Gore",
+              "negative_ratings_mean": 615.7575757575758,
+              "positive_ratings_mean": 2165.5151515151515,
+              "price_mean": 9.383939393939395
+            },
+            {
+              "achievements_mean": 7.1,
+              "all": "Nudity,Violent,Adventure",
+              "average_playtime_mean": 13.7,
+              "count": 10,
+              "median_playtime_mean": 14.7,
+              "name": "Adventure",
+              "negative_ratings_mean": 51.7,
+              "positive_ratings_mean": 394.9,
+              "price_mean": 4.732
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Nudity,Violent,Free to Play",
+              "average_playtime_mean": 4.0,
+              "count": 1,
+              "median_playtime_mean": 4.0,
+              "name": "Free to Play",
+              "negative_ratings_mean": 18.0,
+              "positive_ratings_mean": 140.0,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 44.0,
+              "all": "Nudity,Violent,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 16.0,
+              "positive_ratings_mean": 9.0,
+              "price_mean": 19.99
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Nudity,Violent,Casual",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Casual",
+              "negative_ratings_mean": 4.0,
+              "positive_ratings_mean": 6.0,
+              "price_mean": 6.99
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Nudity,Violent,Indie",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Indie",
+              "negative_ratings_mean": 79.5,
+              "positive_ratings_mean": 55.0,
+              "price_mean": 3.99
+            }
+          ],
+          "count": 0,
+          "name": "Violent"
+        },
+        {
+          "all": "Nudity,Gore",
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Nudity,Gore,Action",
+              "average_playtime_mean": 62.666666666666664,
+              "count": 3,
+              "median_playtime_mean": 63.0,
+              "name": "Action",
+              "negative_ratings_mean": 31.0,
+              "positive_ratings_mean": 472.0,
+              "price_mean": 1.86
+            },
+            {
+              "achievements_mean": 3.5,
+              "all": "Nudity,Gore,Adventure",
+              "average_playtime_mean": 89.0,
+              "count": 2,
+              "median_playtime_mean": 89.0,
+              "name": "Adventure",
+              "negative_ratings_mean": 16.0,
+              "positive_ratings_mean": 83.0,
+              "price_mean": 3.19
+            }
+          ],
+          "count": 0,
+          "name": "Gore"
+        },
+        {
+          "achievements_mean": 56.0,
+          "all": "Nudity,Action",
+          "average_playtime_mean": 75.0,
+          "children": [
+            {
+              "achievements_mean": 3.6,
+              "all": "Nudity,Action,Adventure",
+              "average_playtime_mean": 5.4,
+              "count": 5,
+              "median_playtime_mean": 6.8,
+              "name": "Adventure",
+              "negative_ratings_mean": 45.6,
+              "positive_ratings_mean": 144.2,
+              "price_mean": 3.4120000000000004
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Nudity,Action,Indie",
+              "average_playtime_mean": 266.0,
+              "count": 2,
+              "median_playtime_mean": 271.0,
+              "name": "Indie",
+              "negative_ratings_mean": 46.5,
+              "positive_ratings_mean": 70.0,
+              "price_mean": 9.190000000000001
+            },
+            {
+              "achievements_mean": 15.666666666666666,
+              "all": "Nudity,Action,Casual",
+              "average_playtime_mean": 54.0,
+              "count": 3,
+              "median_playtime_mean": 54.0,
+              "name": "Casual",
+              "negative_ratings_mean": 48.0,
+              "positive_ratings_mean": 165.33333333333334,
+              "price_mean": 8.056666666666667
+            }
+          ],
+          "count": 1,
+          "median_playtime_mean": 75.0,
+          "name": "Action",
+          "negative_ratings_mean": 11.0,
+          "positive_ratings_mean": 59.0,
+          "price_mean": 22.99
+        },
+        {
+          "achievements_mean": 17.5,
+          "all": "Nudity,Indie",
+          "average_playtime_mean": 110.0,
+          "children": [
+            {
+              "achievements_mean": 11.5,
+              "all": "Nudity,Indie,RPG",
+              "average_playtime_mean": 264.5,
+              "count": 2,
+              "median_playtime_mean": 264.5,
+              "name": "RPG",
+              "negative_ratings_mean": 10.0,
+              "positive_ratings_mean": 79.5,
+              "price_mean": 6.99
+            }
+          ],
+          "count": 2,
+          "median_playtime_mean": 110.0,
+          "name": "Indie",
+          "negative_ratings_mean": 58.0,
+          "positive_ratings_mean": 188.0,
+          "price_mean": 5.59
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Nudity,Casual",
+          "average_playtime_mean": 0.0,
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Nudity,Casual,Free to Play",
+              "average_playtime_mean": 5.0,
+              "count": 1,
+              "median_playtime_mean": 5.0,
+              "name": "Free to Play",
+              "negative_ratings_mean": 46.0,
+              "positive_ratings_mean": 164.0,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 12.5,
+              "all": "Nudity,Casual,Indie",
+              "average_playtime_mean": 27.5,
+              "count": 8,
+              "median_playtime_mean": 28.75,
+              "name": "Indie",
+              "negative_ratings_mean": 17.375,
+              "positive_ratings_mean": 67.75,
+              "price_mean": 2.59
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Nudity,Casual,Simulation",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Simulation",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 9.0,
+              "price_mean": 2.89
+            }
+          ],
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Casual",
+          "negative_ratings_mean": 6.0,
+          "positive_ratings_mean": 34.0,
+          "price_mean": 6.99
+        },
+        {
+          "achievements_mean": 20.6,
+          "all": "Nudity,Adventure",
+          "average_playtime_mean": 0.0,
+          "children": [
+            {
+              "achievements_mean": 24.636363636363637,
+              "all": "Nudity,Adventure,Casual",
+              "average_playtime_mean": 94.63636363636364,
+              "count": 11,
+              "median_playtime_mean": 101.45454545454545,
+              "name": "Casual",
+              "negative_ratings_mean": 141.36363636363637,
+              "positive_ratings_mean": 1095.4545454545455,
+              "price_mean": 2.772727272727273
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Nudity,Adventure,RPG",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "RPG",
+              "negative_ratings_mean": 7.0,
+              "positive_ratings_mean": 28.0,
+              "price_mean": 6.99
+            },
+            {
+              "achievements_mean": 10.0,
+              "all": "Nudity,Adventure,Indie",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Indie",
+              "negative_ratings_mean": 8.0,
+              "positive_ratings_mean": 5.0,
+              "price_mean": 0.79
+            }
+          ],
+          "count": 5,
+          "median_playtime_mean": 0.0,
+          "name": "Adventure",
+          "negative_ratings_mean": 3.8,
+          "positive_ratings_mean": 25.2,
+          "price_mean": 15.351999999999999
+        },
+        {
+          "achievements_mean": 20.0,
+          "all": "Nudity,RPG",
+          "average_playtime_mean": 38.0,
+          "count": 2,
+          "median_playtime_mean": 38.0,
+          "name": "RPG",
+          "negative_ratings_mean": 71.0,
+          "positive_ratings_mean": 280.0,
+          "price_mean": 20.84
+        },
+        {
+          "all": "Nudity,Free to Play",
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Nudity,Free to Play,Simulation",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Simulation",
+              "negative_ratings_mean": 11.0,
+              "positive_ratings_mean": 32.0,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 3.0,
+              "all": "Nudity,Free to Play,Indie",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Indie",
+              "negative_ratings_mean": 18.0,
+              "positive_ratings_mean": 117.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 0,
+          "name": "Free to Play"
+        },
+        {
+          "achievements_mean": 16.0,
+          "all": "Nudity,Simulation",
+          "average_playtime_mean": 0.0,
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Simulation",
+          "negative_ratings_mean": 11.0,
+          "positive_ratings_mean": 110.0,
+          "price_mean": 7.19
+        }
+      ],
+      "count": 0,
+      "name": "Nudity"
+    },
+    {
+      "all": "Photo Editing",
+      "children": [
+        {
+          "all": "Photo Editing,Utilities",
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Photo Editing,Utilities,Video Production",
+              "average_playtime_mean": 293.0,
+              "count": 1,
+              "median_playtime_mean": 298.0,
+              "name": "Video Production",
+              "negative_ratings_mean": 13.0,
+              "positive_ratings_mean": 17.0,
+              "price_mean": 6.99
+            }
+          ],
+          "count": 0,
+          "name": "Utilities"
+        }
+      ],
+      "count": 0,
+      "name": "Photo Editing"
+    },
+    {
+      "achievements_mean": 61.46296296296296,
+      "all": "RPG",
+      "average_playtime_mean": 370.9222222222222,
+      "children": [
+        {
+          "achievements_mean": 27.42528735632184,
+          "all": "RPG,Strategy",
+          "average_playtime_mean": 284.01149425287355,
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "RPG,Strategy,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 25.0,
+              "positive_ratings_mean": 186.5,
+              "price_mean": 10.99
+            }
+          ],
+          "count": 87,
+          "median_playtime_mean": 316.82758620689657,
+          "name": "Strategy",
+          "negative_ratings_mean": 199.70114942528735,
+          "positive_ratings_mean": 796.2298850574713,
+          "price_mean": 11.469310344827587
+        },
+        {
+          "all": "RPG,Casual",
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "RPG,Casual,Adventure",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Adventure",
+              "negative_ratings_mean": 14.0,
+              "positive_ratings_mean": 57.0,
+              "price_mean": 6.99
+            }
+          ],
+          "count": 0,
+          "name": "Casual"
+        },
+        {
+          "achievements_mean": 5.0,
+          "all": "RPG,Indie",
+          "average_playtime_mean": 134.5,
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "RPG,Indie,Casual",
+              "average_playtime_mean": 105.0,
+              "count": 1,
+              "median_playtime_mean": 105.0,
+              "name": "Casual",
+              "negative_ratings_mean": 63.0,
+              "positive_ratings_mean": 111.0,
+              "price_mean": 14.99
+            }
+          ],
+          "count": 6,
+          "median_playtime_mean": 195.83333333333334,
+          "name": "Indie",
+          "negative_ratings_mean": 77.0,
+          "positive_ratings_mean": 1081.8333333333333,
+          "price_mean": 4.66
+        },
+        {
+          "achievements_mean": 10.9,
+          "all": "RPG,Simulation",
+          "average_playtime_mean": 0.0,
+          "children": [
+            {
+              "achievements_mean": 31.0,
+              "all": "RPG,Simulation,Strategy",
+              "average_playtime_mean": 173.1875,
+              "count": 16,
+              "median_playtime_mean": 121.5,
+              "name": "Strategy",
+              "negative_ratings_mean": 623.0,
+              "positive_ratings_mean": 2874.6875,
+              "price_mean": 11.54
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "RPG,Simulation,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 2.0,
+              "positive_ratings_mean": 4.0,
+              "price_mean": 11.39
+            }
+          ],
+          "count": 10,
+          "median_playtime_mean": 0.0,
+          "name": "Simulation",
+          "negative_ratings_mean": 77.8,
+          "positive_ratings_mean": 105.8,
+          "price_mean": 10.311
+        },
+        {
+          "achievements_mean": 8.416666666666666,
+          "all": "RPG,Early Access",
+          "average_playtime_mean": 24.083333333333332,
+          "count": 12,
+          "median_playtime_mean": 24.5,
+          "name": "Early Access",
+          "negative_ratings_mean": 21.25,
+          "positive_ratings_mean": 63.833333333333336,
+          "price_mean": 11.098333333333331
+        },
+        {
+          "all": "RPG,Sports",
+          "children": [
+            {
+              "achievements_mean": 18.0,
+              "all": "RPG,Sports,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 2.0,
+              "positive_ratings_mean": 20.0,
+              "price_mean": 6.99
+            }
+          ],
+          "count": 0,
+          "name": "Sports"
+        }
+      ],
+      "count": 270,
+      "median_playtime_mean": 359.05555555555554,
+      "name": "RPG",
+      "negative_ratings_mean": 523.4777777777778,
+      "positive_ratings_mean": 3477.1814814814816,
+      "price_mean": 11.971444444444444
+    },
+    {
+      "achievements_mean": 15.383720930232558,
+      "all": "Racing",
+      "average_playtime_mean": 196.91860465116278,
+      "children": [
+        {
+          "achievements_mean": 9.142857142857142,
+          "all": "Racing,Simulation",
+          "average_playtime_mean": 207.92857142857142,
+          "children": [
+            {
+              "achievements_mean": 28.203125,
+              "all": "Racing,Simulation,Sports",
+              "average_playtime_mean": 504.328125,
+              "count": 64,
+              "median_playtime_mean": 291.53125,
+              "name": "Sports",
+              "negative_ratings_mean": 238.6875,
+              "positive_ratings_mean": 944.296875,
+              "price_mean": 18.06703125
+            },
+            {
+              "achievements_mean": 2.4,
+              "all": "Racing,Simulation,Early Access",
+              "average_playtime_mean": 416.2,
+              "count": 5,
+              "median_playtime_mean": 406.6,
+              "name": "Early Access",
+              "negative_ratings_mean": 327.2,
+              "positive_ratings_mean": 3194.4,
+              "price_mean": 10.149999999999999
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Racing,Simulation,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 7.0,
+              "positive_ratings_mean": 9.0,
+              "price_mean": 3.99
+            }
+          ],
+          "count": 14,
+          "median_playtime_mean": 210.35714285714286,
+          "name": "Simulation",
+          "negative_ratings_mean": 319.7142857142857,
+          "positive_ratings_mean": 1432.5,
+          "price_mean": 7.604285714285714
+        },
+        {
+          "achievements_mean": 18.526315789473685,
+          "all": "Racing,Sports",
+          "average_playtime_mean": 745.7368421052631,
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Racing,Sports,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 3.0,
+              "positive_ratings_mean": 3.0,
+              "price_mean": 9.99
+            }
+          ],
+          "count": 19,
+          "median_playtime_mean": 1053.578947368421,
+          "name": "Sports",
+          "negative_ratings_mean": 475.94736842105266,
+          "positive_ratings_mean": 1458.4736842105262,
+          "price_mean": 13.037368421052632
+        },
+        {
+          "achievements_mean": 2.3333333333333335,
+          "all": "Racing,Early Access",
+          "average_playtime_mean": 0.0,
+          "count": 6,
+          "median_playtime_mean": 0.0,
+          "name": "Early Access",
+          "negative_ratings_mean": 11.0,
+          "positive_ratings_mean": 26.5,
+          "price_mean": 2.858333333333333
+        },
+        {
+          "all": "Racing,RPG",
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Racing,RPG,Simulation",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Simulation",
+              "negative_ratings_mean": 51.0,
+              "positive_ratings_mean": 67.0,
+              "price_mean": 14.99
+            }
+          ],
+          "count": 0,
+          "name": "RPG"
+        }
+      ],
+      "count": 86,
+      "median_playtime_mean": 182.46511627906978,
+      "name": "Racing",
+      "negative_ratings_mean": 224.98837209302326,
+      "positive_ratings_mean": 817.8255813953489,
+      "price_mean": 10.488372093023257
+    },
+    {
+      "all": "Sexual Content",
+      "children": [
+        {
+          "all": "Sexual Content,Violent",
+          "children": [
+            {
+              "achievements_mean": 9.285714285714286,
+              "all": "Sexual Content,Violent,Adventure",
+              "average_playtime_mean": 60.857142857142854,
+              "count": 7,
+              "median_playtime_mean": 77.0,
+              "name": "Adventure",
+              "negative_ratings_mean": 173.42857142857142,
+              "positive_ratings_mean": 869.5714285714286,
+              "price_mean": 6.877142857142857
+            },
+            {
+              "achievements_mean": 14.75,
+              "all": "Sexual Content,Violent,Action",
+              "average_playtime_mean": 108.0,
+              "count": 8,
+              "median_playtime_mean": 184.0,
+              "name": "Action",
+              "negative_ratings_mean": 161.5,
+              "positive_ratings_mean": 239.25,
+              "price_mean": 7.8025
+            },
+            {
+              "achievements_mean": 341.6,
+              "all": "Sexual Content,Violent,Gore",
+              "average_playtime_mean": 34.93333333333333,
+              "count": 15,
+              "median_playtime_mean": 35.46666666666667,
+              "name": "Gore",
+              "negative_ratings_mean": 25.533333333333335,
+              "positive_ratings_mean": 110.06666666666666,
+              "price_mean": 2.039333333333334
+            },
+            {
+              "achievements_mean": 5.0,
+              "all": "Sexual Content,Violent,Indie",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Indie",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 38.5,
+              "price_mean": 5.49
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Sexual Content,Violent,RPG",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "RPG",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 0.0,
+              "price_mean": 3.99
+            },
+            {
+              "achievements_mean": 53.0,
+              "all": "Sexual Content,Violent,Free to Play",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Free to Play",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 43.0,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Sexual Content,Violent,Casual",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Casual",
+              "negative_ratings_mean": 76.5,
+              "positive_ratings_mean": 339.5,
+              "price_mean": 3.095
+            }
+          ],
+          "count": 0,
+          "name": "Violent"
+        },
+        {
+          "achievements_mean": 25.0,
+          "all": "Sexual Content,Action",
+          "average_playtime_mean": 182.5,
+          "children": [
+            {
+              "achievements_mean": 2.6666666666666665,
+              "all": "Sexual Content,Action,Casual",
+              "average_playtime_mean": 96.66666666666667,
+              "count": 3,
+              "median_playtime_mean": 100.0,
+              "name": "Casual",
+              "negative_ratings_mean": 262.3333333333333,
+              "positive_ratings_mean": 675.6666666666666,
+              "price_mean": 4.69
+            },
+            {
+              "achievements_mean": 12.0,
+              "all": "Sexual Content,Action,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 6.0,
+              "positive_ratings_mean": 3.0,
+              "price_mean": 6.19
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Sexual Content,Action,Indie",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Indie",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 1.0,
+              "price_mean": 1.69
+            },
+            {
+              "achievements_mean": 9.0,
+              "all": "Sexual Content,Action,Adventure",
+              "average_playtime_mean": 0.0,
+              "count": 3,
+              "median_playtime_mean": 0.0,
+              "name": "Adventure",
+              "negative_ratings_mean": 4.666666666666667,
+              "positive_ratings_mean": 4.333333333333333,
+              "price_mean": 1.2233333333333334
+            }
+          ],
+          "count": 2,
+          "median_playtime_mean": 182.5,
+          "name": "Action",
+          "negative_ratings_mean": 20.5,
+          "positive_ratings_mean": 57.0,
+          "price_mean": 9.889999999999999
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Sexual Content,Nudity",
+          "average_playtime_mean": 0.0,
+          "children": [
+            {
+              "achievements_mean": 17.428571428571427,
+              "all": "Sexual Content,Nudity,Indie",
+              "average_playtime_mean": 148.14285714285714,
+              "count": 7,
+              "median_playtime_mean": 196.14285714285714,
+              "name": "Indie",
+              "negative_ratings_mean": 264.14285714285717,
+              "positive_ratings_mean": 1021.8571428571429,
+              "price_mean": 9.604285714285714
+            },
+            {
+              "achievements_mean": 14.847826086956522,
+              "all": "Sexual Content,Nudity,Casual",
+              "average_playtime_mean": 160.15217391304347,
+              "count": 46,
+              "median_playtime_mean": 155.2173913043478,
+              "name": "Casual",
+              "negative_ratings_mean": 138.6086956521739,
+              "positive_ratings_mean": 1433.0434782608695,
+              "price_mean": 4.914782608695652
+            },
+            {
+              "achievements_mean": 3.0,
+              "all": "Sexual Content,Nudity,Gore",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Gore",
+              "negative_ratings_mean": 32.5,
+              "positive_ratings_mean": 65.5,
+              "price_mean": 3.44
+            },
+            {
+              "achievements_mean": 83.2,
+              "all": "Sexual Content,Nudity,Violent",
+              "average_playtime_mean": 69.125,
+              "count": 40,
+              "median_playtime_mean": 68.95,
+              "name": "Violent",
+              "negative_ratings_mean": 464.975,
+              "positive_ratings_mean": 857.575,
+              "price_mean": 8.64875
+            },
+            {
+              "achievements_mean": 29.733333333333334,
+              "all": "Sexual Content,Nudity,Action",
+              "average_playtime_mean": 33.333333333333336,
+              "count": 15,
+              "median_playtime_mean": 35.86666666666667,
+              "name": "Action",
+              "negative_ratings_mean": 47.93333333333333,
+              "positive_ratings_mean": 238.6,
+              "price_mean": 7.330666666666665
+            },
+            {
+              "achievements_mean": 8.357142857142858,
+              "all": "Sexual Content,Nudity,Adventure",
+              "average_playtime_mean": 121.52380952380952,
+              "count": 42,
+              "median_playtime_mean": 130.04761904761904,
+              "name": "Adventure",
+              "negative_ratings_mean": 41.11904761904762,
+              "positive_ratings_mean": 221.28571428571428,
+              "price_mean": 9.347857142857142
+            },
+            {
+              "achievements_mean": 48.0,
+              "all": "Sexual Content,Nudity,RPG",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "RPG",
+              "negative_ratings_mean": 8.0,
+              "positive_ratings_mean": 33.0,
+              "price_mean": 19.49
+            }
+          ],
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Nudity",
+          "negative_ratings_mean": 2.0,
+          "positive_ratings_mean": 2.0,
+          "price_mean": 2.09
+        },
+        {
+          "achievements_mean": 38.0,
+          "all": "Sexual Content,Strategy",
+          "average_playtime_mean": 40.0,
+          "count": 1,
+          "median_playtime_mean": 40.0,
+          "name": "Strategy",
+          "negative_ratings_mean": 64.0,
+          "positive_ratings_mean": 197.0,
+          "price_mean": 14.99
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Sexual Content,Adventure",
+          "average_playtime_mean": 0.0,
+          "children": [
+            {
+              "achievements_mean": 3.25,
+              "all": "Sexual Content,Adventure,Casual",
+              "average_playtime_mean": 16.5,
+              "count": 8,
+              "median_playtime_mean": 16.5,
+              "name": "Casual",
+              "negative_ratings_mean": 15.25,
+              "positive_ratings_mean": 91.5,
+              "price_mean": 9.291250000000002
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Sexual Content,Adventure,Indie",
+              "average_playtime_mean": 0.0,
+              "count": 3,
+              "median_playtime_mean": 0.0,
+              "name": "Indie",
+              "negative_ratings_mean": 2.0,
+              "positive_ratings_mean": 3.3333333333333335,
+              "price_mean": 2.4566666666666666
+            },
+            {
+              "achievements_mean": 42.0,
+              "all": "Sexual Content,Adventure,Simulation",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Simulation",
+              "negative_ratings_mean": 10.0,
+              "positive_ratings_mean": 17.0,
+              "price_mean": 14.99
+            },
+            {
+              "achievements_mean": 20.0,
+              "all": "Sexual Content,Adventure,Free to Play",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Free to Play",
+              "negative_ratings_mean": 95.5,
+              "positive_ratings_mean": 168.0,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 34.0,
+              "all": "Sexual Content,Adventure,RPG",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "RPG",
+              "negative_ratings_mean": 19.0,
+              "positive_ratings_mean": 173.0,
+              "price_mean": 19.49
+            }
+          ],
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Adventure",
+          "negative_ratings_mean": 5.0,
+          "positive_ratings_mean": 0.0,
+          "price_mean": 23.79
+        },
+        {
+          "achievements_mean": 23.0,
+          "all": "Sexual Content,Casual",
+          "average_playtime_mean": 103.0,
+          "children": [
+            {
+              "achievements_mean": 16.833333333333332,
+              "all": "Sexual Content,Casual,Indie",
+              "average_playtime_mean": 50.583333333333336,
+              "count": 12,
+              "median_playtime_mean": 50.583333333333336,
+              "name": "Indie",
+              "negative_ratings_mean": 14.583333333333334,
+              "positive_ratings_mean": 157.25,
+              "price_mean": 4.6816666666666675
+            },
+            {
+              "achievements_mean": 2.0,
+              "all": "Sexual Content,Casual,Free to Play",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Free to Play",
+              "negative_ratings_mean": 19.0,
+              "positive_ratings_mean": 56.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 2,
+          "median_playtime_mean": 103.0,
+          "name": "Casual",
+          "negative_ratings_mean": 25.5,
+          "positive_ratings_mean": 114.0,
+          "price_mean": 1.635
+        },
+        {
+          "achievements_mean": 2.0,
+          "all": "Sexual Content,Indie",
+          "average_playtime_mean": 22.0,
+          "children": [
+            {
+              "achievements_mean": 52.0,
+              "all": "Sexual Content,Indie,Simulation",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Simulation",
+              "negative_ratings_mean": 87.0,
+              "positive_ratings_mean": 116.0,
+              "price_mean": 14.69
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Sexual Content,Indie,RPG",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "RPG",
+              "negative_ratings_mean": 16.0,
+              "positive_ratings_mean": 42.0,
+              "price_mean": 10.29
+            }
+          ],
+          "count": 2,
+          "median_playtime_mean": 22.0,
+          "name": "Indie",
+          "negative_ratings_mean": 6.5,
+          "positive_ratings_mean": 28.5,
+          "price_mean": 5.390000000000001
+        },
+        {
+          "achievements_mean": 20.0,
+          "all": "Sexual Content,Simulation",
+          "average_playtime_mean": 301.0,
+          "count": 1,
+          "median_playtime_mean": 315.0,
+          "name": "Simulation",
+          "negative_ratings_mean": 28.0,
+          "positive_ratings_mean": 162.0,
+          "price_mean": 3.99
+        },
+        {
+          "achievements_mean": 21.0,
+          "all": "Sexual Content,RPG",
+          "average_playtime_mean": 0.0,
+          "count": 2,
+          "median_playtime_mean": 0.0,
+          "name": "RPG",
+          "negative_ratings_mean": 53.5,
+          "positive_ratings_mean": 142.5,
+          "price_mean": 7.890000000000001
+        },
+        {
+          "all": "Sexual Content,Gore",
+          "children": [
+            {
+              "achievements_mean": 3.0,
+              "all": "Sexual Content,Gore,Adventure",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Adventure",
+              "negative_ratings_mean": 22.0,
+              "positive_ratings_mean": 3.0,
+              "price_mean": 14.99
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Sexual Content,Gore,RPG",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "RPG",
+              "negative_ratings_mean": 0.0,
+              "positive_ratings_mean": 1.0,
+              "price_mean": 14.49
+            }
+          ],
+          "count": 0,
+          "name": "Gore"
+        },
+        {
+          "all": "Sexual Content,Free to Play",
+          "children": [
+            {
+              "achievements_mean": 11.25,
+              "all": "Sexual Content,Free to Play,Indie",
+              "average_playtime_mean": 26.25,
+              "count": 4,
+              "median_playtime_mean": 40.25,
+              "name": "Indie",
+              "negative_ratings_mean": 196.5,
+              "positive_ratings_mean": 702.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 0,
+          "name": "Free to Play"
+        }
+      ],
+      "count": 0,
+      "name": "Sexual Content"
+    },
+    {
+      "achievements_mean": 13.704268292682928,
+      "all": "Simulation",
+      "average_playtime_mean": 219.5121951219512,
+      "children": [
+        {
+          "achievements_mean": 20.53142857142857,
+          "all": "Simulation,Strategy",
+          "average_playtime_mean": 314.2857142857143,
+          "children": [
+            {
+              "achievements_mean": 5.0,
+              "all": "Simulation,Strategy,Early Access",
+              "average_playtime_mean": 24.307692307692307,
+              "count": 13,
+              "median_playtime_mean": 24.307692307692307,
+              "name": "Early Access",
+              "negative_ratings_mean": 46.0,
+              "positive_ratings_mean": 203.6153846153846,
+              "price_mean": 11.074615384615385
+            }
+          ],
+          "count": 175,
+          "median_playtime_mean": 268.1657142857143,
+          "name": "Strategy",
+          "negative_ratings_mean": 427.0914285714286,
+          "positive_ratings_mean": 2030.7714285714285,
+          "price_mean": 14.594114285714285
+        },
+        {
+          "achievements_mean": 28.964912280701753,
+          "all": "Simulation,Sports",
+          "average_playtime_mean": 628.280701754386,
+          "children": [
+            {
+              "achievements_mean": 12.285714285714286,
+              "all": "Simulation,Sports,Strategy",
+              "average_playtime_mean": 1.0714285714285714,
+              "count": 14,
+              "median_playtime_mean": 1.0714285714285714,
+              "name": "Strategy",
+              "negative_ratings_mean": 31.285714285714285,
+              "positive_ratings_mean": 31.142857142857142,
+              "price_mean": 10.872857142857143
+            },
+            {
+              "achievements_mean": 43.142857142857146,
+              "all": "Simulation,Sports,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 7,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 13.142857142857142,
+              "positive_ratings_mean": 25.428571428571427,
+              "price_mean": 14.804285714285713
+            }
+          ],
+          "count": 57,
+          "median_playtime_mean": 729.1052631578947,
+          "name": "Sports",
+          "negative_ratings_mean": 508.56140350877195,
+          "positive_ratings_mean": 442.0877192982456,
+          "price_mean": 16.220526315789474
+        },
+        {
+          "achievements_mean": 3.9411764705882355,
+          "all": "Simulation,Early Access",
+          "average_playtime_mean": 57.588235294117645,
+          "count": 34,
+          "median_playtime_mean": 72.58823529411765,
+          "name": "Early Access",
+          "negative_ratings_mean": 44.11764705882353,
+          "positive_ratings_mean": 214.26470588235293,
+          "price_mean": 10.854117647058825
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Simulation,Education",
+          "average_playtime_mean": 0.0,
+          "children": [
+            {
+              "achievements_mean": 0.0,
+              "all": "Simulation,Education,Software Training",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Software Training",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 11.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Education",
+          "negative_ratings_mean": 1.0,
+          "positive_ratings_mean": 6.0,
+          "price_mean": 7.19
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Simulation,Utilities",
+          "average_playtime_mean": 0.0,
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Utilities",
+          "negative_ratings_mean": 16.0,
+          "positive_ratings_mean": 184.0,
+          "price_mean": 9.99
+        }
+      ],
+      "count": 328,
+      "median_playtime_mean": 217.96951219512195,
+      "name": "Simulation",
+      "negative_ratings_mean": 154.77439024390245,
+      "positive_ratings_mean": 431.390243902439,
+      "price_mean": 10.872134146341462
+    },
+    {
+      "all": "Software Training",
+      "children": [
+        {
+          "achievements_mean": 0.0,
+          "all": "Software Training,Utilities",
+          "average_playtime_mean": 0.0,
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Utilities",
+          "negative_ratings_mean": 5.0,
+          "positive_ratings_mean": 138.0,
+          "price_mean": 0.0
+        }
+      ],
+      "count": 0,
+      "name": "Software Training"
+    },
+    {
+      "achievements_mean": 16.523809523809526,
+      "all": "Sports",
+      "average_playtime_mean": 153.36507936507937,
+      "children": [
+        {
+          "achievements_mean": 21.0,
+          "all": "Sports,Casual",
+          "average_playtime_mean": 0.0,
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Casual",
+          "negative_ratings_mean": 44.0,
+          "positive_ratings_mean": 244.0,
+          "price_mean": 6.99
+        },
+        {
+          "achievements_mean": 27.571428571428573,
+          "all": "Sports,Strategy",
+          "average_playtime_mean": 373.2857142857143,
+          "children": [
+            {
+              "achievements_mean": 7.0,
+              "all": "Sports,Strategy,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 14.0,
+              "positive_ratings_mean": 12.0,
+              "price_mean": 7.99
+            }
+          ],
+          "count": 7,
+          "median_playtime_mean": 390.14285714285717,
+          "name": "Strategy",
+          "negative_ratings_mean": 257.0,
+          "positive_ratings_mean": 709.5714285714286,
+          "price_mean": 9.847142857142858
+        },
+        {
+          "achievements_mean": 6.181818181818182,
+          "all": "Sports,Early Access",
+          "average_playtime_mean": 0.0,
+          "count": 11,
+          "median_playtime_mean": 0.0,
+          "name": "Early Access",
+          "negative_ratings_mean": 4.2727272727272725,
+          "positive_ratings_mean": 12.636363636363637,
+          "price_mean": 4.3554545454545455
+        }
+      ],
+      "count": 63,
+      "median_playtime_mean": 160.11111111111111,
+      "name": "Sports",
+      "negative_ratings_mean": 136.96825396825398,
+      "positive_ratings_mean": 152.26984126984127,
+      "price_mean": 13.796825396825398
+    },
+    {
+      "achievements_mean": 14.315463917525774,
+      "all": "Strategy",
+      "average_playtime_mean": 211.60206185567012,
+      "children": [
+        {
+          "achievements_mean": 15.0,
+          "all": "Strategy,Casual",
+          "average_playtime_mean": 136.5,
+          "count": 8,
+          "median_playtime_mean": 145.625,
+          "name": "Casual",
+          "negative_ratings_mean": 63.75,
+          "positive_ratings_mean": 416.625,
+          "price_mean": 6.18
+        },
+        {
+          "achievements_mean": 31.333333333333332,
+          "all": "Strategy,Indie",
+          "average_playtime_mean": 5.333333333333333,
+          "children": [
+            {
+              "achievements_mean": 43.0,
+              "all": "Strategy,Indie,Casual",
+              "average_playtime_mean": 61.0,
+              "count": 3,
+              "median_playtime_mean": 62.333333333333336,
+              "name": "Casual",
+              "negative_ratings_mean": 94.66666666666667,
+              "positive_ratings_mean": 256.6666666666667,
+              "price_mean": 6.323333333333333
+            }
+          ],
+          "count": 3,
+          "median_playtime_mean": 5.333333333333333,
+          "name": "Indie",
+          "negative_ratings_mean": 21.0,
+          "positive_ratings_mean": 61.666666666666664,
+          "price_mean": 6.590000000000001
+        },
+        {
+          "achievements_mean": 6.666666666666667,
+          "all": "Strategy,Simulation",
+          "average_playtime_mean": 24.0,
+          "count": 3,
+          "median_playtime_mean": 24.0,
+          "name": "Simulation",
+          "negative_ratings_mean": 23.666666666666668,
+          "positive_ratings_mean": 186.66666666666666,
+          "price_mean": 5.156666666666667
+        },
+        {
+          "all": "Strategy,Action",
+          "children": [
+            {
+              "achievements_mean": 92.0,
+              "all": "Strategy,Action,Indie",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Indie",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 10.0,
+              "price_mean": 4.79
+            }
+          ],
+          "count": 0,
+          "name": "Action"
+        },
+        {
+          "achievements_mean": 57.0,
+          "all": "Strategy,RPG",
+          "average_playtime_mean": 2486.0,
+          "children": [
+            {
+              "achievements_mean": 5.0,
+              "all": "Strategy,RPG,Indie",
+              "average_playtime_mean": 0.0,
+              "count": 7,
+              "median_playtime_mean": 0.0,
+              "name": "Indie",
+              "negative_ratings_mean": 13.571428571428571,
+              "positive_ratings_mean": 159.71428571428572,
+              "price_mean": 1.5685714285714287
+            }
+          ],
+          "count": 1,
+          "median_playtime_mean": 2486.0,
+          "name": "RPG",
+          "negative_ratings_mean": 134.0,
+          "positive_ratings_mean": 166.0,
+          "price_mean": 9.99
+        },
+        {
+          "achievements_mean": 10.857142857142858,
+          "all": "Strategy,Early Access",
+          "average_playtime_mean": 103.52380952380952,
+          "count": 21,
+          "median_playtime_mean": 92.71428571428571,
+          "name": "Early Access",
+          "negative_ratings_mean": 105.0,
+          "positive_ratings_mean": 568.6190476190476,
+          "price_mean": 8.423809523809522
+        }
+      ],
+      "count": 485,
+      "median_playtime_mean": 210.3422680412371,
+      "name": "Strategy",
+      "negative_ratings_mean": 303.5979381443299,
+      "positive_ratings_mean": 1352.521649484536,
+      "price_mean": 10.410185567010311
+    },
+    {
+      "achievements_mean": 3.8636363636363638,
+      "all": "Utilities",
+      "average_playtime_mean": 165.1818181818182,
+      "children": [
+        {
+          "achievements_mean": 0.0,
+          "all": "Utilities,Video Production",
+          "average_playtime_mean": 5.4,
+          "children": [
+            {
+              "achievements_mean": 12.0,
+              "all": "Utilities,Video Production,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 35.5,
+              "positive_ratings_mean": 125.0,
+              "price_mean": 2.84
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Utilities,Video Production,Web Publishing",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Web Publishing",
+              "negative_ratings_mean": 8.0,
+              "positive_ratings_mean": 113.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 5,
+          "median_playtime_mean": 5.4,
+          "name": "Video Production",
+          "negative_ratings_mean": 62.0,
+          "positive_ratings_mean": 82.0,
+          "price_mean": 2.536
+        },
+        {
+          "achievements_mean": 1.6666666666666667,
+          "all": "Utilities,Early Access",
+          "average_playtime_mean": 281.1666666666667,
+          "count": 6,
+          "median_playtime_mean": 409.1666666666667,
+          "name": "Early Access",
+          "negative_ratings_mean": 43.666666666666664,
+          "positive_ratings_mean": 138.66666666666666,
+          "price_mean": 2.4600000000000004
+        },
+        {
+          "achievements_mean": 7.0,
+          "all": "Utilities,Web Publishing",
+          "average_playtime_mean": 1016.0,
+          "count": 1,
+          "median_playtime_mean": 1016.0,
+          "name": "Web Publishing",
+          "negative_ratings_mean": 77.0,
+          "positive_ratings_mean": 329.0,
+          "price_mean": 6.99
+        },
+        {
+          "all": "Utilities,Game Development",
+          "children": [
+            {
+              "achievements_mean": 8.0,
+              "all": "Utilities,Game Development,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 19.0,
+              "price_mean": 3.99
+            }
+          ],
+          "count": 0,
+          "name": "Game Development"
+        }
+      ],
+      "count": 44,
+      "median_playtime_mean": 285.54545454545456,
+      "name": "Utilities",
+      "negative_ratings_mean": 109.22727272727273,
+      "positive_ratings_mean": 321.8181818181818,
+      "price_mean": 5.460681818181818
+    },
+    {
+      "achievements_mean": 0.0,
+      "all": "Video Production",
+      "average_playtime_mean": 0.0,
+      "count": 5,
+      "median_playtime_mean": 0.0,
+      "name": "Video Production",
+      "negative_ratings_mean": 5.4,
+      "positive_ratings_mean": 24.6,
+      "price_mean": 0.798
+    },
+    {
+      "achievements_mean": 0.0,
+      "all": "Violent",
+      "average_playtime_mean": 0.0,
+      "children": [
+        {
+          "achievements_mean": 8.263157894736842,
+          "all": "Violent,Action",
+          "average_playtime_mean": 136.78947368421052,
+          "children": [
+            {
+              "achievements_mean": 8.25,
+              "all": "Violent,Action,Strategy",
+              "average_playtime_mean": 240.125,
+              "count": 8,
+              "median_playtime_mean": 115.25,
+              "name": "Strategy",
+              "negative_ratings_mean": 88.625,
+              "positive_ratings_mean": 971.5,
+              "price_mean": 4.5175
+            },
+            {
+              "achievements_mean": 20.234567901234566,
+              "all": "Violent,Action,Adventure",
+              "average_playtime_mean": 62.67901234567901,
+              "count": 81,
+              "median_playtime_mean": 59.50617283950617,
+              "name": "Adventure",
+              "negative_ratings_mean": 210.59259259259258,
+              "positive_ratings_mean": 325.98765432098764,
+              "price_mean": 7.3203703703703695
+            },
+            {
+              "achievements_mean": 7.068493150684931,
+              "all": "Violent,Action,Indie",
+              "average_playtime_mean": 25.273972602739725,
+              "count": 73,
+              "median_playtime_mean": 26.205479452054796,
+              "name": "Indie",
+              "negative_ratings_mean": 17.054794520547944,
+              "positive_ratings_mean": 37.67123287671233,
+              "price_mean": 5.632876712328768
+            },
+            {
+              "achievements_mean": 9.333333333333334,
+              "all": "Violent,Action,Simulation",
+              "average_playtime_mean": 0.0,
+              "count": 6,
+              "median_playtime_mean": 0.0,
+              "name": "Simulation",
+              "negative_ratings_mean": 25.666666666666668,
+              "positive_ratings_mean": 59.0,
+              "price_mean": 6.456666666666668
+            },
+            {
+              "achievements_mean": 12.666666666666666,
+              "all": "Violent,Action,Free to Play",
+              "average_playtime_mean": 3.0,
+              "count": 3,
+              "median_playtime_mean": 4.666666666666667,
+              "name": "Free to Play",
+              "negative_ratings_mean": 197.66666666666666,
+              "positive_ratings_mean": 293.6666666666667,
+              "price_mean": 0.6966666666666667
+            },
+            {
+              "achievements_mean": 21.5,
+              "all": "Violent,Action,Massively Multiplayer",
+              "average_playtime_mean": 47.0,
+              "count": 2,
+              "median_playtime_mean": 48.5,
+              "name": "Massively Multiplayer",
+              "negative_ratings_mean": 534.5,
+              "positive_ratings_mean": 910.5,
+              "price_mean": 0.795
+            },
+            {
+              "achievements_mean": 9.666666666666666,
+              "all": "Violent,Action,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 3,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 246.66666666666666,
+              "positive_ratings_mean": 194.0,
+              "price_mean": 16.923333333333336
+            },
+            {
+              "achievements_mean": 20.5,
+              "all": "Violent,Action,Racing",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Racing",
+              "negative_ratings_mean": 12.0,
+              "positive_ratings_mean": 84.5,
+              "price_mean": 12.389999999999999
+            },
+            {
+              "achievements_mean": 8.854166666666666,
+              "all": "Violent,Action,Casual",
+              "average_playtime_mean": 12.520833333333334,
+              "count": 48,
+              "median_playtime_mean": 20.0625,
+              "name": "Casual",
+              "negative_ratings_mean": 33.125,
+              "positive_ratings_mean": 103.6875,
+              "price_mean": 4.08625
+            },
+            {
+              "achievements_mean": 8.5,
+              "all": "Violent,Action,RPG",
+              "average_playtime_mean": 11.0,
+              "count": 2,
+              "median_playtime_mean": 18.0,
+              "name": "RPG",
+              "negative_ratings_mean": 64.0,
+              "positive_ratings_mean": 48.0,
+              "price_mean": 3.495
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Violent,Action,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 9.0,
+              "positive_ratings_mean": 10.0,
+              "price_mean": 3.99
+            }
+          ],
+          "count": 19,
+          "median_playtime_mean": 150.1578947368421,
+          "name": "Action",
+          "negative_ratings_mean": 205.31578947368422,
+          "positive_ratings_mean": 255.52631578947367,
+          "price_mean": 7.825263157894737
+        },
+        {
+          "achievements_mean": 15.0,
+          "all": "Violent,Gore",
+          "average_playtime_mean": 0.0,
+          "children": [
+            {
+              "achievements_mean": 82.32758620689656,
+              "all": "Violent,Gore,Action",
+              "average_playtime_mean": 31.686206896551724,
+              "count": 290,
+              "median_playtime_mean": 34.69655172413793,
+              "name": "Action",
+              "negative_ratings_mean": 77.14137931034483,
+              "positive_ratings_mean": 154.58620689655172,
+              "price_mean": 5.999482758620689
+            },
+            {
+              "achievements_mean": 10.590909090909092,
+              "all": "Violent,Gore,Indie",
+              "average_playtime_mean": 18.863636363636363,
+              "count": 22,
+              "median_playtime_mean": 18.863636363636363,
+              "name": "Indie",
+              "negative_ratings_mean": 20.136363636363637,
+              "positive_ratings_mean": 44.63636363636363,
+              "price_mean": 4.572727272727271
+            },
+            {
+              "achievements_mean": 11.098039215686274,
+              "all": "Violent,Gore,Adventure",
+              "average_playtime_mean": 60.294117647058826,
+              "count": 51,
+              "median_playtime_mean": 97.37254901960785,
+              "name": "Adventure",
+              "negative_ratings_mean": 21.941176470588236,
+              "positive_ratings_mean": 120.05882352941177,
+              "price_mean": 5.36156862745098
+            },
+            {
+              "achievements_mean": 11.428571428571429,
+              "all": "Violent,Gore,Casual",
+              "average_playtime_mean": 53.714285714285715,
+              "count": 7,
+              "median_playtime_mean": 52.142857142857146,
+              "name": "Casual",
+              "negative_ratings_mean": 38.0,
+              "positive_ratings_mean": 535.2857142857143,
+              "price_mean": 4.134285714285714
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Violent,Gore,RPG",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "RPG",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 2.0,
+              "price_mean": 1.99
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Violent,Gore,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 0.0,
+              "positive_ratings_mean": 3.0,
+              "price_mean": 2.79
+            },
+            {
+              "achievements_mean": 1.0,
+              "all": "Violent,Gore,Simulation",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Simulation",
+              "negative_ratings_mean": 14.0,
+              "positive_ratings_mean": 9.0,
+              "price_mean": 0.79
+            }
+          ],
+          "count": 2,
+          "median_playtime_mean": 0.0,
+          "name": "Gore",
+          "negative_ratings_mean": 14.5,
+          "positive_ratings_mean": 18.5,
+          "price_mean": 2.495
+        },
+        {
+          "achievements_mean": 10.555555555555555,
+          "all": "Violent,Adventure",
+          "average_playtime_mean": 0.0,
+          "children": [
+            {
+              "achievements_mean": 11.526315789473685,
+              "all": "Violent,Adventure,Casual",
+              "average_playtime_mean": 17.263157894736842,
+              "count": 19,
+              "median_playtime_mean": 17.263157894736842,
+              "name": "Casual",
+              "negative_ratings_mean": 13.736842105263158,
+              "positive_ratings_mean": 85.21052631578948,
+              "price_mean": 4.606842105263158
+            },
+            {
+              "achievements_mean": 11.652173913043478,
+              "all": "Violent,Adventure,Indie",
+              "average_playtime_mean": 64.8695652173913,
+              "count": 23,
+              "median_playtime_mean": 67.3913043478261,
+              "name": "Indie",
+              "negative_ratings_mean": 23.47826086956522,
+              "positive_ratings_mean": 102.8695652173913,
+              "price_mean": 7.551304347826089
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Violent,Adventure,RPG",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "RPG",
+              "negative_ratings_mean": 7.0,
+              "positive_ratings_mean": 20.0,
+              "price_mean": 6.99
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Violent,Adventure,Free to Play",
+              "average_playtime_mean": 521.3333333333334,
+              "count": 3,
+              "median_playtime_mean": 521.3333333333334,
+              "name": "Free to Play",
+              "negative_ratings_mean": 62.0,
+              "positive_ratings_mean": 78.66666666666667,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 9,
+          "median_playtime_mean": 0.0,
+          "name": "Adventure",
+          "negative_ratings_mean": 28.0,
+          "positive_ratings_mean": 79.11111111111111,
+          "price_mean": 10.412222222222221
+        },
+        {
+          "achievements_mean": 626.125,
+          "all": "Violent,Indie",
+          "average_playtime_mean": 0.0,
+          "children": [
+            {
+              "achievements_mean": 6.5,
+              "all": "Violent,Indie,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 2,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 2.5,
+              "positive_ratings_mean": 2.5,
+              "price_mean": 7.039999999999999
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Violent,Indie,RPG",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "RPG",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 36.0,
+              "price_mean": 0.0
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Violent,Indie,Strategy",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Strategy",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 3.0,
+              "price_mean": 6.19
+            }
+          ],
+          "count": 8,
+          "median_playtime_mean": 0.0,
+          "name": "Indie",
+          "negative_ratings_mean": 5.375,
+          "positive_ratings_mean": 8.875,
+          "price_mean": 3.0774999999999997
+        },
+        {
+          "achievements_mean": 27.25,
+          "all": "Violent,RPG",
+          "average_playtime_mean": 95.5,
+          "children": [
+            {
+              "achievements_mean": 8.0,
+              "all": "Violent,RPG,Strategy",
+              "average_playtime_mean": 4.5,
+              "count": 2,
+              "median_playtime_mean": 4.5,
+              "name": "Strategy",
+              "negative_ratings_mean": 84.5,
+              "positive_ratings_mean": 143.0,
+              "price_mean": 8.59
+            }
+          ],
+          "count": 4,
+          "median_playtime_mean": 109.25,
+          "name": "RPG",
+          "negative_ratings_mean": 372.0,
+          "positive_ratings_mean": 1173.75,
+          "price_mean": 22.44
+        },
+        {
+          "achievements_mean": 0.0,
+          "all": "Violent,Simulation",
+          "average_playtime_mean": 0.0,
+          "children": [
+            {
+              "achievements_mean": 59.0,
+              "all": "Violent,Simulation,Sports",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Sports",
+              "negative_ratings_mean": 537.0,
+              "positive_ratings_mean": 793.0,
+              "price_mean": 39.99
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Violent,Simulation,Early Access",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "Early Access",
+              "negative_ratings_mean": 1.0,
+              "positive_ratings_mean": 1.0,
+              "price_mean": 4.79
+            }
+          ],
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Simulation",
+          "negative_ratings_mean": 4.0,
+          "positive_ratings_mean": 20.0,
+          "price_mean": 3.99
+        },
+        {
+          "achievements_mean": 22.0,
+          "all": "Violent,Sports",
+          "average_playtime_mean": 0.0,
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Sports",
+          "negative_ratings_mean": 69.0,
+          "positive_ratings_mean": 127.0,
+          "price_mean": 8.99
+        },
+        {
+          "all": "Violent,Free to Play",
+          "children": [
+            {
+              "achievements_mean": 24.0,
+              "all": "Violent,Free to Play,Indie",
+              "average_playtime_mean": 221.0,
+              "count": 2,
+              "median_playtime_mean": 110.5,
+              "name": "Indie",
+              "negative_ratings_mean": 625.0,
+              "positive_ratings_mean": 2641.0,
+              "price_mean": 0.0
+            }
+          ],
+          "count": 0,
+          "name": "Free to Play"
+        },
+        {
+          "all": "Violent,Casual",
+          "children": [
+            {
+              "achievements_mean": 30.0,
+              "all": "Violent,Casual,Indie",
+              "average_playtime_mean": 0.0,
+              "count": 3,
+              "median_playtime_mean": 0.0,
+              "name": "Indie",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 12.333333333333334,
+              "price_mean": 6.423333333333332
+            },
+            {
+              "achievements_mean": 0.0,
+              "all": "Violent,Casual,RPG",
+              "average_playtime_mean": 0.0,
+              "count": 1,
+              "median_playtime_mean": 0.0,
+              "name": "RPG",
+              "negative_ratings_mean": 5.0,
+              "positive_ratings_mean": 10.0,
+              "price_mean": 3.99
+            }
+          ],
+          "count": 0,
+          "name": "Casual"
+        },
+        {
+          "achievements_mean": 15.0,
+          "all": "Violent,Strategy",
+          "average_playtime_mean": 0.0,
+          "count": 1,
+          "median_playtime_mean": 0.0,
+          "name": "Strategy",
+          "negative_ratings_mean": 22.0,
+          "positive_ratings_mean": 13.0,
+          "price_mean": 15.49
+        }
+      ],
+      "count": 2,
+      "median_playtime_mean": 0.0,
+      "name": "Violent",
+      "negative_ratings_mean": 1.0,
+      "positive_ratings_mean": 5.0,
+      "price_mean": 5.495
+    },
+    {
+      "achievements_mean": 0.0,
+      "all": "Web Publishing",
+      "average_playtime_mean": 0.0,
+      "count": 1,
+      "median_playtime_mean": 0.0,
+      "name": "Web Publishing",
+      "negative_ratings_mean": 34.0,
+      "positive_ratings_mean": 326.0,
+      "price_mean": 18.99
+    }
+  ],
+  "name": "root"
+}

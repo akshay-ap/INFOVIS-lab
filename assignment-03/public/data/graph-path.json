@@ -1,0 +1,2074 @@
+{
+  "nodes": [
+    {
+      "count": 19421,
+      "positive_ratings_mean": 540.1722362391226,
+      "negative_ratings_mean": 91.3736676793162,
+      "average_playtime_mean": 112.83610524689769,
+      "median_playtime_mean": 122.06662890685341,
+      "price_mean": 5.049866639204985,
+      "achievements_mean": 45.950465990422735,
+      "1997": 1,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 1,
+      "2002": 0,
+      "2003": 2,
+      "2004": 0,
+      "2005": 3,
+      "2006": 9,
+      "2007": 3,
+      "2008": 23,
+      "2009": 59,
+      "2010": 64,
+      "2011": 97,
+      "2012": 167,
+      "2013": 240,
+      "2014": 887,
+      "2015": 1900,
+      "2016": 3154,
+      "2017": 4706,
+      "2018": 6404,
+      "2019": 1701,
+      "id": "Indie"
+    },
+    {
+      "count": 11903,
+      "positive_ratings_mean": 1581.9314458539864,
+      "negative_ratings_mean": 356.7624968495337,
+      "average_playtime_mean": 144.01663446190037,
+      "median_playtime_mean": 118.42157439301016,
+      "price_mean": 6.1403688145845585,
+      "achievements_mean": 51.70713265563303,
+      "1997": 1,
+      "1998": 1,
+      "1999": 2,
+      "2000": 2,
+      "2001": 3,
+      "2002": 1,
+      "2003": 2,
+      "2004": 6,
+      "2005": 1,
+      "2006": 17,
+      "2007": 58,
+      "2008": 61,
+      "2009": 111,
+      "2010": 81,
+      "2011": 102,
+      "2012": 162,
+      "2013": 199,
+      "2014": 647,
+      "2015": 1156,
+      "2016": 1950,
+      "2017": 2905,
+      "2018": 3513,
+      "2019": 922,
+      "id": "Action"
+    },
+    {
+      "count": 10210,
+      "positive_ratings_mean": 273.9059745347698,
+      "negative_ratings_mean": 48.726542605288934,
+      "average_playtime_mean": 85.07375122428991,
+      "median_playtime_mean": 96.5030362389814,
+      "price_mean": 4.1061949069539665,
+      "achievements_mean": 79.9003917727718,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 1,
+      "2004": 0,
+      "2005": 0,
+      "2006": 5,
+      "2007": 8,
+      "2008": 33,
+      "2009": 52,
+      "2010": 69,
+      "2011": 42,
+      "2012": 53,
+      "2013": 80,
+      "2014": 404,
+      "2015": 754,
+      "2016": 1624,
+      "2017": 2560,
+      "2018": 3624,
+      "2019": 901,
+      "id": "Casual"
+    },
+    {
+      "count": 10032,
+      "positive_ratings_mean": 869.7240829346092,
+      "negative_ratings_mean": 233.05073763955343,
+      "average_playtime_mean": 151.6566985645933,
+      "median_playtime_mean": 156.4712918660287,
+      "price_mean": 6.1218002392344495,
+      "achievements_mean": 31.604166666666668,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 1,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 8,
+      "2008": 23,
+      "2009": 70,
+      "2010": 48,
+      "2011": 54,
+      "2012": 97,
+      "2013": 153,
+      "2014": 582,
+      "2015": 1011,
+      "2016": 1636,
+      "2017": 2478,
+      "2018": 3001,
+      "2019": 870,
+      "id": "Adventure"
+    },
+    {
+      "count": 5247,
+      "positive_ratings_mean": 863.9925671812464,
+      "negative_ratings_mean": 180.21307413760243,
+      "average_playtime_mean": 193.13016962073567,
+      "median_playtime_mean": 207.03678292357537,
+      "price_mean": 6.944560701353154,
+      "achievements_mean": 72.97636744806556,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 1,
+      "2002": 0,
+      "2003": 1,
+      "2004": 0,
+      "2005": 2,
+      "2006": 24,
+      "2007": 22,
+      "2008": 31,
+      "2009": 66,
+      "2010": 60,
+      "2011": 75,
+      "2012": 75,
+      "2013": 104,
+      "2014": 331,
+      "2015": 578,
+      "2016": 806,
+      "2017": 1174,
+      "2018": 1461,
+      "2019": 436,
+      "id": "Strategy"
+    },
+    {
+      "count": 5194,
+      "positive_ratings_mean": 819.659607239122,
+      "negative_ratings_mean": 166.51752021563343,
+      "average_playtime_mean": 154.24085483249902,
+      "median_playtime_mean": 141.3498267231421,
+      "price_mean": 7.208983442433577,
+      "achievements_mean": 70.57142857142857,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 1,
+      "2007": 1,
+      "2008": 17,
+      "2009": 43,
+      "2010": 27,
+      "2011": 26,
+      "2012": 38,
+      "2013": 62,
+      "2014": 240,
+      "2015": 467,
+      "2016": 849,
+      "2017": 1231,
+      "2018": 1717,
+      "2019": 475,
+      "id": "Simulation"
+    },
+    {
+      "count": 4311,
+      "positive_ratings_mean": 1346.5768963117607,
+      "negative_ratings_mean": 278.386685223846,
+      "average_playtime_mean": 276.9858501507771,
+      "median_playtime_mean": 291.34539549988403,
+      "price_mean": 6.942147993504987,
+      "achievements_mean": 48.47715147297611,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 2,
+      "2002": 0,
+      "2003": 1,
+      "2004": 0,
+      "2005": 3,
+      "2006": 3,
+      "2007": 7,
+      "2008": 13,
+      "2009": 37,
+      "2010": 33,
+      "2011": 37,
+      "2012": 58,
+      "2013": 74,
+      "2014": 283,
+      "2015": 502,
+      "2016": 621,
+      "2017": 935,
+      "2018": 1276,
+      "2019": 426,
+      "id": "RPG"
+    },
+    {
+      "count": 2954,
+      "positive_ratings_mean": 388.052471225457,
+      "negative_ratings_mean": 121.70243737305348,
+      "average_playtime_mean": 81.30094786729858,
+      "median_playtime_mean": 81.01117129316181,
+      "price_mean": 7.039631008801625,
+      "achievements_mean": 14.185849695328368,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 0,
+      "2013": 4,
+      "2014": 60,
+      "2015": 189,
+      "2016": 444,
+      "2017": 743,
+      "2018": 1097,
+      "2019": 417,
+      "id": "Early Access"
+    },
+    {
+      "count": 1704,
+      "positive_ratings_mean": 4346.627347417841,
+      "negative_ratings_mean": 900.8163145539907,
+      "average_playtime_mean": 554.4377934272301,
+      "median_playtime_mean": 532.1455399061033,
+      "price_mean": 0.09916666666666667,
+      "achievements_mean": 23.412558685446008,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 1,
+      "2008": 2,
+      "2009": 1,
+      "2010": 2,
+      "2011": 10,
+      "2012": 17,
+      "2013": 21,
+      "2014": 62,
+      "2015": 145,
+      "2016": 284,
+      "2017": 381,
+      "2018": 570,
+      "2019": 208,
+      "id": "Free to Play"
+    },
+    {
+      "count": 1322,
+      "positive_ratings_mean": 519.4773071104387,
+      "negative_ratings_mean": 136.142965204236,
+      "average_playtime_mean": 115.51815431164901,
+      "median_playtime_mean": 103.64145234493192,
+      "price_mean": 7.877934947049925,
+      "achievements_mean": 28.13540090771558,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 2,
+      "2009": 7,
+      "2010": 2,
+      "2011": 5,
+      "2012": 7,
+      "2013": 13,
+      "2014": 52,
+      "2015": 103,
+      "2016": 237,
+      "2017": 351,
+      "2018": 438,
+      "2019": 105,
+      "id": "Sports"
+    },
+    {
+      "count": 1024,
+      "positive_ratings_mean": 663.78515625,
+      "negative_ratings_mean": 138.5361328125,
+      "average_playtime_mean": 142.220703125,
+      "median_playtime_mean": 132.68359375,
+      "price_mean": 7.0501171875,
+      "achievements_mean": 23.201171875,
+      "1997": 1,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 3,
+      "2007": 4,
+      "2008": 11,
+      "2009": 9,
+      "2010": 8,
+      "2011": 11,
+      "2012": 13,
+      "2013": 19,
+      "2014": 62,
+      "2015": 96,
+      "2016": 147,
+      "2017": 229,
+      "2018": 334,
+      "2019": 77,
+      "id": "Racing"
+    },
+    {
+      "count": 843,
+      "positive_ratings_mean": 294.76393831553975,
+      "negative_ratings_mean": 121.39739027283511,
+      "average_playtime_mean": 48.144721233689204,
+      "median_playtime_mean": 49.195729537366546,
+      "price_mean": 6.228351126927639,
+      "achievements_mean": 51.16607354685647,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 1,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 1,
+      "2007": 1,
+      "2008": 0,
+      "2009": 1,
+      "2010": 0,
+      "2011": 2,
+      "2012": 2,
+      "2013": 4,
+      "2014": 3,
+      "2015": 6,
+      "2016": 81,
+      "2017": 425,
+      "2018": 315,
+      "2019": 1,
+      "id": "Violent"
+    },
+    {
+      "count": 723,
+      "positive_ratings_mean": 3468.1120331950206,
+      "negative_ratings_mean": 1884.088520055325,
+      "average_playtime_mean": 725.4840940525588,
+      "median_playtime_mean": 506.61272475795295,
+      "price_mean": 4.320110650069156,
+      "achievements_mean": 23.86721991701245,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 1,
+      "2011": 9,
+      "2012": 11,
+      "2013": 10,
+      "2014": 32,
+      "2015": 56,
+      "2016": 113,
+      "2017": 166,
+      "2018": 241,
+      "2019": 84,
+      "id": "Massively Multiplayer"
+    },
+    {
+      "count": 537,
+      "positive_ratings_mean": 323.6815642458101,
+      "negative_ratings_mean": 123.57914338919926,
+      "average_playtime_mean": 47.64804469273743,
+      "median_playtime_mean": 49.14897579143389,
+      "price_mean": 5.972104283054004,
+      "achievements_mean": 65.4953445065177,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 2,
+      "2010": 0,
+      "2011": 0,
+      "2012": 2,
+      "2013": 4,
+      "2014": 1,
+      "2015": 8,
+      "2016": 54,
+      "2017": 256,
+      "2018": 210,
+      "2019": 0,
+      "id": "Gore"
+    },
+    {
+      "count": 266,
+      "positive_ratings_mean": 822.218045112782,
+      "negative_ratings_mean": 212.04887218045113,
+      "average_playtime_mean": 99.97368421052632,
+      "median_playtime_mean": 94.97368421052632,
+      "price_mean": 7.285977443609022,
+      "achievements_mean": 23.958646616541355,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 3,
+      "2010": 0,
+      "2011": 2,
+      "2012": 0,
+      "2013": 2,
+      "2014": 3,
+      "2015": 8,
+      "2016": 41,
+      "2017": 125,
+      "2018": 82,
+      "2019": 0,
+      "id": "Nudity"
+    },
+    {
+      "count": 245,
+      "positive_ratings_mean": 571.9755102040816,
+      "negative_ratings_mean": 142.76326530612246,
+      "average_playtime_mean": 84.39591836734694,
+      "median_playtime_mean": 89.73061224489796,
+      "price_mean": 6.846612244897959,
+      "achievements_mean": 45.089795918367344,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 0,
+      "2013": 1,
+      "2014": 3,
+      "2015": 9,
+      "2016": 34,
+      "2017": 105,
+      "2018": 93,
+      "2019": 0,
+      "id": "Sexual Content"
+    },
+    {
+      "count": 146,
+      "positive_ratings_mean": 592.4041095890411,
+      "negative_ratings_mean": 66.34246575342466,
+      "average_playtime_mean": 112.56164383561644,
+      "median_playtime_mean": 147.25342465753425,
+      "price_mean": 14.392671232876712,
+      "achievements_mean": 2.6301369863013697,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 1,
+      "2013": 3,
+      "2014": 13,
+      "2015": 17,
+      "2016": 27,
+      "2017": 28,
+      "2018": 45,
+      "2019": 12,
+      "id": "Utilities"
+    },
+    {
+      "count": 87,
+      "positive_ratings_mean": 880.7126436781609,
+      "negative_ratings_mean": 52.160919540229884,
+      "average_playtime_mean": 112.22988505747126,
+      "median_playtime_mean": 101.37931034482759,
+      "price_mean": 26.817241379310342,
+      "achievements_mean": 2.3563218390804597,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 1,
+      "2013": 1,
+      "2014": 8,
+      "2015": 13,
+      "2016": 16,
+      "2017": 24,
+      "2018": 21,
+      "2019": 3,
+      "id": "Design & Illustration"
+    },
+    {
+      "count": 79,
+      "positive_ratings_mean": 1126.9493670886077,
+      "negative_ratings_mean": 72.16455696202532,
+      "average_playtime_mean": 88.13924050632912,
+      "median_playtime_mean": 76.49367088607595,
+      "price_mean": 27.726962025316453,
+      "achievements_mean": 2.1139240506329116,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 2,
+      "2013": 3,
+      "2014": 5,
+      "2015": 11,
+      "2016": 13,
+      "2017": 15,
+      "2018": 25,
+      "2019": 5,
+      "id": "Animation & Modeling"
+    },
+    {
+      "count": 51,
+      "positive_ratings_mean": 72.76470588235294,
+      "negative_ratings_mean": 24.41176470588235,
+      "average_playtime_mean": 42.96078431372549,
+      "median_playtime_mean": 46.588235294117645,
+      "price_mean": 26.788823529411765,
+      "achievements_mean": 1.2549019607843137,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 0,
+      "2013": 3,
+      "2014": 4,
+      "2015": 9,
+      "2016": 9,
+      "2017": 12,
+      "2018": 14,
+      "2019": 0,
+      "id": "Education"
+    },
+    {
+      "count": 38,
+      "positive_ratings_mean": 542.7105263157895,
+      "negative_ratings_mean": 68.39473684210526,
+      "average_playtime_mean": 26.973684210526315,
+      "median_playtime_mean": 29.31578947368421,
+      "price_mean": 11.322368421052632,
+      "achievements_mean": 2.3684210526315788,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 1,
+      "2013": 0,
+      "2014": 2,
+      "2015": 6,
+      "2016": 9,
+      "2017": 7,
+      "2018": 12,
+      "2019": 1,
+      "id": "Video Production"
+    },
+    {
+      "count": 31,
+      "positive_ratings_mean": 98.6774193548387,
+      "negative_ratings_mean": 36.74193548387097,
+      "average_playtime_mean": 9.741935483870968,
+      "median_playtime_mean": 15.709677419354838,
+      "price_mean": 31.802258064516128,
+      "achievements_mean": 0.9032258064516129,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 0,
+      "2013": 2,
+      "2014": 4,
+      "2015": 8,
+      "2016": 5,
+      "2017": 4,
+      "2018": 8,
+      "2019": 0,
+      "id": "Software Training"
+    },
+    {
+      "count": 29,
+      "positive_ratings_mean": 47.48275862068966,
+      "negative_ratings_mean": 15.620689655172415,
+      "average_playtime_mean": 2.2413793103448274,
+      "median_playtime_mean": 2.2413793103448274,
+      "price_mean": 11.25344827586207,
+      "achievements_mean": 2.310344827586207,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 0,
+      "2013": 0,
+      "2014": 2,
+      "2015": 2,
+      "2016": 7,
+      "2017": 8,
+      "2018": 10,
+      "2019": 0,
+      "id": "Audio Production"
+    },
+    {
+      "count": 28,
+      "positive_ratings_mean": 338.89285714285717,
+      "negative_ratings_mean": 50.75,
+      "average_playtime_mean": 136.21428571428572,
+      "median_playtime_mean": 138.35714285714286,
+      "price_mean": 39.69607142857143,
+      "achievements_mean": 2.25,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 1,
+      "2013": 3,
+      "2014": 2,
+      "2015": 5,
+      "2016": 2,
+      "2017": 8,
+      "2018": 6,
+      "2019": 1,
+      "id": "Web Publishing"
+    },
+    {
+      "count": 17,
+      "positive_ratings_mean": 102.23529411764706,
+      "negative_ratings_mean": 37.529411764705884,
+      "average_playtime_mean": 116.0,
+      "median_playtime_mean": 116.0,
+      "price_mean": 61.68,
+      "achievements_mean": 1.1764705882352942,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 0,
+      "2013": 0,
+      "2014": 0,
+      "2015": 4,
+      "2016": 1,
+      "2017": 4,
+      "2018": 7,
+      "2019": 1,
+      "id": "Game Development"
+    },
+    {
+      "count": 12,
+      "positive_ratings_mean": 84.0,
+      "negative_ratings_mean": 30.916666666666668,
+      "average_playtime_mean": 429.5833333333333,
+      "median_playtime_mean": 430.0,
+      "price_mean": 14.643333333333333,
+      "achievements_mean": 0.9166666666666666,
+      "1997": 0,
+      "1998": 0,
+      "1999": 0,
+      "2000": 0,
+      "2001": 0,
+      "2002": 0,
+      "2003": 0,
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 0,
+      "2013": 0,
+      "2014": 2,
+      "2015": 4,
+      "2016": 2,
+      "2017": 2,
+      "2018": 2,
+      "2019": 0,
+      "id": "Photo Editing"
+    }
+  ],
+  "links": [
+    {
+      "source": "Indie",
+      "target": "Action",
+      "value": 9183
+    },
+    {
+      "source": "Indie",
+      "target": "Casual",
+      "value": 7978
+    },
+    {
+      "source": "Indie",
+      "target": "Adventure",
+      "value": 7623
+    },
+    {
+      "source": "Indie",
+      "target": "Strategy",
+      "value": 3669
+    },
+    {
+      "source": "Indie",
+      "target": "Simulation",
+      "value": 3547
+    },
+    {
+      "source": "Indie",
+      "target": "RPG",
+      "value": 3215
+    },
+    {
+      "source": "Indie",
+      "target": "Early Access",
+      "value": 2391
+    },
+    {
+      "source": "Indie",
+      "target": "Free to Play",
+      "value": 1079
+    },
+    {
+      "source": "Indie",
+      "target": "Sports",
+      "value": 853
+    },
+    {
+      "source": "Indie",
+      "target": "Racing",
+      "value": 665
+    },
+    {
+      "source": "Indie",
+      "target": "Violent",
+      "value": 620
+    },
+    {
+      "source": "Indie",
+      "target": "Massively Multiplayer",
+      "value": 392
+    },
+    {
+      "source": "Indie",
+      "target": "Gore",
+      "value": 434
+    },
+    {
+      "source": "Indie",
+      "target": "Nudity",
+      "value": 190
+    },
+    {
+      "source": "Indie",
+      "target": "Sexual Content",
+      "value": 182
+    },
+    {
+      "source": "Indie",
+      "target": "Utilities",
+      "value": 5
+    },
+    {
+      "source": "Indie",
+      "target": "Design & Illustration",
+      "value": 5
+    },
+    {
+      "source": "Indie",
+      "target": "Animation & Modeling",
+      "value": 7
+    },
+    {
+      "source": "Indie",
+      "target": "Education",
+      "value": 7
+    },
+    {
+      "source": "Indie",
+      "target": "Video Production",
+      "value": 5
+    },
+    {
+      "source": "Indie",
+      "target": "Software Training",
+      "value": 4
+    },
+    {
+      "source": "Indie",
+      "target": "Audio Production",
+      "value": 8
+    },
+    {
+      "source": "Indie",
+      "target": "Web Publishing",
+      "value": 5
+    },
+    {
+      "source": "Indie",
+      "target": "Game Development",
+      "value": 1
+    },
+    {
+      "source": "Indie",
+      "target": "Photo Editing",
+      "value": 2
+    },
+    {
+      "source": "Action",
+      "target": "Casual",
+      "value": 3399
+    },
+    {
+      "source": "Action",
+      "target": "Adventure",
+      "value": 4526
+    },
+    {
+      "source": "Action",
+      "target": "Strategy",
+      "value": 1500
+    },
+    {
+      "source": "Action",
+      "target": "Simulation",
+      "value": 1558
+    },
+    {
+      "source": "Action",
+      "target": "RPG",
+      "value": 1765
+    },
+    {
+      "source": "Action",
+      "target": "Early Access",
+      "value": 1714
+    },
+    {
+      "source": "Action",
+      "target": "Free to Play",
+      "value": 670
+    },
+    {
+      "source": "Action",
+      "target": "Sports",
+      "value": 557
+    },
+    {
+      "source": "Action",
+      "target": "Racing",
+      "value": 511
+    },
+    {
+      "source": "Action",
+      "target": "Violent",
+      "value": 606
+    },
+    {
+      "source": "Action",
+      "target": "Massively Multiplayer",
+      "value": 434
+    },
+    {
+      "source": "Action",
+      "target": "Gore",
+      "value": 383
+    },
+    {
+      "source": "Action",
+      "target": "Nudity",
+      "value": 87
+    },
+    {
+      "source": "Action",
+      "target": "Sexual Content",
+      "value": 57
+    },
+    {
+      "source": "Action",
+      "target": "Video Production",
+      "value": 1
+    },
+    {
+      "source": "Casual",
+      "target": "Adventure",
+      "value": 3564
+    },
+    {
+      "source": "Casual",
+      "target": "Strategy",
+      "value": 1915
+    },
+    {
+      "source": "Casual",
+      "target": "Simulation",
+      "value": 2269
+    },
+    {
+      "source": "Casual",
+      "target": "RPG",
+      "value": 988
+    },
+    {
+      "source": "Casual",
+      "target": "Early Access",
+      "value": 830
+    },
+    {
+      "source": "Casual",
+      "target": "Free to Play",
+      "value": 659
+    },
+    {
+      "source": "Casual",
+      "target": "Sports",
+      "value": 577
+    },
+    {
+      "source": "Casual",
+      "target": "Racing",
+      "value": 358
+    },
+    {
+      "source": "Casual",
+      "target": "Violent",
+      "value": 178
+    },
+    {
+      "source": "Casual",
+      "target": "Massively Multiplayer",
+      "value": 190
+    },
+    {
+      "source": "Casual",
+      "target": "Gore",
+      "value": 99
+    },
+    {
+      "source": "Casual",
+      "target": "Nudity",
+      "value": 133
+    },
+    {
+      "source": "Casual",
+      "target": "Sexual Content",
+      "value": 131
+    },
+    {
+      "source": "Casual",
+      "target": "Utilities",
+      "value": 4
+    },
+    {
+      "source": "Casual",
+      "target": "Design & Illustration",
+      "value": 7
+    },
+    {
+      "source": "Casual",
+      "target": "Animation & Modeling",
+      "value": 8
+    },
+    {
+      "source": "Casual",
+      "target": "Education",
+      "value": 6
+    },
+    {
+      "source": "Casual",
+      "target": "Video Production",
+      "value": 5
+    },
+    {
+      "source": "Casual",
+      "target": "Software Training",
+      "value": 3
+    },
+    {
+      "source": "Casual",
+      "target": "Audio Production",
+      "value": 4
+    },
+    {
+      "source": "Casual",
+      "target": "Web Publishing",
+      "value": 3
+    },
+    {
+      "source": "Casual",
+      "target": "Game Development",
+      "value": 1
+    },
+    {
+      "source": "Casual",
+      "target": "Photo Editing",
+      "value": 2
+    },
+    {
+      "source": "Adventure",
+      "target": "Strategy",
+      "value": 1226
+    },
+    {
+      "source": "Adventure",
+      "target": "Simulation",
+      "value": 1424
+    },
+    {
+      "source": "Adventure",
+      "target": "RPG",
+      "value": 2410
+    },
+    {
+      "source": "Adventure",
+      "target": "Early Access",
+      "value": 1008
+    },
+    {
+      "source": "Adventure",
+      "target": "Free to Play",
+      "value": 496
+    },
+    {
+      "source": "Adventure",
+      "target": "Sports",
+      "value": 170
+    },
+    {
+      "source": "Adventure",
+      "target": "Racing",
+      "value": 194
+    },
+    {
+      "source": "Adventure",
+      "target": "Violent",
+      "value": 406
+    },
+    {
+      "source": "Adventure",
+      "target": "Massively Multiplayer",
+      "value": 252
+    },
+    {
+      "source": "Adventure",
+      "target": "Gore",
+      "value": 292
+    },
+    {
+      "source": "Adventure",
+      "target": "Nudity",
+      "value": 131
+    },
+    {
+      "source": "Adventure",
+      "target": "Sexual Content",
+      "value": 107
+    },
+    {
+      "source": "Adventure",
+      "target": "Design & Illustration",
+      "value": 1
+    },
+    {
+      "source": "Adventure",
+      "target": "Animation & Modeling",
+      "value": 1
+    },
+    {
+      "source": "Adventure",
+      "target": "Education",
+      "value": 1
+    },
+    {
+      "source": "Adventure",
+      "target": "Video Production",
+      "value": 2
+    },
+    {
+      "source": "Strategy",
+      "target": "Simulation",
+      "value": 1619
+    },
+    {
+      "source": "Strategy",
+      "target": "RPG",
+      "value": 1155
+    },
+    {
+      "source": "Strategy",
+      "target": "Early Access",
+      "value": 713
+    },
+    {
+      "source": "Strategy",
+      "target": "Free to Play",
+      "value": 411
+    },
+    {
+      "source": "Strategy",
+      "target": "Sports",
+      "value": 212
+    },
+    {
+      "source": "Strategy",
+      "target": "Racing",
+      "value": 68
+    },
+    {
+      "source": "Strategy",
+      "target": "Violent",
+      "value": 110
+    },
+    {
+      "source": "Strategy",
+      "target": "Massively Multiplayer",
+      "value": 218
+    },
+    {
+      "source": "Strategy",
+      "target": "Gore",
+      "value": 59
+    },
+    {
+      "source": "Strategy",
+      "target": "Nudity",
+      "value": 20
+    },
+    {
+      "source": "Strategy",
+      "target": "Sexual Content",
+      "value": 19
+    },
+    {
+      "source": "Strategy",
+      "target": "Utilities",
+      "value": 1
+    },
+    {
+      "source": "Strategy",
+      "target": "Design & Illustration",
+      "value": 1
+    },
+    {
+      "source": "Strategy",
+      "target": "Animation & Modeling",
+      "value": 1
+    },
+    {
+      "source": "Strategy",
+      "target": "Education",
+      "value": 1
+    },
+    {
+      "source": "Strategy",
+      "target": "Video Production",
+      "value": 2
+    },
+    {
+      "source": "Strategy",
+      "target": "Software Training",
+      "value": 1
+    },
+    {
+      "source": "Strategy",
+      "target": "Audio Production",
+      "value": 1
+    },
+    {
+      "source": "Strategy",
+      "target": "Web Publishing",
+      "value": 1
+    },
+    {
+      "source": "Strategy",
+      "target": "Game Development",
+      "value": 1
+    },
+    {
+      "source": "Strategy",
+      "target": "Photo Editing",
+      "value": 1
+    },
+    {
+      "source": "Simulation",
+      "target": "RPG",
+      "value": 695
+    },
+    {
+      "source": "Simulation",
+      "target": "Early Access",
+      "value": 863
+    },
+    {
+      "source": "Simulation",
+      "target": "Free to Play",
+      "value": 339
+    },
+    {
+      "source": "Simulation",
+      "target": "Sports",
+      "value": 684
+    },
+    {
+      "source": "Simulation",
+      "target": "Racing",
+      "value": 370
+    },
+    {
+      "source": "Simulation",
+      "target": "Violent",
+      "value": 129
+    },
+    {
+      "source": "Simulation",
+      "target": "Massively Multiplayer",
+      "value": 189
+    },
+    {
+      "source": "Simulation",
+      "target": "Gore",
+      "value": 69
+    },
+    {
+      "source": "Simulation",
+      "target": "Nudity",
+      "value": 57
+    },
+    {
+      "source": "Simulation",
+      "target": "Sexual Content",
+      "value": 58
+    },
+    {
+      "source": "Simulation",
+      "target": "Utilities",
+      "value": 2
+    },
+    {
+      "source": "Simulation",
+      "target": "Design & Illustration",
+      "value": 4
+    },
+    {
+      "source": "Simulation",
+      "target": "Animation & Modeling",
+      "value": 5
+    },
+    {
+      "source": "Simulation",
+      "target": "Education",
+      "value": 4
+    },
+    {
+      "source": "Simulation",
+      "target": "Video Production",
+      "value": 2
+    },
+    {
+      "source": "Simulation",
+      "target": "Software Training",
+      "value": 1
+    },
+    {
+      "source": "Simulation",
+      "target": "Audio Production",
+      "value": 3
+    },
+    {
+      "source": "Simulation",
+      "target": "Web Publishing",
+      "value": 1
+    },
+    {
+      "source": "Simulation",
+      "target": "Game Development",
+      "value": 1
+    },
+    {
+      "source": "RPG",
+      "target": "Early Access",
+      "value": 665
+    },
+    {
+      "source": "RPG",
+      "target": "Free to Play",
+      "value": 379
+    },
+    {
+      "source": "RPG",
+      "target": "Sports",
+      "value": 67
+    },
+    {
+      "source": "RPG",
+      "target": "Racing",
+      "value": 54
+    },
+    {
+      "source": "RPG",
+      "target": "Violent",
+      "value": 141
+    },
+    {
+      "source": "RPG",
+      "target": "Massively Multiplayer",
+      "value": 307
+    },
+    {
+      "source": "RPG",
+      "target": "Gore",
+      "value": 89
+    },
+    {
+      "source": "RPG",
+      "target": "Nudity",
+      "value": 62
+    },
+    {
+      "source": "RPG",
+      "target": "Sexual Content",
+      "value": 49
+    },
+    {
+      "source": "RPG",
+      "target": "Utilities",
+      "value": 2
+    },
+    {
+      "source": "RPG",
+      "target": "Design & Illustration",
+      "value": 1
+    },
+    {
+      "source": "RPG",
+      "target": "Animation & Modeling",
+      "value": 1
+    },
+    {
+      "source": "RPG",
+      "target": "Education",
+      "value": 1
+    },
+    {
+      "source": "RPG",
+      "target": "Video Production",
+      "value": 1
+    },
+    {
+      "source": "RPG",
+      "target": "Software Training",
+      "value": 1
+    },
+    {
+      "source": "RPG",
+      "target": "Audio Production",
+      "value": 1
+    },
+    {
+      "source": "RPG",
+      "target": "Web Publishing",
+      "value": 1
+    },
+    {
+      "source": "RPG",
+      "target": "Game Development",
+      "value": 1
+    },
+    {
+      "source": "RPG",
+      "target": "Photo Editing",
+      "value": 1
+    },
+    {
+      "source": "Early Access",
+      "target": "Free to Play",
+      "value": 240
+    },
+    {
+      "source": "Early Access",
+      "target": "Sports",
+      "value": 224
+    },
+    {
+      "source": "Early Access",
+      "target": "Racing",
+      "value": 152
+    },
+    {
+      "source": "Early Access",
+      "target": "Violent",
+      "value": 140
+    },
+    {
+      "source": "Early Access",
+      "target": "Massively Multiplayer",
+      "value": 215
+    },
+    {
+      "source": "Early Access",
+      "target": "Gore",
+      "value": 87
+    },
+    {
+      "source": "Early Access",
+      "target": "Nudity",
+      "value": 20
+    },
+    {
+      "source": "Early Access",
+      "target": "Sexual Content",
+      "value": 9
+    },
+    {
+      "source": "Early Access",
+      "target": "Utilities",
+      "value": 30
+    },
+    {
+      "source": "Early Access",
+      "target": "Design & Illustration",
+      "value": 19
+    },
+    {
+      "source": "Early Access",
+      "target": "Animation & Modeling",
+      "value": 21
+    },
+    {
+      "source": "Early Access",
+      "target": "Education",
+      "value": 10
+    },
+    {
+      "source": "Early Access",
+      "target": "Video Production",
+      "value": 6
+    },
+    {
+      "source": "Early Access",
+      "target": "Software Training",
+      "value": 5
+    },
+    {
+      "source": "Early Access",
+      "target": "Audio Production",
+      "value": 6
+    },
+    {
+      "source": "Early Access",
+      "target": "Web Publishing",
+      "value": 3
+    },
+    {
+      "source": "Early Access",
+      "target": "Game Development",
+      "value": 3
+    },
+    {
+      "source": "Free to Play",
+      "target": "Sports",
+      "value": 91
+    },
+    {
+      "source": "Free to Play",
+      "target": "Racing",
+      "value": 55
+    },
+    {
+      "source": "Free to Play",
+      "target": "Violent",
+      "value": 39
+    },
+    {
+      "source": "Free to Play",
+      "target": "Massively Multiplayer",
+      "value": 349
+    },
+    {
+      "source": "Free to Play",
+      "target": "Gore",
+      "value": 22
+    },
+    {
+      "source": "Free to Play",
+      "target": "Nudity",
+      "value": 14
+    },
+    {
+      "source": "Free to Play",
+      "target": "Sexual Content",
+      "value": 21
+    },
+    {
+      "source": "Free to Play",
+      "target": "Utilities",
+      "value": 3
+    },
+    {
+      "source": "Free to Play",
+      "target": "Design & Illustration",
+      "value": 6
+    },
+    {
+      "source": "Free to Play",
+      "target": "Animation & Modeling",
+      "value": 5
+    },
+    {
+      "source": "Free to Play",
+      "target": "Education",
+      "value": 4
+    },
+    {
+      "source": "Free to Play",
+      "target": "Video Production",
+      "value": 2
+    },
+    {
+      "source": "Free to Play",
+      "target": "Software Training",
+      "value": 3
+    },
+    {
+      "source": "Free to Play",
+      "target": "Audio Production",
+      "value": 2
+    },
+    {
+      "source": "Free to Play",
+      "target": "Web Publishing",
+      "value": 3
+    },
+    {
+      "source": "Free to Play",
+      "target": "Game Development",
+      "value": 2
+    },
+    {
+      "source": "Free to Play",
+      "target": "Photo Editing",
+      "value": 2
+    },
+    {
+      "source": "Sports",
+      "target": "Racing",
+      "value": 348
+    },
+    {
+      "source": "Sports",
+      "target": "Violent",
+      "value": 21
+    },
+    {
+      "source": "Sports",
+      "target": "Massively Multiplayer",
+      "value": 49
+    },
+    {
+      "source": "Sports",
+      "target": "Gore",
+      "value": 10
+    },
+    {
+      "source": "Sports",
+      "target": "Nudity",
+      "value": 1
+    },
+    {
+      "source": "Sports",
+      "target": "Sexual Content",
+      "value": 2
+    },
+    {
+      "source": "Racing",
+      "target": "Violent",
+      "value": 19
+    },
+    {
+      "source": "Racing",
+      "target": "Massively Multiplayer",
+      "value": 48
+    },
+    {
+      "source": "Racing",
+      "target": "Gore",
+      "value": 12
+    },
+    {
+      "source": "Racing",
+      "target": "Nudity",
+      "value": 2
+    },
+    {
+      "source": "Racing",
+      "target": "Sexual Content",
+      "value": 2
+    },
+    {
+      "source": "Violent",
+      "target": "Massively Multiplayer",
+      "value": 27
+    },
+    {
+      "source": "Violent",
+      "target": "Gore",
+      "value": 447
+    },
+    {
+      "source": "Violent",
+      "target": "Nudity",
+      "value": 98
+    },
+    {
+      "source": "Violent",
+      "target": "Sexual Content",
+      "value": 76
+    },
+    {
+      "source": "Violent",
+      "target": "Video Production",
+      "value": 1
+    },
+    {
+      "source": "Massively Multiplayer",
+      "target": "Gore",
+      "value": 13
+    },
+    {
+      "source": "Massively Multiplayer",
+      "target": "Nudity",
+      "value": 3
+    },
+    {
+      "source": "Massively Multiplayer",
+      "target": "Sexual Content",
+      "value": 1
+    },
+    {
+      "source": "Massively Multiplayer",
+      "target": "Utilities",
+      "value": 1
+    },
+    {
+      "source": "Massively Multiplayer",
+      "target": "Education",
+      "value": 1
+    },
+    {
+      "source": "Gore",
+      "target": "Nudity",
+      "value": 64
+    },
+    {
+      "source": "Gore",
+      "target": "Sexual Content",
+      "value": 43
+    },
+    {
+      "source": "Gore",
+      "target": "Video Production",
+      "value": 1
+    },
+    {
+      "source": "Nudity",
+      "target": "Sexual Content",
+      "value": 154
+    },
+    {
+      "source": "Utilities",
+      "target": "Design & Illustration",
+      "value": 53
+    },
+    {
+      "source": "Utilities",
+      "target": "Animation & Modeling",
+      "value": 53
+    },
+    {
+      "source": "Utilities",
+      "target": "Education",
+      "value": 29
+    },
+    {
+      "source": "Utilities",
+      "target": "Video Production",
+      "value": 24
+    },
+    {
+      "source": "Utilities",
+      "target": "Software Training",
+      "value": 26
+    },
+    {
+      "source": "Utilities",
+      "target": "Audio Production",
+      "value": 17
+    },
+    {
+      "source": "Utilities",
+      "target": "Web Publishing",
+      "value": 19
+    },
+    {
+      "source": "Utilities",
+      "target": "Game Development",
+      "value": 12
+    },
+    {
+      "source": "Utilities",
+      "target": "Photo Editing",
+      "value": 8
+    },
+    {
+      "source": "Design & Illustration",
+      "target": "Animation & Modeling",
+      "value": 54
+    },
+    {
+      "source": "Design & Illustration",
+      "target": "Education",
+      "value": 27
+    },
+    {
+      "source": "Design & Illustration",
+      "target": "Video Production",
+      "value": 13
+    },
+    {
+      "source": "Design & Illustration",
+      "target": "Software Training",
+      "value": 20
+    },
+    {
+      "source": "Design & Illustration",
+      "target": "Audio Production",
+      "value": 6
+    },
+    {
+      "source": "Design & Illustration",
+      "target": "Web Publishing",
+      "value": 21
+    },
+    {
+      "source": "Design & Illustration",
+      "target": "Game Development",
+      "value": 16
+    },
+    {
+      "source": "Design & Illustration",
+      "target": "Photo Editing",
+      "value": 11
+    },
+    {
+      "source": "Animation & Modeling",
+      "target": "Education",
+      "value": 25
+    },
+    {
+      "source": "Animation & Modeling",
+      "target": "Video Production",
+      "value": 19
+    },
+    {
+      "source": "Animation & Modeling",
+      "target": "Software Training",
+      "value": 21
+    },
+    {
+      "source": "Animation & Modeling",
+      "target": "Audio Production",
+      "value": 7
+    },
+    {
+      "source": "Animation & Modeling",
+      "target": "Web Publishing",
+      "value": 15
+    },
+    {
+      "source": "Animation & Modeling",
+      "target": "Game Development",
+      "value": 15
+    },
+    {
+      "source": "Animation & Modeling",
+      "target": "Photo Editing",
+      "value": 8
+    },
+    {
+      "source": "Education",
+      "target": "Video Production",
+      "value": 9
+    },
+    {
+      "source": "Education",
+      "target": "Software Training",
+      "value": 26
+    },
+    {
+      "source": "Education",
+      "target": "Audio Production",
+      "value": 5
+    },
+    {
+      "source": "Education",
+      "target": "Web Publishing",
+      "value": 13
+    },
+    {
+      "source": "Education",
+      "target": "Game Development",
+      "value": 10
+    },
+    {
+      "source": "Education",
+      "target": "Photo Editing",
+      "value": 4
+    },
+    {
+      "source": "Video Production",
+      "target": "Software Training",
+      "value": 9
+    },
+    {
+      "source": "Video Production",
+      "target": "Audio Production",
+      "value": 7
+    },
+    {
+      "source": "Video Production",
+      "target": "Web Publishing",
+      "value": 8
+    },
+    {
+      "source": "Video Production",
+      "target": "Game Development",
+      "value": 3
+    },
+    {
+      "source": "Video Production",
+      "target": "Photo Editing",
+      "value": 6
+    },
+    {
+      "source": "Software Training",
+      "target": "Audio Production",
+      "value": 5
+    },
+    {
+      "source": "Software Training",
+      "target": "Web Publishing",
+      "value": 12
+    },
+    {
+      "source": "Software Training",
+      "target": "Game Development",
+      "value": 8
+    },
+    {
+      "source": "Software Training",
+      "target": "Photo Editing",
+      "value": 5
+    },
+    {
+      "source": "Audio Production",
+      "target": "Web Publishing",
+      "value": 6
+    },
+    {
+      "source": "Audio Production",
+      "target": "Game Development",
+      "value": 1
+    },
+    {
+      "source": "Audio Production",
+      "target": "Photo Editing",
+      "value": 3
+    },
+    {
+      "source": "Web Publishing",
+      "target": "Game Development",
+      "value": 7
+    },
+    {
+      "source": "Web Publishing",
+      "target": "Photo Editing",
+      "value": 4
+    },
+    {
+      "source": "Game Development",
+      "target": "Photo Editing",
+      "value": 2
+    }
+  ]
+}

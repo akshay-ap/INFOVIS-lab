@@ -14,3 +14,12 @@ nav {
 .divider {
     flex-grow: 1;
 }
+
+.centered {
+    /* Center horizontally*/
+    text-align: center;
+}
+
+.parent div {
+    float:left;
+}

@@ -79,3 +79,7 @@ Here is an example invocation:
 ```console
 python make_graph_from_aggregate.py steam-store-games.csv genres -t 10
 ```
+
+#### Result
+
+![Image](assignment-3.png)

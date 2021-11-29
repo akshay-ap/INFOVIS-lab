@@ -3,361 +3,6 @@
 (function () {
   'use strict';
 
-  function ascending$1(a, b) {
-    return a == null || b == null ? NaN : a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
-  }
-
-  function bisector(f) {
-    let delta = f;
-    let compare1 = f;
-    let compare2 = f;
-
-    if (f.length !== 2) {
-      delta = (d, x) => f(d) - x;
-      compare1 = ascending$1;
-      compare2 = (d, x) => ascending$1(f(d), x);
-    }
-
-    function left(a, x, lo = 0, hi = a.length) {
-      if (lo < hi) {
-        if (compare1(x, x) !== 0) return hi;
-        do {
-          const mid = (lo + hi) >>> 1;
-          if (compare2(a[mid], x) < 0) lo = mid + 1;
-          else hi = mid;
-        } while (lo < hi);
-      }
-      return lo;
-    }
-
-    function right(a, x, lo = 0, hi = a.length) {
-      if (lo < hi) {
-        if (compare1(x, x) !== 0) return hi;
-        do {
-          const mid = (lo + hi) >>> 1;
-          if (compare2(a[mid], x) <= 0) lo = mid + 1;
-          else hi = mid;
-        } while (lo < hi);
-      }
-      return lo;
-    }
-
-    function center(a, x, lo = 0, hi = a.length) {
-      const i = left(a, x, lo, hi - 1);
-      return i > lo && delta(a[i - 1], x) > -delta(a[i], x) ? i - 1 : i;
-    }
-
-    return {left, center, right};
-  }
-
-  function number$2(x) {
-    return x === null ? NaN : +x;
-  }
-
-  const ascendingBisect = bisector(ascending$1);
-  const bisectRight = ascendingBisect.right;
-  bisector(number$2).center;
-  var bisect = bisectRight;
-
-  function extent(values, valueof) {
-    let min;
-    let max;
-    if (valueof === undefined) {
-      for (const value of values) {
-        if (value != null) {
-          if (min === undefined) {
-            if (value >= value) min = max = value;
-          } else {
-            if (min > value) min = value;
-            if (max < value) max = value;
-          }
-        }
-      }
-    } else {
-      let index = -1;
-      for (let value of values) {
-        if ((value = valueof(value, ++index, values)) != null) {
-          if (min === undefined) {
-            if (value >= value) min = max = value;
-          } else {
-            if (min > value) min = value;
-            if (max < value) max = value;
-          }
-        }
-      }
-    }
-    return [min, max];
-  }
-
-  class InternMap extends Map {
-    constructor(entries, key = keyof) {
-      super();
-      Object.defineProperties(this, {_intern: {value: new Map()}, _key: {value: key}});
-      if (entries != null) for (const [key, value] of entries) this.set(key, value);
-    }
-    get(key) {
-      return super.get(intern_get(this, key));
-    }
-    has(key) {
-      return super.has(intern_get(this, key));
-    }
-    set(key, value) {
-      return super.set(intern_set(this, key), value);
-    }
-    delete(key) {
-      return super.delete(intern_delete(this, key));
-    }
-  }
-
-  function intern_get({_intern, _key}, value) {
-    const key = _key(value);
-    return _intern.has(key) ? _intern.get(key) : value;
-  }
-
-  function intern_set({_intern, _key}, value) {
-    const key = _key(value);
-    if (_intern.has(key)) return _intern.get(key);
-    _intern.set(key, value);
-    return value;
-  }
-
-  function intern_delete({_intern, _key}, value) {
-    const key = _key(value);
-    if (_intern.has(key)) {
-      value = _intern.get(key);
-      _intern.delete(key);
-    }
-    return value;
-  }
-
-  function keyof(value) {
-    return value !== null && typeof value === "object" ? value.valueOf() : value;
-  }
-
-  var e10 = Math.sqrt(50),
-      e5 = Math.sqrt(10),
-      e2 = Math.sqrt(2);
-
-  function ticks(start, stop, count) {
-    var reverse,
-        i = -1,
-        n,
-        ticks,
-        step;
-
-    stop = +stop, start = +start, count = +count;
-    if (start === stop && count > 0) return [start];
-    if (reverse = stop < start) n = start, start = stop, stop = n;
-    if ((step = tickIncrement(start, stop, count)) === 0 || !isFinite(step)) return [];
-
-    if (step > 0) {
-      let r0 = Math.round(start / step), r1 = Math.round(stop / step);
-      if (r0 * step < start) ++r0;
-      if (r1 * step > stop) --r1;
-      ticks = new Array(n = r1 - r0 + 1);
-      while (++i < n) ticks[i] = (r0 + i) * step;
-    } else {
-      step = -step;
-      let r0 = Math.round(start * step), r1 = Math.round(stop * step);
-      if (r0 / step < start) ++r0;
-      if (r1 / step > stop) --r1;
-      ticks = new Array(n = r1 - r0 + 1);
-      while (++i < n) ticks[i] = (r0 + i) / step;
-    }
-
-    if (reverse) ticks.reverse();
-
-    return ticks;
-  }
-
-  function tickIncrement(start, stop, count) {
-    var step = (stop - start) / Math.max(0, count),
-        power = Math.floor(Math.log(step) / Math.LN10),
-        error = step / Math.pow(10, power);
-    return power >= 0
-        ? (error >= e10 ? 10 : error >= e5 ? 5 : error >= e2 ? 2 : 1) * Math.pow(10, power)
-        : -Math.pow(10, -power) / (error >= e10 ? 10 : error >= e5 ? 5 : error >= e2 ? 2 : 1);
-  }
-
-  function tickStep(start, stop, count) {
-    var step0 = Math.abs(stop - start) / Math.max(0, count),
-        step1 = Math.pow(10, Math.floor(Math.log(step0) / Math.LN10)),
-        error = step0 / step1;
-    if (error >= e10) step1 *= 10;
-    else if (error >= e5) step1 *= 5;
-    else if (error >= e2) step1 *= 2;
-    return stop < start ? -step1 : step1;
-  }
-
-  function identity$3(x) {
-    return x;
-  }
-
-  var top = 1,
-      right = 2,
-      bottom = 3,
-      left = 4,
-      epsilon = 1e-6;
-
-  function translateX(x) {
-    return "translate(" + x + ",0)";
-  }
-
-  function translateY(y) {
-    return "translate(0," + y + ")";
-  }
-
-  function number$1(scale) {
-    return d => +scale(d);
-  }
-
-  function center(scale, offset) {
-    offset = Math.max(0, scale.bandwidth() - offset * 2) / 2;
-    if (scale.round()) offset = Math.round(offset);
-    return d => +scale(d) + offset;
-  }
-
-  function entering() {
-    return !this.__axis;
-  }
-
-  function axis(orient, scale) {
-    var tickArguments = [],
-        tickValues = null,
-        tickFormat = null,
-        tickSizeInner = 6,
-        tickSizeOuter = 6,
-        tickPadding = 3,
-        offset = typeof window !== "undefined" && window.devicePixelRatio > 1 ? 0 : 0.5,
-        k = orient === top || orient === left ? -1 : 1,
-        x = orient === left || orient === right ? "x" : "y",
-        transform = orient === top || orient === bottom ? translateX : translateY;
-
-    function axis(context) {
-      var values = tickValues == null ? (scale.ticks ? scale.ticks.apply(scale, tickArguments) : scale.domain()) : tickValues,
-          format = tickFormat == null ? (scale.tickFormat ? scale.tickFormat.apply(scale, tickArguments) : identity$3) : tickFormat,
-          spacing = Math.max(tickSizeInner, 0) + tickPadding,
-          range = scale.range(),
-          range0 = +range[0] + offset,
-          range1 = +range[range.length - 1] + offset,
-          position = (scale.bandwidth ? center : number$1)(scale.copy(), offset),
-          selection = context.selection ? context.selection() : context,
-          path = selection.selectAll(".domain").data([null]),
-          tick = selection.selectAll(".tick").data(values, scale).order(),
-          tickExit = tick.exit(),
-          tickEnter = tick.enter().append("g").attr("class", "tick"),
-          line = tick.select("line"),
-          text = tick.select("text");
-
-      path = path.merge(path.enter().insert("path", ".tick")
-          .attr("class", "domain")
-          .attr("stroke", "currentColor"));
-
-      tick = tick.merge(tickEnter);
-
-      line = line.merge(tickEnter.append("line")
-          .attr("stroke", "currentColor")
-          .attr(x + "2", k * tickSizeInner));
-
-      text = text.merge(tickEnter.append("text")
-          .attr("fill", "currentColor")
-          .attr(x, k * spacing)
-          .attr("dy", orient === top ? "0em" : orient === bottom ? "0.71em" : "0.32em"));
-
-      if (context !== selection) {
-        path = path.transition(context);
-        tick = tick.transition(context);
-        line = line.transition(context);
-        text = text.transition(context);
-
-        tickExit = tickExit.transition(context)
-            .attr("opacity", epsilon)
-            .attr("transform", function(d) { return isFinite(d = position(d)) ? transform(d + offset) : this.getAttribute("transform"); });
-
-        tickEnter
-            .attr("opacity", epsilon)
-            .attr("transform", function(d) { var p = this.parentNode.__axis; return transform((p && isFinite(p = p(d)) ? p : position(d)) + offset); });
-      }
-
-      tickExit.remove();
-
-      path
-          .attr("d", orient === left || orient === right
-              ? (tickSizeOuter ? "M" + k * tickSizeOuter + "," + range0 + "H" + offset + "V" + range1 + "H" + k * tickSizeOuter : "M" + offset + "," + range0 + "V" + range1)
-              : (tickSizeOuter ? "M" + range0 + "," + k * tickSizeOuter + "V" + offset + "H" + range1 + "V" + k * tickSizeOuter : "M" + range0 + "," + offset + "H" + range1));
-
-      tick
-          .attr("opacity", 1)
-          .attr("transform", function(d) { return transform(position(d) + offset); });
-
-      line
-          .attr(x + "2", k * tickSizeInner);
-
-      text
-          .attr(x, k * spacing)
-          .text(format);
-
-      selection.filter(entering)
-          .attr("fill", "none")
-          .attr("font-size", 10)
-          .attr("font-family", "sans-serif")
-          .attr("text-anchor", orient === right ? "start" : orient === left ? "end" : "middle");
-
-      selection
-          .each(function() { this.__axis = position; });
-    }
-
-    axis.scale = function(_) {
-      return arguments.length ? (scale = _, axis) : scale;
-    };
-
-    axis.ticks = function() {
-      return tickArguments = Array.from(arguments), axis;
-    };
-
-    axis.tickArguments = function(_) {
-      return arguments.length ? (tickArguments = _ == null ? [] : Array.from(_), axis) : tickArguments.slice();
-    };
-
-    axis.tickValues = function(_) {
-      return arguments.length ? (tickValues = _ == null ? null : Array.from(_), axis) : tickValues && tickValues.slice();
-    };
-
-    axis.tickFormat = function(_) {
-      return arguments.length ? (tickFormat = _, axis) : tickFormat;
-    };
-
-    axis.tickSize = function(_) {
-      return arguments.length ? (tickSizeInner = tickSizeOuter = +_, axis) : tickSizeInner;
-    };
-
-    axis.tickSizeInner = function(_) {
-      return arguments.length ? (tickSizeInner = +_, axis) : tickSizeInner;
-    };
-
-    axis.tickSizeOuter = function(_) {
-      return arguments.length ? (tickSizeOuter = +_, axis) : tickSizeOuter;
-    };
-
-    axis.tickPadding = function(_) {
-      return arguments.length ? (tickPadding = +_, axis) : tickPadding;
-    };
-
-    axis.offset = function(_) {
-      return arguments.length ? (offset = +_, axis) : offset;
-    };
-
-    return axis;
-  }
-
-  function axisBottom(scale) {
-    return axis(bottom, scale);
-  }
-
-  function axisLeft(scale) {
-    return axis(left, scale);
-  }
-
   var noop = {value: () => {}};
 
   function dispatch() {
@@ -557,11 +202,11 @@
     };
   }
 
-  var find = Array.prototype.find;
+  var find$1 = Array.prototype.find;
 
   function childFind(match) {
     return function() {
-      return find.call(this.children, match);
+      return find$1.call(this.children, match);
     };
   }
 
@@ -629,7 +274,7 @@
     querySelectorAll: function(selector) { return this._parent.querySelectorAll(selector); }
   };
 
-  function constant$1(x) {
+  function constant$3(x) {
     return function() {
       return x;
     };
@@ -716,7 +361,7 @@
         parents = this._parents,
         groups = this._groups;
 
-    if (typeof value !== "function") value = constant$1(value);
+    if (typeof value !== "function") value = constant$3(value);
 
     for (var m = groups.length, update = new Array(m), enter = new Array(m), exit = new Array(m), j = 0; j < m; ++j) {
       var parent = parents[j],
@@ -1746,9 +1391,9 @@
         : m1) * 255;
   }
 
-  var constant = x => () => x;
+  var constant$2 = x => () => x;
 
-  function linear$1(a, d) {
+  function linear(a, d) {
     return function(t) {
       return a + t * d;
     };
@@ -1762,13 +1407,13 @@
 
   function gamma(y) {
     return (y = +y) === 1 ? nogamma : function(a, b) {
-      return b - a ? exponential(a, b, y) : constant(isNaN(a) ? b : a);
+      return b - a ? exponential(a, b, y) : constant$2(isNaN(a) ? b : a);
     };
   }
 
   function nogamma(a, b) {
     var d = b - a;
-    return d ? linear$1(a, d) : constant(isNaN(a) ? b : a);
+    return d ? linear(a, d) : constant$2(isNaN(a) ? b : a);
   }
 
   var interpolateRgb = (function rgbGamma(y) {
@@ -1793,69 +1438,9 @@
     return rgb$1;
   })(1);
 
-  function numberArray(a, b) {
-    if (!b) b = [];
-    var n = a ? Math.min(b.length, a.length) : 0,
-        c = b.slice(),
-        i;
-    return function(t) {
-      for (i = 0; i < n; ++i) c[i] = a[i] * (1 - t) + b[i] * t;
-      return c;
-    };
-  }
-
-  function isNumberArray(x) {
-    return ArrayBuffer.isView(x) && !(x instanceof DataView);
-  }
-
-  function genericArray(a, b) {
-    var nb = b ? b.length : 0,
-        na = a ? Math.min(nb, a.length) : 0,
-        x = new Array(na),
-        c = new Array(nb),
-        i;
-
-    for (i = 0; i < na; ++i) x[i] = interpolate$1(a[i], b[i]);
-    for (; i < nb; ++i) c[i] = b[i];
-
-    return function(t) {
-      for (i = 0; i < na; ++i) c[i] = x[i](t);
-      return c;
-    };
-  }
-
-  function date(a, b) {
-    var d = new Date;
-    return a = +a, b = +b, function(t) {
-      return d.setTime(a * (1 - t) + b * t), d;
-    };
-  }
-
   function interpolateNumber(a, b) {
     return a = +a, b = +b, function(t) {
       return a * (1 - t) + b * t;
-    };
-  }
-
-  function object(a, b) {
-    var i = {},
-        c = {},
-        k;
-
-    if (a === null || typeof a !== "object") a = {};
-    if (b === null || typeof b !== "object") b = {};
-
-    for (k in b) {
-      if (k in a) {
-        i[k] = interpolate$1(a[k], b[k]);
-      } else {
-        c[k] = b[k];
-      }
-    }
-
-    return function(t) {
-      for (k in i) c[k] = i[k](t);
-      return c;
     };
   }
 
@@ -1922,28 +1507,9 @@
           });
   }
 
-  function interpolate$1(a, b) {
-    var t = typeof b, c;
-    return b == null || t === "boolean" ? constant(b)
-        : (t === "number" ? interpolateNumber
-        : t === "string" ? ((c = color(b)) ? (b = c, interpolateRgb) : interpolateString)
-        : b instanceof color ? interpolateRgb
-        : b instanceof Date ? date
-        : isNumberArray(b) ? numberArray
-        : Array.isArray(b) ? genericArray
-        : typeof b.valueOf !== "function" && typeof b.toString !== "function" || isNaN(b) ? object
-        : interpolateNumber)(a, b);
-  }
-
-  function interpolateRound(a, b) {
-    return a = +a, b = +b, function(t) {
-      return Math.round(a * (1 - t) + b * t);
-    };
-  }
-
   var degrees = 180 / Math.PI;
 
-  var identity$2 = {
+  var identity = {
     translateX: 0,
     translateY: 0,
     rotate: 0,
@@ -1973,14 +1539,14 @@
   /* eslint-disable no-undef */
   function parseCss(value) {
     const m = new (typeof DOMMatrix === "function" ? DOMMatrix : WebKitCSSMatrix)(value + "");
-    return m.isIdentity ? identity$2 : decompose(m.a, m.b, m.c, m.d, m.e, m.f);
+    return m.isIdentity ? identity : decompose(m.a, m.b, m.c, m.d, m.e, m.f);
   }
 
   function parseSvg(value) {
-    if (value == null) return identity$2;
+    if (value == null) return identity;
     if (!svgNode) svgNode = document.createElementNS("http://www.w3.org/2000/svg", "g");
     svgNode.setAttribute("transform", value);
-    if (!(value = svgNode.transform.baseVal.consolidate())) return identity$2;
+    if (!(value = svgNode.transform.baseVal.consolidate())) return identity;
     value = value.matrix;
     return decompose(value.a, value.b, value.c, value.d, value.e, value.f);
   }
@@ -3044,673 +2610,745 @@
     return fetch(input, init).then(responseJson);
   }
 
-  function formatDecimal(x) {
-    return Math.abs(x = Math.round(x)) >= 1e21
-        ? x.toLocaleString("en").replace(/,/g, "")
-        : x.toString(10);
-  }
-
-  // Computes the decimal coefficient and exponent of the specified number x with
-  // significant digits p, where x is positive and p is in [1, 21] or undefined.
-  // For example, formatDecimalParts(1.23) returns ["123", 0].
-  function formatDecimalParts(x, p) {
-    if ((i = (x = p ? x.toExponential(p - 1) : x.toExponential()).indexOf("e")) < 0) return null; // NaN, ±Infinity
-    var i, coefficient = x.slice(0, i);
-
-    // The string returned by toExponential either has the form \d\.\d+e[-+]\d+
-    // (e.g., 1.2e+3) or the form \de[-+]\d+ (e.g., 1e+3).
-    return [
-      coefficient.length > 1 ? coefficient[0] + coefficient.slice(2) : coefficient,
-      +x.slice(i + 1)
-    ];
-  }
-
-  function exponent(x) {
-    return x = formatDecimalParts(Math.abs(x)), x ? x[1] : NaN;
-  }
-
-  function formatGroup(grouping, thousands) {
-    return function(value, width) {
-      var i = value.length,
-          t = [],
-          j = 0,
-          g = grouping[0],
-          length = 0;
-
-      while (i > 0 && g > 0) {
-        if (length + g + 1 > width) g = Math.max(1, width - length);
-        t.push(value.substring(i -= g, i + g));
-        if ((length += g + 1) > width) break;
-        g = grouping[j = (j + 1) % grouping.length];
-      }
-
-      return t.reverse().join(thousands);
-    };
-  }
-
-  function formatNumerals(numerals) {
-    return function(value) {
-      return value.replace(/[0-9]/g, function(i) {
-        return numerals[+i];
-      });
-    };
-  }
-
-  // [[fill]align][sign][symbol][0][width][,][.precision][~][type]
-  var re = /^(?:(.)?([<>=^]))?([+\-( ])?([$#])?(0)?(\d+)?(,)?(\.\d+)?(~)?([a-z%])?$/i;
-
-  function formatSpecifier(specifier) {
-    if (!(match = re.exec(specifier))) throw new Error("invalid format: " + specifier);
-    var match;
-    return new FormatSpecifier({
-      fill: match[1],
-      align: match[2],
-      sign: match[3],
-      symbol: match[4],
-      zero: match[5],
-      width: match[6],
-      comma: match[7],
-      precision: match[8] && match[8].slice(1),
-      trim: match[9],
-      type: match[10]
-    });
-  }
-
-  formatSpecifier.prototype = FormatSpecifier.prototype; // instanceof
-
-  function FormatSpecifier(specifier) {
-    this.fill = specifier.fill === undefined ? " " : specifier.fill + "";
-    this.align = specifier.align === undefined ? ">" : specifier.align + "";
-    this.sign = specifier.sign === undefined ? "-" : specifier.sign + "";
-    this.symbol = specifier.symbol === undefined ? "" : specifier.symbol + "";
-    this.zero = !!specifier.zero;
-    this.width = specifier.width === undefined ? undefined : +specifier.width;
-    this.comma = !!specifier.comma;
-    this.precision = specifier.precision === undefined ? undefined : +specifier.precision;
-    this.trim = !!specifier.trim;
-    this.type = specifier.type === undefined ? "" : specifier.type + "";
-  }
-
-  FormatSpecifier.prototype.toString = function() {
-    return this.fill
-        + this.align
-        + this.sign
-        + this.symbol
-        + (this.zero ? "0" : "")
-        + (this.width === undefined ? "" : Math.max(1, this.width | 0))
-        + (this.comma ? "," : "")
-        + (this.precision === undefined ? "" : "." + Math.max(0, this.precision | 0))
-        + (this.trim ? "~" : "")
-        + this.type;
-  };
-
-  // Trims insignificant zeros, e.g., replaces 1.2000k with 1.2k.
-  function formatTrim(s) {
-    out: for (var n = s.length, i = 1, i0 = -1, i1; i < n; ++i) {
-      switch (s[i]) {
-        case ".": i0 = i1 = i; break;
-        case "0": if (i0 === 0) i0 = i; i1 = i; break;
-        default: if (!+s[i]) break out; if (i0 > 0) i0 = 0; break;
-      }
-    }
-    return i0 > 0 ? s.slice(0, i0) + s.slice(i1 + 1) : s;
-  }
-
-  var prefixExponent;
-
-  function formatPrefixAuto(x, p) {
-    var d = formatDecimalParts(x, p);
-    if (!d) return x + "";
-    var coefficient = d[0],
-        exponent = d[1],
-        i = exponent - (prefixExponent = Math.max(-8, Math.min(8, Math.floor(exponent / 3))) * 3) + 1,
-        n = coefficient.length;
-    return i === n ? coefficient
-        : i > n ? coefficient + new Array(i - n + 1).join("0")
-        : i > 0 ? coefficient.slice(0, i) + "." + coefficient.slice(i)
-        : "0." + new Array(1 - i).join("0") + formatDecimalParts(x, Math.max(0, p + i - 1))[0]; // less than 1y!
-  }
-
-  function formatRounded(x, p) {
-    var d = formatDecimalParts(x, p);
-    if (!d) return x + "";
-    var coefficient = d[0],
-        exponent = d[1];
-    return exponent < 0 ? "0." + new Array(-exponent).join("0") + coefficient
-        : coefficient.length > exponent + 1 ? coefficient.slice(0, exponent + 1) + "." + coefficient.slice(exponent + 1)
-        : coefficient + new Array(exponent - coefficient.length + 2).join("0");
-  }
-
-  var formatTypes = {
-    "%": (x, p) => (x * 100).toFixed(p),
-    "b": (x) => Math.round(x).toString(2),
-    "c": (x) => x + "",
-    "d": formatDecimal,
-    "e": (x, p) => x.toExponential(p),
-    "f": (x, p) => x.toFixed(p),
-    "g": (x, p) => x.toPrecision(p),
-    "o": (x) => Math.round(x).toString(8),
-    "p": (x, p) => formatRounded(x * 100, p),
-    "r": formatRounded,
-    "s": formatPrefixAuto,
-    "X": (x) => Math.round(x).toString(16).toUpperCase(),
-    "x": (x) => Math.round(x).toString(16)
-  };
-
-  function identity$1(x) {
-    return x;
-  }
-
-  var map = Array.prototype.map,
-      prefixes = ["y","z","a","f","p","n","µ","m","","k","M","G","T","P","E","Z","Y"];
-
-  function formatLocale(locale) {
-    var group = locale.grouping === undefined || locale.thousands === undefined ? identity$1 : formatGroup(map.call(locale.grouping, Number), locale.thousands + ""),
-        currencyPrefix = locale.currency === undefined ? "" : locale.currency[0] + "",
-        currencySuffix = locale.currency === undefined ? "" : locale.currency[1] + "",
-        decimal = locale.decimal === undefined ? "." : locale.decimal + "",
-        numerals = locale.numerals === undefined ? identity$1 : formatNumerals(map.call(locale.numerals, String)),
-        percent = locale.percent === undefined ? "%" : locale.percent + "",
-        minus = locale.minus === undefined ? "−" : locale.minus + "",
-        nan = locale.nan === undefined ? "NaN" : locale.nan + "";
-
-    function newFormat(specifier) {
-      specifier = formatSpecifier(specifier);
-
-      var fill = specifier.fill,
-          align = specifier.align,
-          sign = specifier.sign,
-          symbol = specifier.symbol,
-          zero = specifier.zero,
-          width = specifier.width,
-          comma = specifier.comma,
-          precision = specifier.precision,
-          trim = specifier.trim,
-          type = specifier.type;
-
-      // The "n" type is an alias for ",g".
-      if (type === "n") comma = true, type = "g";
-
-      // The "" type, and any invalid type, is an alias for ".12~g".
-      else if (!formatTypes[type]) precision === undefined && (precision = 12), trim = true, type = "g";
-
-      // If zero fill is specified, padding goes after sign and before digits.
-      if (zero || (fill === "0" && align === "=")) zero = true, fill = "0", align = "=";
-
-      // Compute the prefix and suffix.
-      // For SI-prefix, the suffix is lazily computed.
-      var prefix = symbol === "$" ? currencyPrefix : symbol === "#" && /[boxX]/.test(type) ? "0" + type.toLowerCase() : "",
-          suffix = symbol === "$" ? currencySuffix : /[%p]/.test(type) ? percent : "";
-
-      // What format function should we use?
-      // Is this an integer type?
-      // Can this type generate exponential notation?
-      var formatType = formatTypes[type],
-          maybeSuffix = /[defgprs%]/.test(type);
-
-      // Set the default precision if not specified,
-      // or clamp the specified precision to the supported range.
-      // For significant precision, it must be in [1, 21].
-      // For fixed precision, it must be in [0, 20].
-      precision = precision === undefined ? 6
-          : /[gprs]/.test(type) ? Math.max(1, Math.min(21, precision))
-          : Math.max(0, Math.min(20, precision));
-
-      function format(value) {
-        var valuePrefix = prefix,
-            valueSuffix = suffix,
-            i, n, c;
-
-        if (type === "c") {
-          valueSuffix = formatType(value) + valueSuffix;
-          value = "";
-        } else {
-          value = +value;
-
-          // Determine the sign. -0 is not less than 0, but 1 / -0 is!
-          var valueNegative = value < 0 || 1 / value < 0;
-
-          // Perform the initial formatting.
-          value = isNaN(value) ? nan : formatType(Math.abs(value), precision);
-
-          // Trim insignificant zeros.
-          if (trim) value = formatTrim(value);
-
-          // If a negative value rounds to zero after formatting, and no explicit positive sign is requested, hide the sign.
-          if (valueNegative && +value === 0 && sign !== "+") valueNegative = false;
-
-          // Compute the prefix and suffix.
-          valuePrefix = (valueNegative ? (sign === "(" ? sign : minus) : sign === "-" || sign === "(" ? "" : sign) + valuePrefix;
-          valueSuffix = (type === "s" ? prefixes[8 + prefixExponent / 3] : "") + valueSuffix + (valueNegative && sign === "(" ? ")" : "");
-
-          // Break the formatted value into the integer “value” part that can be
-          // grouped, and fractional or exponential “suffix” part that is not.
-          if (maybeSuffix) {
-            i = -1, n = value.length;
-            while (++i < n) {
-              if (c = value.charCodeAt(i), 48 > c || c > 57) {
-                valueSuffix = (c === 46 ? decimal + value.slice(i + 1) : value.slice(i)) + valueSuffix;
-                value = value.slice(0, i);
-                break;
-              }
-            }
-          }
+  function max(values, valueof) {
+    let max;
+    if (valueof === undefined) {
+      for (const value of values) {
+        if (value != null
+            && (max < value || (max === undefined && value >= value))) {
+          max = value;
         }
-
-        // If the fill character is not "0", grouping is applied before padding.
-        if (comma && !zero) value = group(value, Infinity);
-
-        // Compute the padding.
-        var length = valuePrefix.length + value.length + valueSuffix.length,
-            padding = length < width ? new Array(width - length + 1).join(fill) : "";
-
-        // If the fill character is "0", grouping is applied after padding.
-        if (comma && zero) value = group(padding + value, padding.length ? width - valueSuffix.length : Infinity), padding = "";
-
-        // Reconstruct the final output based on the desired alignment.
-        switch (align) {
-          case "<": value = valuePrefix + value + valueSuffix + padding; break;
-          case "=": value = valuePrefix + padding + value + valueSuffix; break;
-          case "^": value = padding.slice(0, length = padding.length >> 1) + valuePrefix + value + valueSuffix + padding.slice(length); break;
-          default: value = padding + valuePrefix + value + valueSuffix; break;
+      }
+    } else {
+      let index = -1;
+      for (let value of values) {
+        if ((value = valueof(value, ++index, values)) != null
+            && (max < value || (max === undefined && value >= value))) {
+          max = value;
         }
-
-        return numerals(value);
       }
-
-      format.toString = function() {
-        return specifier + "";
-      };
-
-      return format;
     }
-
-    function formatPrefix(specifier, value) {
-      var f = newFormat((specifier = formatSpecifier(specifier), specifier.type = "f", specifier)),
-          e = Math.max(-8, Math.min(8, Math.floor(exponent(value) / 3))) * 3,
-          k = Math.pow(10, -e),
-          prefix = prefixes[8 + e / 3];
-      return function(value) {
-        return f(k * value) + prefix;
-      };
-    }
-
-    return {
-      format: newFormat,
-      formatPrefix: formatPrefix
-    };
+    return max;
   }
 
-  var locale;
-  var format;
-  var formatPrefix;
-
-  defaultLocale({
-    thousands: ",",
-    grouping: [3],
-    currency: ["$", ""]
-  });
-
-  function defaultLocale(definition) {
-    locale = formatLocale(definition);
-    format = locale.format;
-    formatPrefix = locale.formatPrefix;
-    return locale;
-  }
-
-  function precisionFixed(step) {
-    return Math.max(0, -exponent(Math.abs(step)));
-  }
-
-  function precisionPrefix(step, value) {
-    return Math.max(0, Math.max(-8, Math.min(8, Math.floor(exponent(value) / 3))) * 3 - exponent(Math.abs(step)));
-  }
-
-  function precisionRound(step, max) {
-    step = Math.abs(step), max = Math.abs(max) - step;
-    return Math.max(0, exponent(max) - exponent(step)) + 1;
-  }
-
-  function initRange(domain, range) {
-    switch (arguments.length) {
-      case 0: break;
-      case 1: this.range(domain); break;
-      default: this.range(range).domain(domain); break;
-    }
-    return this;
-  }
-
-  const implicit = Symbol("implicit");
-
-  function ordinal() {
-    var index = new InternMap(),
-        domain = [],
-        range = [],
-        unknown = implicit;
-
-    function scale(d) {
-      let i = index.get(d);
-      if (i === undefined) {
-        if (unknown !== implicit) return unknown;
-        index.set(d, i = domain.push(d) - 1);
+  function min(values, valueof) {
+    let min;
+    if (valueof === undefined) {
+      for (const value of values) {
+        if (value != null
+            && (min > value || (min === undefined && value >= value))) {
+          min = value;
+        }
       }
-      return range[i % range.length];
-    }
-
-    scale.domain = function(_) {
-      if (!arguments.length) return domain.slice();
-      domain = [], index = new InternMap();
-      for (const value of _) {
-        if (index.has(value)) continue;
-        index.set(value, domain.push(value) - 1);
+    } else {
+      let index = -1;
+      for (let value of values) {
+        if ((value = valueof(value, ++index, values)) != null
+            && (min > value || (min === undefined && value >= value))) {
+          min = value;
+        }
       }
-      return scale;
-    };
-
-    scale.range = function(_) {
-      return arguments.length ? (range = Array.from(_), scale) : range.slice();
-    };
-
-    scale.unknown = function(_) {
-      return arguments.length ? (unknown = _, scale) : unknown;
-    };
-
-    scale.copy = function() {
-      return ordinal(domain, range).unknown(unknown);
-    };
-
-    initRange.apply(scale, arguments);
-
-    return scale;
+    }
+    return min;
   }
 
-  function constants(x) {
+  function sum(values, valueof) {
+    let sum = 0;
+    if (valueof === undefined) {
+      for (let value of values) {
+        if (value = +value) {
+          sum += value;
+        }
+      }
+    } else {
+      let index = -1;
+      for (let value of values) {
+        if (value = +valueof(value, ++index, values)) {
+          sum += value;
+        }
+      }
+    }
+    return sum;
+  }
+
+  function justify(node, n) {
+    return node.sourceLinks.length ? node.depth : n - 1;
+  }
+
+  function constant$1(x) {
     return function() {
       return x;
     };
   }
 
-  function number(x) {
-    return +x;
+  function ascendingSourceBreadth(a, b) {
+    return ascendingBreadth(a.source, b.source) || a.index - b.index;
   }
 
-  var unit = [0, 1];
-
-  function identity(x) {
-    return x;
+  function ascendingTargetBreadth(a, b) {
+    return ascendingBreadth(a.target, b.target) || a.index - b.index;
   }
 
-  function normalize(a, b) {
-    return (b -= (a = +a))
-        ? function(x) { return (x - a) / b; }
-        : constants(isNaN(b) ? NaN : 0.5);
+  function ascendingBreadth(a, b) {
+    return a.y0 - b.y0;
   }
 
-  function clamper(a, b) {
-    var t;
-    if (a > b) t = a, a = b, b = t;
-    return function(x) { return Math.max(a, Math.min(b, x)); };
+  function value(d) {
+    return d.value;
   }
 
-  // normalize(a, b)(x) takes a domain value x in [a,b] and returns the corresponding parameter t in [0,1].
-  // interpolate(a, b)(t) takes a parameter t in [0,1] and returns the corresponding range value x in [a,b].
-  function bimap(domain, range, interpolate) {
-    var d0 = domain[0], d1 = domain[1], r0 = range[0], r1 = range[1];
-    if (d1 < d0) d0 = normalize(d1, d0), r0 = interpolate(r1, r0);
-    else d0 = normalize(d0, d1), r0 = interpolate(r0, r1);
-    return function(x) { return r0(d0(x)); };
+  function defaultId(d) {
+    return d.index;
   }
 
-  function polymap(domain, range, interpolate) {
-    var j = Math.min(domain.length, range.length) - 1,
-        d = new Array(j),
-        r = new Array(j),
-        i = -1;
-
-    // Reverse descending domains.
-    if (domain[j] < domain[0]) {
-      domain = domain.slice().reverse();
-      range = range.slice().reverse();
-    }
-
-    while (++i < j) {
-      d[i] = normalize(domain[i], domain[i + 1]);
-      r[i] = interpolate(range[i], range[i + 1]);
-    }
-
-    return function(x) {
-      var i = bisect(domain, x, 1, j) - 1;
-      return r[i](d[i](x));
-    };
+  function defaultNodes(graph) {
+    return graph.nodes;
   }
 
-  function copy(source, target) {
-    return target
-        .domain(source.domain())
-        .range(source.range())
-        .interpolate(source.interpolate())
-        .clamp(source.clamp())
-        .unknown(source.unknown());
+  function defaultLinks(graph) {
+    return graph.links;
   }
 
-  function transformer() {
-    var domain = unit,
-        range = unit,
-        interpolate = interpolate$1,
-        transform,
-        untransform,
-        unknown,
-        clamp = identity,
-        piecewise,
-        output,
-        input;
-
-    function rescale() {
-      var n = Math.min(domain.length, range.length);
-      if (clamp !== identity) clamp = clamper(domain[0], domain[n - 1]);
-      piecewise = n > 2 ? polymap : bimap;
-      output = input = null;
-      return scale;
-    }
-
-    function scale(x) {
-      return x == null || isNaN(x = +x) ? unknown : (output || (output = piecewise(domain.map(transform), range, interpolate)))(transform(clamp(x)));
-    }
-
-    scale.invert = function(y) {
-      return clamp(untransform((input || (input = piecewise(range, domain.map(transform), interpolateNumber)))(y)));
-    };
-
-    scale.domain = function(_) {
-      return arguments.length ? (domain = Array.from(_, number), rescale()) : domain.slice();
-    };
-
-    scale.range = function(_) {
-      return arguments.length ? (range = Array.from(_), rescale()) : range.slice();
-    };
-
-    scale.rangeRound = function(_) {
-      return range = Array.from(_), interpolate = interpolateRound, rescale();
-    };
-
-    scale.clamp = function(_) {
-      return arguments.length ? (clamp = _ ? true : identity, rescale()) : clamp !== identity;
-    };
-
-    scale.interpolate = function(_) {
-      return arguments.length ? (interpolate = _, rescale()) : interpolate;
-    };
-
-    scale.unknown = function(_) {
-      return arguments.length ? (unknown = _, scale) : unknown;
-    };
-
-    return function(t, u) {
-      transform = t, untransform = u;
-      return rescale();
-    };
+  function find(nodeById, id) {
+    const node = nodeById.get(id);
+    if (!node) throw new Error("missing: " + id);
+    return node;
   }
 
-  function continuous() {
-    return transformer()(identity, identity);
-  }
-
-  function tickFormat(start, stop, count, specifier) {
-    var step = tickStep(start, stop, count),
-        precision;
-    specifier = formatSpecifier(specifier == null ? ",f" : specifier);
-    switch (specifier.type) {
-      case "s": {
-        var value = Math.max(Math.abs(start), Math.abs(stop));
-        if (specifier.precision == null && !isNaN(precision = precisionPrefix(step, value))) specifier.precision = precision;
-        return formatPrefix(specifier, value);
+  function computeLinkBreadths({nodes}) {
+    for (const node of nodes) {
+      let y0 = node.y0;
+      let y1 = y0;
+      for (const link of node.sourceLinks) {
+        link.y0 = y0 + link.width / 2;
+        y0 += link.width;
       }
-      case "":
-      case "e":
-      case "g":
-      case "p":
-      case "r": {
-        if (specifier.precision == null && !isNaN(precision = precisionRound(step, Math.max(Math.abs(start), Math.abs(stop))))) specifier.precision = precision - (specifier.type === "e");
-        break;
-      }
-      case "f":
-      case "%": {
-        if (specifier.precision == null && !isNaN(precision = precisionFixed(step))) specifier.precision = precision - (specifier.type === "%") * 2;
-        break;
+      for (const link of node.targetLinks) {
+        link.y1 = y1 + link.width / 2;
+        y1 += link.width;
       }
     }
-    return format(specifier);
   }
 
-  function linearish(scale) {
-    var domain = scale.domain;
+  function Sankey() {
+    let x0 = 0, y0 = 0, x1 = 1, y1 = 1; // extent
+    let dx = 24; // nodeWidth
+    let dy = 8, py; // nodePadding
+    let id = defaultId;
+    let align = justify;
+    let sort;
+    let linkSort;
+    let nodes = defaultNodes;
+    let links = defaultLinks;
+    let iterations = 6;
 
-    scale.ticks = function(count) {
-      var d = domain();
-      return ticks(d[0], d[d.length - 1], count == null ? 10 : count);
+    function sankey() {
+      const graph = {nodes: nodes.apply(null, arguments), links: links.apply(null, arguments)};
+      computeNodeLinks(graph);
+      computeNodeValues(graph);
+      computeNodeDepths(graph);
+      computeNodeHeights(graph);
+      computeNodeBreadths(graph);
+      computeLinkBreadths(graph);
+      return graph;
+    }
+
+    sankey.update = function(graph) {
+      computeLinkBreadths(graph);
+      return graph;
     };
 
-    scale.tickFormat = function(count, specifier) {
-      var d = domain();
-      return tickFormat(d[0], d[d.length - 1], count == null ? 10 : count, specifier);
+    sankey.nodeId = function(_) {
+      return arguments.length ? (id = typeof _ === "function" ? _ : constant$1(_), sankey) : id;
     };
 
-    scale.nice = function(count) {
-      if (count == null) count = 10;
+    sankey.nodeAlign = function(_) {
+      return arguments.length ? (align = typeof _ === "function" ? _ : constant$1(_), sankey) : align;
+    };
 
-      var d = domain();
-      var i0 = 0;
-      var i1 = d.length - 1;
-      var start = d[i0];
-      var stop = d[i1];
-      var prestep;
-      var step;
-      var maxIter = 10;
+    sankey.nodeSort = function(_) {
+      return arguments.length ? (sort = _, sankey) : sort;
+    };
 
-      if (stop < start) {
-        step = start, start = stop, stop = step;
-        step = i0, i0 = i1, i1 = step;
+    sankey.nodeWidth = function(_) {
+      return arguments.length ? (dx = +_, sankey) : dx;
+    };
+
+    sankey.nodePadding = function(_) {
+      return arguments.length ? (dy = py = +_, sankey) : dy;
+    };
+
+    sankey.nodes = function(_) {
+      return arguments.length ? (nodes = typeof _ === "function" ? _ : constant$1(_), sankey) : nodes;
+    };
+
+    sankey.links = function(_) {
+      return arguments.length ? (links = typeof _ === "function" ? _ : constant$1(_), sankey) : links;
+    };
+
+    sankey.linkSort = function(_) {
+      return arguments.length ? (linkSort = _, sankey) : linkSort;
+    };
+
+    sankey.size = function(_) {
+      return arguments.length ? (x0 = y0 = 0, x1 = +_[0], y1 = +_[1], sankey) : [x1 - x0, y1 - y0];
+    };
+
+    sankey.extent = function(_) {
+      return arguments.length ? (x0 = +_[0][0], x1 = +_[1][0], y0 = +_[0][1], y1 = +_[1][1], sankey) : [[x0, y0], [x1, y1]];
+    };
+
+    sankey.iterations = function(_) {
+      return arguments.length ? (iterations = +_, sankey) : iterations;
+    };
+
+    function computeNodeLinks({nodes, links}) {
+      for (const [i, node] of nodes.entries()) {
+        node.index = i;
+        node.sourceLinks = [];
+        node.targetLinks = [];
       }
-      
-      while (maxIter-- > 0) {
-        step = tickIncrement(start, stop, count);
-        if (step === prestep) {
-          d[i0] = start;
-          d[i1] = stop;
-          return domain(d);
-        } else if (step > 0) {
-          start = Math.floor(start / step) * step;
-          stop = Math.ceil(stop / step) * step;
-        } else if (step < 0) {
-          start = Math.ceil(start * step) / step;
-          stop = Math.floor(stop * step) / step;
-        } else {
-          break;
+      const nodeById = new Map(nodes.map((d, i) => [id(d, i, nodes), d]));
+      for (const [i, link] of links.entries()) {
+        link.index = i;
+        let {source, target} = link;
+        if (typeof source !== "object") source = link.source = find(nodeById, source);
+        if (typeof target !== "object") target = link.target = find(nodeById, target);
+        source.sourceLinks.push(link);
+        target.targetLinks.push(link);
+      }
+      if (linkSort != null) {
+        for (const {sourceLinks, targetLinks} of nodes) {
+          sourceLinks.sort(linkSort);
+          targetLinks.sort(linkSort);
         }
-        prestep = step;
+      }
+    }
+
+    function computeNodeValues({nodes}) {
+      for (const node of nodes) {
+        node.value = node.fixedValue === undefined
+            ? Math.max(sum(node.sourceLinks, value), sum(node.targetLinks, value))
+            : node.fixedValue;
+      }
+    }
+
+    function computeNodeDepths({nodes}) {
+      const n = nodes.length;
+      let current = new Set(nodes);
+      let next = new Set;
+      let x = 0;
+      while (current.size) {
+        for (const node of current) {
+          node.depth = x;
+          for (const {target} of node.sourceLinks) {
+            next.add(target);
+          }
+        }
+        if (++x > n) throw new Error("circular link");
+        current = next;
+        next = new Set;
+      }
+    }
+
+    function computeNodeHeights({nodes}) {
+      const n = nodes.length;
+      let current = new Set(nodes);
+      let next = new Set;
+      let x = 0;
+      while (current.size) {
+        for (const node of current) {
+          node.height = x;
+          for (const {source} of node.targetLinks) {
+            next.add(source);
+          }
+        }
+        if (++x > n) throw new Error("circular link");
+        current = next;
+        next = new Set;
+      }
+    }
+
+    function computeNodeLayers({nodes}) {
+      const x = max(nodes, d => d.depth) + 1;
+      const kx = (x1 - x0 - dx) / (x - 1);
+      const columns = new Array(x);
+      for (const node of nodes) {
+        const i = Math.max(0, Math.min(x - 1, Math.floor(align.call(null, node, x))));
+        node.layer = i;
+        node.x0 = x0 + i * kx;
+        node.x1 = node.x0 + dx;
+        if (columns[i]) columns[i].push(node);
+        else columns[i] = [node];
+      }
+      if (sort) for (const column of columns) {
+        column.sort(sort);
+      }
+      return columns;
+    }
+
+    function initializeNodeBreadths(columns) {
+      const ky = min(columns, c => (y1 - y0 - (c.length - 1) * py) / sum(c, value));
+      for (const nodes of columns) {
+        let y = y0;
+        for (const node of nodes) {
+          node.y0 = y;
+          node.y1 = y + node.value * ky;
+          y = node.y1 + py;
+          for (const link of node.sourceLinks) {
+            link.width = link.value * ky;
+          }
+        }
+        y = (y1 - y + py) / (nodes.length + 1);
+        for (let i = 0; i < nodes.length; ++i) {
+          const node = nodes[i];
+          node.y0 += y * (i + 1);
+          node.y1 += y * (i + 1);
+        }
+        reorderLinks(nodes);
+      }
+    }
+
+    function computeNodeBreadths(graph) {
+      const columns = computeNodeLayers(graph);
+      py = Math.min(dy, (y1 - y0) / (max(columns, c => c.length) - 1));
+      initializeNodeBreadths(columns);
+      for (let i = 0; i < iterations; ++i) {
+        const alpha = Math.pow(0.99, i);
+        const beta = Math.max(1 - alpha, (i + 1) / iterations);
+        relaxRightToLeft(columns, alpha, beta);
+        relaxLeftToRight(columns, alpha, beta);
+      }
+    }
+
+    // Reposition each node based on its incoming (target) links.
+    function relaxLeftToRight(columns, alpha, beta) {
+      for (let i = 1, n = columns.length; i < n; ++i) {
+        const column = columns[i];
+        for (const target of column) {
+          let y = 0;
+          let w = 0;
+          for (const {source, value} of target.targetLinks) {
+            let v = value * (target.layer - source.layer);
+            y += targetTop(source, target) * v;
+            w += v;
+          }
+          if (!(w > 0)) continue;
+          let dy = (y / w - target.y0) * alpha;
+          target.y0 += dy;
+          target.y1 += dy;
+          reorderNodeLinks(target);
+        }
+        if (sort === undefined) column.sort(ascendingBreadth);
+        resolveCollisions(column, beta);
+      }
+    }
+
+    // Reposition each node based on its outgoing (source) links.
+    function relaxRightToLeft(columns, alpha, beta) {
+      for (let n = columns.length, i = n - 2; i >= 0; --i) {
+        const column = columns[i];
+        for (const source of column) {
+          let y = 0;
+          let w = 0;
+          for (const {target, value} of source.sourceLinks) {
+            let v = value * (target.layer - source.layer);
+            y += sourceTop(source, target) * v;
+            w += v;
+          }
+          if (!(w > 0)) continue;
+          let dy = (y / w - source.y0) * alpha;
+          source.y0 += dy;
+          source.y1 += dy;
+          reorderNodeLinks(source);
+        }
+        if (sort === undefined) column.sort(ascendingBreadth);
+        resolveCollisions(column, beta);
+      }
+    }
+
+    function resolveCollisions(nodes, alpha) {
+      const i = nodes.length >> 1;
+      const subject = nodes[i];
+      resolveCollisionsBottomToTop(nodes, subject.y0 - py, i - 1, alpha);
+      resolveCollisionsTopToBottom(nodes, subject.y1 + py, i + 1, alpha);
+      resolveCollisionsBottomToTop(nodes, y1, nodes.length - 1, alpha);
+      resolveCollisionsTopToBottom(nodes, y0, 0, alpha);
+    }
+
+    // Push any overlapping nodes down.
+    function resolveCollisionsTopToBottom(nodes, y, i, alpha) {
+      for (; i < nodes.length; ++i) {
+        const node = nodes[i];
+        const dy = (y - node.y0) * alpha;
+        if (dy > 1e-6) node.y0 += dy, node.y1 += dy;
+        y = node.y1 + py;
+      }
+    }
+
+    // Push any overlapping nodes up.
+    function resolveCollisionsBottomToTop(nodes, y, i, alpha) {
+      for (; i >= 0; --i) {
+        const node = nodes[i];
+        const dy = (node.y1 - y) * alpha;
+        if (dy > 1e-6) node.y0 -= dy, node.y1 -= dy;
+        y = node.y0 - py;
+      }
+    }
+
+    function reorderNodeLinks({sourceLinks, targetLinks}) {
+      if (linkSort === undefined) {
+        for (const {source: {sourceLinks}} of targetLinks) {
+          sourceLinks.sort(ascendingTargetBreadth);
+        }
+        for (const {target: {targetLinks}} of sourceLinks) {
+          targetLinks.sort(ascendingSourceBreadth);
+        }
+      }
+    }
+
+    function reorderLinks(nodes) {
+      if (linkSort === undefined) {
+        for (const {sourceLinks, targetLinks} of nodes) {
+          sourceLinks.sort(ascendingTargetBreadth);
+          targetLinks.sort(ascendingSourceBreadth);
+        }
+      }
+    }
+
+    // Returns the target.y0 that would produce an ideal link from source to target.
+    function targetTop(source, target) {
+      let y = source.y0 - (source.sourceLinks.length - 1) * py / 2;
+      for (const {target: node, width} of source.sourceLinks) {
+        if (node === target) break;
+        y += width + py;
+      }
+      for (const {source: node, width} of target.targetLinks) {
+        if (node === source) break;
+        y -= width;
+      }
+      return y;
+    }
+
+    // Returns the source.y0 that would produce an ideal link from source to target.
+    function sourceTop(source, target) {
+      let y = target.y0 - (target.targetLinks.length - 1) * py / 2;
+      for (const {source: node, width} of target.targetLinks) {
+        if (node === source) break;
+        y += width + py;
+      }
+      for (const {target: node, width} of source.sourceLinks) {
+        if (node === target) break;
+        y -= width;
+      }
+      return y;
+    }
+
+    return sankey;
+  }
+
+  var pi = Math.PI,
+      tau = 2 * pi,
+      epsilon = 1e-6,
+      tauEpsilon = tau - epsilon;
+
+  function Path() {
+    this._x0 = this._y0 = // start of current subpath
+    this._x1 = this._y1 = null; // end of current subpath
+    this._ = "";
+  }
+
+  function path() {
+    return new Path;
+  }
+
+  Path.prototype = path.prototype = {
+    constructor: Path,
+    moveTo: function(x, y) {
+      this._ += "M" + (this._x0 = this._x1 = +x) + "," + (this._y0 = this._y1 = +y);
+    },
+    closePath: function() {
+      if (this._x1 !== null) {
+        this._x1 = this._x0, this._y1 = this._y0;
+        this._ += "Z";
+      }
+    },
+    lineTo: function(x, y) {
+      this._ += "L" + (this._x1 = +x) + "," + (this._y1 = +y);
+    },
+    quadraticCurveTo: function(x1, y1, x, y) {
+      this._ += "Q" + (+x1) + "," + (+y1) + "," + (this._x1 = +x) + "," + (this._y1 = +y);
+    },
+    bezierCurveTo: function(x1, y1, x2, y2, x, y) {
+      this._ += "C" + (+x1) + "," + (+y1) + "," + (+x2) + "," + (+y2) + "," + (this._x1 = +x) + "," + (this._y1 = +y);
+    },
+    arcTo: function(x1, y1, x2, y2, r) {
+      x1 = +x1, y1 = +y1, x2 = +x2, y2 = +y2, r = +r;
+      var x0 = this._x1,
+          y0 = this._y1,
+          x21 = x2 - x1,
+          y21 = y2 - y1,
+          x01 = x0 - x1,
+          y01 = y0 - y1,
+          l01_2 = x01 * x01 + y01 * y01;
+
+      // Is the radius negative? Error.
+      if (r < 0) throw new Error("negative radius: " + r);
+
+      // Is this path empty? Move to (x1,y1).
+      if (this._x1 === null) {
+        this._ += "M" + (this._x1 = x1) + "," + (this._y1 = y1);
       }
 
-      return scale;
+      // Or, is (x1,y1) coincident with (x0,y0)? Do nothing.
+      else if (!(l01_2 > epsilon));
+
+      // Or, are (x0,y0), (x1,y1) and (x2,y2) collinear?
+      // Equivalently, is (x1,y1) coincident with (x2,y2)?
+      // Or, is the radius zero? Line to (x1,y1).
+      else if (!(Math.abs(y01 * x21 - y21 * x01) > epsilon) || !r) {
+        this._ += "L" + (this._x1 = x1) + "," + (this._y1 = y1);
+      }
+
+      // Otherwise, draw an arc!
+      else {
+        var x20 = x2 - x0,
+            y20 = y2 - y0,
+            l21_2 = x21 * x21 + y21 * y21,
+            l20_2 = x20 * x20 + y20 * y20,
+            l21 = Math.sqrt(l21_2),
+            l01 = Math.sqrt(l01_2),
+            l = r * Math.tan((pi - Math.acos((l21_2 + l01_2 - l20_2) / (2 * l21 * l01))) / 2),
+            t01 = l / l01,
+            t21 = l / l21;
+
+        // If the start tangent is not coincident with (x0,y0), line to.
+        if (Math.abs(t01 - 1) > epsilon) {
+          this._ += "L" + (x1 + t01 * x01) + "," + (y1 + t01 * y01);
+        }
+
+        this._ += "A" + r + "," + r + ",0,0," + (+(y01 * x20 > x01 * y20)) + "," + (this._x1 = x1 + t21 * x21) + "," + (this._y1 = y1 + t21 * y21);
+      }
+    },
+    arc: function(x, y, r, a0, a1, ccw) {
+      x = +x, y = +y, r = +r, ccw = !!ccw;
+      var dx = r * Math.cos(a0),
+          dy = r * Math.sin(a0),
+          x0 = x + dx,
+          y0 = y + dy,
+          cw = 1 ^ ccw,
+          da = ccw ? a0 - a1 : a1 - a0;
+
+      // Is the radius negative? Error.
+      if (r < 0) throw new Error("negative radius: " + r);
+
+      // Is this path empty? Move to (x0,y0).
+      if (this._x1 === null) {
+        this._ += "M" + x0 + "," + y0;
+      }
+
+      // Or, is (x0,y0) not coincident with the previous point? Line to (x0,y0).
+      else if (Math.abs(this._x1 - x0) > epsilon || Math.abs(this._y1 - y0) > epsilon) {
+        this._ += "L" + x0 + "," + y0;
+      }
+
+      // Is this arc empty? We’re done.
+      if (!r) return;
+
+      // Does the angle go the wrong way? Flip the direction.
+      if (da < 0) da = da % tau + tau;
+
+      // Is this a complete circle? Draw two arcs to complete the circle.
+      if (da > tauEpsilon) {
+        this._ += "A" + r + "," + r + ",0,1," + cw + "," + (x - dx) + "," + (y - dy) + "A" + r + "," + r + ",0,1," + cw + "," + (this._x1 = x0) + "," + (this._y1 = y0);
+      }
+
+      // Is this arc non-empty? Draw an arc!
+      else if (da > epsilon) {
+        this._ += "A" + r + "," + r + ",0," + (+(da >= pi)) + "," + cw + "," + (this._x1 = x + r * Math.cos(a1)) + "," + (this._y1 = y + r * Math.sin(a1));
+      }
+    },
+    rect: function(x, y, w, h) {
+      this._ += "M" + (this._x0 = this._x1 = +x) + "," + (this._y0 = this._y1 = +y) + "h" + (+w) + "v" + (+h) + "h" + (-w) + "Z";
+    },
+    toString: function() {
+      return this._;
+    }
+  };
+
+  function constant(x) {
+    return function constant() {
+      return x;
+    };
+  }
+
+  function x(p) {
+    return p[0];
+  }
+
+  function y(p) {
+    return p[1];
+  }
+
+  var slice = Array.prototype.slice;
+
+  function linkSource(d) {
+    return d.source;
+  }
+
+  function linkTarget(d) {
+    return d.target;
+  }
+
+  function link(curve) {
+    var source = linkSource,
+        target = linkTarget,
+        x$1 = x,
+        y$1 = y,
+        context = null;
+
+    function link() {
+      var buffer, argv = slice.call(arguments), s = source.apply(this, argv), t = target.apply(this, argv);
+      if (!context) context = buffer = path();
+      curve(context, +x$1.apply(this, (argv[0] = s, argv)), +y$1.apply(this, argv), +x$1.apply(this, (argv[0] = t, argv)), +y$1.apply(this, argv));
+      if (buffer) return context = null, buffer + "" || null;
+    }
+
+    link.source = function(_) {
+      return arguments.length ? (source = _, link) : source;
     };
 
-    return scale;
-  }
-
-  function linear() {
-    var scale = continuous();
-
-    scale.copy = function() {
-      return copy(scale, linear());
+    link.target = function(_) {
+      return arguments.length ? (target = _, link) : target;
     };
 
-    initRange.apply(scale, arguments);
+    link.x = function(_) {
+      return arguments.length ? (x$1 = typeof _ === "function" ? _ : constant(+_), link) : x$1;
+    };
 
-    return linearish(scale);
+    link.y = function(_) {
+      return arguments.length ? (y$1 = typeof _ === "function" ? _ : constant(+_), link) : y$1;
+    };
+
+    link.context = function(_) {
+      return arguments.length ? ((context = _ == null ? null : _), link) : context;
+    };
+
+    return link;
   }
 
-  function colors(specifier) {
-    var n = specifier.length / 6 | 0, colors = new Array(n), i = 0;
-    while (i < n) colors[i] = "#" + specifier.slice(i * 6, ++i * 6);
-    return colors;
+  function curveHorizontal(context, x0, y0, x1, y1) {
+    context.moveTo(x0, y0);
+    context.bezierCurveTo(x0 = (x0 + x1) / 2, y0, x0, y1, x1, y1);
   }
 
-  var Tableau10 = colors("4e79a7f28e2ce1575976b7b259a14fedc949af7aa1ff9da79c755fbab0ab");
+  function linkHorizontal() {
+    return link(curveHorizontal);
+  }
 
-  document.getElementById("name").innerText = "{insert your name here}";
+  function horizontalSource(d) {
+    return [d.source.x1, d.y0];
+  }
+
+  function horizontalTarget(d) {
+    return [d.target.x0, d.y1];
+  }
+
+  function sankeyLinkHorizontal() {
+    return linkHorizontal()
+        .source(horizontalSource)
+        .target(horizontalTarget);
+  }
+
+  document.getElementById("name").innerText = "Akshay Patel";
   document.getElementById("assignment_number").innerText = "3";
 
-  const width = 960;
-  const height = 500;
-  const margin = {top: 20, bottom: 50, left: 50, right: 20};
+  const getGraph = async () => {
 
-  async function init() {
-      const data = await json("./data/iris.json");
-      console.log(data);
+      const graph = await json("data/graph.json");
 
-      const svg = select("main")
+      console.log("graph", graph);
+      return graph
+  };
+
+  const createSankeyChart = async () => {
+
+      const width = 960;
+      const height = 600;
+
+      const graph = await getGraph();
+
+      const svg = select("main").select("#graph")
           .append("svg")
-              .attr("width", width)
-              .attr("height", height);
+          .attr("width", width)
+          .attr("height", height)
+          .attr("id", "my-sankey");
 
-      const x = linear()
-          .domain(extent(data, d => d.sepalwidth))
-          .range([margin.left, width - margin.right]);
-      const y = linear()
-          .domain(extent(data, d => d.sepallength))
-          .range([margin.top, height - margin.bottom]);
-      const color_scale = ordinal(Tableau10);
+      const sankey = Sankey().nodeWidth(15).nodePadding(10).extent([[1, 1], [width - 10, height - 10]]);
+      const { nodes, links } = sankey({ nodes: graph["nodes"], links: graph["links"] });
 
-      const axis_x = svg.append("g")
-          .attr("transform", `translate(0, ${height - margin.bottom})`)
-          .call(axisBottom(x));
-
-      axis_x.append("text")
-          .attr("y", 30)
-          .attr("x", width - margin.right)
-          .attr("text-anchor", "end")
-          .attr("fill", "currentColor")
-          .text("sepal width →");
-
-      const axis_y = svg.append("g")
-          .attr("transform", `translate(${margin.left}, 0)`)
-          .call(axisLeft(y));
-
-      axis_y
-          .append("g")
-              .attr("transform", `translate(-40, ${margin.top}) rotate(-90)`)
-          .append("text")
-              .attr("text-anchor", "end")
-              .attr("fill", "currentColor")
-              .text("sepal length →");
 
       svg.append("g")
-          .selectAll("circle")
-          .data(data)
-          .join("circle")
-              .attr("cx", d => x(d.sepalwidth))
-              .attr("cy", d => y(d.sepallength))
-              .attr("r", 3)
-              .attr("fill", d => color_scale(d.class));
+          .attr("fill", "none")
+          .attr("stroke", "#000")
+          .attr("stroke-opacity", 0.2)
+          .selectAll("path")
+          .data(graph["links"])
+          .join("path")
+          .attr("d", sankeyLinkHorizontal())
+          .attr("stroke-width", function (d) { if (d.width === 0) return 0; return 1 + d.width; }); // min width of a line = 1 if weight != 0
+
+      // const link = svg.append("g")
+      //     .attr("fill", "none")
+      //     .attr("stroke-opacity", 0.3)
+      //     .selectAll("g")
+      //     .data(graph["links"])
+      //     .join("g")
+      //     .style("mix-blend-mode", "multiply");
+
+      const nodeStroke = "gray", // stroke around node rects
+          nodeStrokeWidth = 0, // width of stroke around node rects, in pixels
+          nodeStrokeOpacity = 0.5, // opacity of stroke around node rects
+          nodeStrokeLinejoin = 5;
+
+      const node = svg.append("g")
+          .attr("stroke", nodeStroke)
+          .attr("stroke-width", nodeStrokeWidth)
+          .attr("stroke-opacity", nodeStrokeOpacity)
+          .attr("stroke-linejoin", nodeStrokeLinejoin)
+          .selectAll("rect")
+          .data(graph["nodes"])
+          .join("rect")
+          .attr("x", d => d.x0)
+          .attr("y", d => d.y0)
+          .attr("height", d => d.y1 - d.y0)
+          .attr("width", d => d.x1 - d.x0);
+
+      node.attr("fill", ({ index: i }) => {
+          if (nodes[i].type === "price") return '#38b000';
+          if (nodes[i].type === "owners") return '#f48c06';
+          if (nodes[i].type === "rating") return '#48cae4';
+          return 'blue'
+      });
+
+
+      svg.append("g")
+          .style("font", "10px sans-serif")
+          .selectAll("text")
+          .data(nodes)
+          .join("text")
+          .attr("x", d => d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6)
+          .attr("y", d => (d.y1 + d.y0) / 2)
+          .attr("dy", "0.35em")
+          .attr("text-anchor", d => d.x0 < width / 2 ? "start" : "end")
+          .text(d => { return `[${d.name}]` })
+          .append("tspan")
+          .attr("fill-opacity", 0.7)
+          .text(d => ` ${d.value.toLocaleString()}`);
+  };
+
+  async function init() {
+      await createSankeyChart();
   }
 
   init();
