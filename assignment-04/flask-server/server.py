@@ -7,6 +7,7 @@ app.config["DEBUG"] = True
 
 @app.route("/api/v1/get_data/<sensor>/<start>/<end>", methods=["GET"])
 def main(sensor, start, end):
+    print(f"Request: {sensor} {start} {end}")
     connection = sqlite3.connect("./sensors.db")
     df = pd.read_sql('''SELECT * FROM {table} 
         WHERE TIME(timestamp) BETWEEN "{start}" AND "{end}"
@@ -15,6 +16,7 @@ def main(sensor, start, end):
         table = sensor, start = start, end = end
     ), con=connection)
     connection.close()
+    print(f"Response size: {df.shape}")
     return Response(
         response=df.to_json(orient="records"),
         headers={"Access-Control-Allow-Origin": "*"}

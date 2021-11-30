@@ -6008,11 +6008,12 @@
     return zoom;
   }
 
-  document.getElementById("name").innerText = "{insert your name here}";document.getElementById("assignment_number").innerText = "{insert the assignment number here}";
+  document.getElementById("name").innerText = "Akshay Patel";
+  document.getElementById("assignment_number").innerText = "4";
 
   const width = window.innerWidth; // full width
   const height = window.innerHeight - 55; // full height - nav bar
-  const margin = {top: 20, bottom: 50, left: 50, right: 20};
+  const margin = { top: 20, bottom: 50, left: 50, right: 20 };
 
   async function init() {
       // get data from flask-server
@@ -6022,7 +6023,7 @@
       // load map materials
       // europe.geojson is from https://github.com/leakyMirror/map-of-europe/tree/master/GeoJSON
       const europe = await json("./data/europe.geojson"); // contains all countries of europe
-      const countries = europe.features.map(d => d.properties.ISO2); 
+      const countries = europe.features.map(d => d.properties.ISO2);
       // capitals.geojson is from https://github.com/Stefie/geojson-world/blob/master/capitals.geojson
       let capitals = await json("./data/capitals.geojson"); // contains all captials of all countries
       // filter capitals which are in europe
@@ -6042,7 +6043,7 @@
       const data_g = svg.append("g");
 
       const geo_projection = mercator()
-          .fitExtent([[margin.left, margin.top], [width - margin.right, height - margin.bottom]], 
+          .fitExtent([[margin.left, margin.top], [width - margin.right, height - margin.bottom]],
               europe.features[14]); // the 14. entry is germany.
       const path = index(geo_projection);
 
@@ -6087,7 +6088,7 @@
           .attr("opacity", 1)
           .attr("fill", d => color(d.P2));
 
-      function zoomed({transform}) {
+      function zoomed({ transform }) {
           map_g.attr("transform", transform);
           map_g.select("path")
               .attr("stroke-width", 1 / transform.k);
@@ -6118,7 +6119,7 @@
   }
 
   // from https://observablehq.com/@d3/color-legend
-  function ramp(color, n=256) {
+  function ramp(color, n = 256) {
       const canvas = document.createElement("canvas");
       canvas.width = n;
       canvas.height = 1;
@@ -6131,7 +6132,7 @@
   }
 
   // from https://observablehq.com/@d3/color-legend
-  function drawLegend(svg, color, width=320) {
+  function drawLegend(svg, color, width = 320) {
       const n = Math.min(color.domain().length, color.range().length);
       const tickAdjust = g => g.selectAll(".tick line").attr("y1", -18);
       const x = color.copy().rangeRound(quantize(interpolate$1(0, width), n));
@@ -6148,7 +6149,7 @@
       svg.append("g")
           .attr("transform", `translate(0, ${18})`)
           .call(axisBottom(x)
-            .tickValues(x.ticks(5).slice(1)))
+              .tickValues(x.ticks(5).slice(1)))
           .call(tickAdjust)
           .call(g => g.select(".domain").remove());
   }
