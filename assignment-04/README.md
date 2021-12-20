@@ -70,3 +70,16 @@ or run the npm command via the `NPM SCRIPTS` tab in the VS Code explorer.
 To open and edit a jupyter notebook, simply go to the data directory, activate your environment and type `jupyter notebook` to open jupyter notebook in the current directory or type `jupyter notebook <name>.ipynb` to directly open a specific notebook. This will start a local server and open your browser.
 
 For more information on jupyter notebook, please refer to [https://jupyter-notebook.readthedocs.io/en/stable/](https://jupyter-notebook.readthedocs.io/en/stable/).
+
+## Loading database
+
+1. Copy the `sensors.db` file to path `flask-server/sensors.db`
+2. Run the juypter nodebook.
+3. After all cells have been run successfully, a new file `flask-server/derived.db` will be created.
+
+or 
+1. Copy the file `derived.db` uploaded with the sumbmission to path `flask-server/derived.db`.
+
+## Result
+
+![Image](./Assignment-4.png)

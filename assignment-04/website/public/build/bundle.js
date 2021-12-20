@@ -3,10 +3,6 @@
 (function () {
   'use strict';
 
-  function ascending$1(a, b) {
-    return a == null || b == null ? NaN : a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
-  }
-
   // https://github.com/python/cpython/blob/a74eea238f5baba15797e2e8b570d153bc8690a7/Modules/mathmodule.c#L1423
   class Adder {
     constructor() {
@@ -102,27 +98,6 @@
     else if (error >= e5) step1 *= 5;
     else if (error >= e2) step1 *= 2;
     return stop < start ? -step1 : step1;
-  }
-
-  function max(values, valueof) {
-    let max;
-    if (valueof === undefined) {
-      for (const value of values) {
-        if (value != null
-            && (max < value || (max === undefined && value >= value))) {
-          max = value;
-        }
-      }
-    } else {
-      let index = -1;
-      for (let value of values) {
-        if ((value = valueof(value, ++index, values)) != null
-            && (max < value || (max === undefined && value >= value))) {
-          max = value;
-        }
-      }
-    }
-    return max;
   }
 
   function* flatten(arrays) {
@@ -1544,7 +1519,7 @@
     yellowgreen: 0x9acd32
   };
 
-  define(Color, color, {
+  define(Color, color$1, {
     copy: function(channels) {
       return Object.assign(new this.constructor, this, channels);
     },
@@ -1570,7 +1545,7 @@
     return this.rgb().formatRgb();
   }
 
-  function color(format) {
+  function color$1(format) {
     var m, l;
     format = (format + "").trim().toLowerCase();
     return (m = reHex.exec(format)) ? (l = m[1].length, m = parseInt(m[1], 16), l === 6 ? rgbn(m) // #ff0000
@@ -1599,7 +1574,7 @@
   }
 
   function rgbConvert(o) {
-    if (!(o instanceof Color)) o = color(o);
+    if (!(o instanceof Color)) o = color$1(o);
     if (!o) return new Rgb;
     o = o.rgb();
     return new Rgb(o.r, o.g, o.b, o.opacity);
@@ -1667,7 +1642,7 @@
 
   function hslConvert(o) {
     if (o instanceof Hsl) return new Hsl(o.h, o.s, o.l, o.opacity);
-    if (!(o instanceof Color)) o = color(o);
+    if (!(o instanceof Color)) o = color$1(o);
     if (!o) return new Hsl;
     if (o instanceof Hsl) return o;
     o = o.rgb();
@@ -1747,26 +1722,6 @@
         : m1) * 255;
   }
 
-  function basis(t1, v0, v1, v2, v3) {
-    var t2 = t1 * t1, t3 = t2 * t1;
-    return ((1 - 3 * t1 + 3 * t2 - t3) * v0
-        + (4 - 6 * t2 + 3 * t3) * v1
-        + (1 + 3 * t1 + 3 * t2 - 3 * t3) * v2
-        + t3 * v3) / 6;
-  }
-
-  function basis$1(values) {
-    var n = values.length - 1;
-    return function(t) {
-      var i = t <= 0 ? (t = 0) : t >= 1 ? (t = 1, n - 1) : Math.floor(t * n),
-          v1 = values[i],
-          v2 = values[i + 1],
-          v0 = i > 0 ? values[i - 1] : 2 * v1 - v2,
-          v3 = i < n - 1 ? values[i + 2] : 2 * v2 - v1;
-      return basis((t - i / n) * n, v0, v1, v2, v3);
-    };
-  }
-
   var constant$1 = x => () => x;
 
   function linear(a, d) {
@@ -1813,34 +1768,6 @@
 
     return rgb$1;
   })(1);
-
-  function rgbSpline(spline) {
-    return function(colors) {
-      var n = colors.length,
-          r = new Array(n),
-          g = new Array(n),
-          b = new Array(n),
-          i, color;
-      for (i = 0; i < n; ++i) {
-        color = rgb(colors[i]);
-        r[i] = color.r || 0;
-        g[i] = color.g || 0;
-        b[i] = color.b || 0;
-      }
-      r = spline(r);
-      g = spline(g);
-      b = spline(b);
-      color.opacity = 1;
-      return function(t) {
-        color.r = r(t);
-        color.g = g(t);
-        color.b = b(t);
-        return color + "";
-      };
-    };
-  }
-
-  var rgbBasis = rgbSpline(basis$1);
 
   function numberArray(a, b) {
     if (!b) b = [];
@@ -1975,8 +1902,8 @@
     var t = typeof b, c;
     return b == null || t === "boolean" ? constant$1(b)
         : (t === "number" ? interpolateNumber
-        : t === "string" ? ((c = color(b)) ? (b = c, interpolateRgb) : interpolateString)
-        : b instanceof color ? interpolateRgb
+        : t === "string" ? ((c = color$1(b)) ? (b = c, interpolateRgb) : interpolateString)
+        : b instanceof color$1 ? interpolateRgb
         : b instanceof Date ? date
         : isNumberArray(b) ? numberArray
         : Array.isArray(b) ? genericArray
@@ -2175,7 +2102,7 @@
 
   var frame = 0, // is an animation frame pending?
       timeout$1 = 0, // is a timeout pending?
-      interval = 0, // are any timers active?
+      interval$1 = 0, // are any timers active?
       pokeDelay = 1000, // how frequently we check for clock skew
       taskHead,
       taskTail,
@@ -2277,9 +2204,9 @@
     var delay = time - clockNow; // Strictly less than if we recomputed clockNow.
     if (delay > 24) {
       if (time < Infinity) timeout$1 = setTimeout(wake, time - clock.now() - clockSkew);
-      if (interval) interval = clearInterval(interval);
+      if (interval$1) interval$1 = clearInterval(interval$1);
     } else {
-      if (!interval) clockLast = clock.now(), interval = setInterval(poke, pokeDelay);
+      if (!interval$1) clockLast = clock.now(), interval$1 = setInterval(poke, pokeDelay);
       frame = 1, setFrame(wake);
     }
   }
@@ -2324,7 +2251,7 @@
     });
   }
 
-  function init$1(node, id) {
+  function init(node, id) {
     var schedule = get(node, id);
     if (schedule.state > CREATED) throw new Error("too late; already scheduled");
     return schedule;
@@ -2557,8 +2484,8 @@
   function interpolate(a, b) {
     var c;
     return (typeof b === "number" ? interpolateNumber
-        : b instanceof color ? interpolateRgb
-        : (c = color(b)) ? (b = c, interpolateRgb)
+        : b instanceof color$1 ? interpolateRgb
+        : (c = color$1(b)) ? (b = c, interpolateRgb)
         : interpolateString)(a, b);
   }
 
@@ -2681,13 +2608,13 @@
 
   function delayFunction(id, value) {
     return function() {
-      init$1(this, id).delay = +value.apply(this, arguments);
+      init(this, id).delay = +value.apply(this, arguments);
     };
   }
 
   function delayConstant(id, value) {
     return value = +value, function() {
-      init$1(this, id).delay = value;
+      init(this, id).delay = value;
     };
   }
 
@@ -2792,7 +2719,7 @@
   }
 
   function onFunction(id, name, listener) {
-    var on0, on1, sit = start(name) ? init$1 : set;
+    var on0, on1, sit = start(name) ? init : set;
     return function() {
       var schedule = sit(this, id),
           on = schedule.on;
@@ -5479,26 +5406,6 @@
     return initInterpolator.apply(scale, arguments);
   }
 
-  function colors(specifier) {
-    var n = specifier.length / 6 | 0, colors = new Array(n), i = 0;
-    while (i < n) colors[i] = "#" + specifier.slice(i * 6, ++i * 6);
-    return colors;
-  }
-
-  var ramp$1 = scheme => rgbBasis(scheme[scheme.length - 1]);
-
-  var scheme = new Array(3).concat(
-    "fee0d2fc9272de2d26",
-    "fee5d9fcae91fb6a4acb181d",
-    "fee5d9fcae91fb6a4ade2d26a50f15",
-    "fee5d9fcbba1fc9272fb6a4ade2d26a50f15",
-    "fee5d9fcbba1fc9272fb6a4aef3b2ccb181d99000d",
-    "fff5f0fee0d2fcbba1fc9272fb6a4aef3b2ccb181d99000d",
-    "fff5f0fee0d2fcbba1fc9272fb6a4aef3b2ccb181da50f1567000d"
-  ).map(colors);
-
-  var Reds = ramp$1(scheme);
-
   var constant = x => () => x;
 
   function ZoomEvent(type, {
@@ -6008,98 +5915,240 @@
     return zoom;
   }
 
-  document.getElementById("name").innerText = "{insert your name here}";document.getElementById("assignment_number").innerText = "{insert the assignment number here}";
+  document.getElementById("name").innerText = "Akshay Patel";
+  document.getElementById("assignment_number").innerText = "4";
 
-  const width = window.innerWidth; // full width
-  const height = window.innerHeight - 55; // full height - nav bar
-  const margin = {top: 20, bottom: 50, left: 50, right: 20};
+  const width = window.innerWidth * 0.50; // full width
+  const height = window.innerHeight * 0.90; // full height - nav bar
 
-  async function init() {
-      // get data from flask-server
-      const response = await fetch("http://127.0.0.1:8080/api/v1/get_data/sds011/12:00:00/12:05:00");
+  var particulateData = [];
+  var particulateType = "P1";
+  var interval;
+
+  var glyphData = [];
+
+  var humidityData = [];
+
+  const get_particulate_data = async (type, start, end) => {
+      const response = await fetch(`http://127.0.0.1:8080/api/v1/get-particulate-data?type=${type}&start=${start}&end=${end}`);
       const data = await response.json();
+      console.log("Particulate data", start, end, data);
+      return data;
+  };
+
+
+  const get_noise_data = async (start, end) => {
+      const response = await fetch(`http://127.0.0.1:8080/api/v1/get-noise-data?start=${start}&end=${end}`);
+      const data = await response.json();
+      console.log("Noise data", start, end, data);
+      return data;
+  };
+
+  const get_humidity_data = async (start, end) => {
+      const response = await fetch(`http://127.0.0.1:8080/api/v1/get-humidity-data?start=${start}&end=${end}`);
+      const data = await response.json();
+      console.log("Humidity data", start, end, data);
+      return data;
+  };
+
+  const color = sequential(interpolate$1("lightgreen", "red"))
+      .domain([0, 450]);
+
+  async function addColorToCountries(type, startTime, endTime) {
+      particulateData = await get_particulate_data(type, startTime, endTime);
+      select("main").select("#map-particulate-container").select("#start-time").text(startTime);
+      select("main").select("#map-particulate-container").select("#end-time").text(endTime);
+      particulateData.forEach((e) => {
+          const x = select("#map_container").select(`#land-${e.cc}`);
+          x.transition().attr('fill', () => { return color(e.P_AVG) }).attr("opacity", 1).duration(1000);
+      });
+  }
+
+  async function addHumidityData(startTime, endTime) {
+      humidityData = await get_humidity_data(startTime, endTime);
+      select("main").select("#map-humidity-container").select("#start-time").text(startTime);
+      select("main").select("#map-humidity-container").select("#end-time").text(endTime);
+
+      humidityData.forEach((e) => {
+
+          if (e.HUMIDITY_AVG > 100 || e.HUMIDITY_AVG < 0) {
+              console.log("Invalid HUMIDITY_AVG", e);
+              return
+          }
+
+          const x = select("main").select("#map-humidity-container").select("#map-humidity").select(`#rect-land-${e.cc}`);
+          x.transition().attr('r', e.HUMIDITY_AVG * 0.5).attr("opacity", 0.25)
+              .style("stroke", "#00b4d8")
+              .style("stroke-width", 3).duration(1000);
+
+          select("main").select("#map-humidity-container").select("#map-humidity").select(`#text-humidity-${e.cc}`)
+              .text(Math.round(e.HUMIDITY_AVG) + " %");
+      });
+  }
+
+
+  async function addGlyphData(startTime, endTime) {
+      glyphData = await get_noise_data(startTime, endTime);
+      select("main").select("#map-glyph-container").select("#start-time").text(startTime);
+      select("main").select("#map-glyph-container").select("#end-time").text(endTime);
+      // d3.select("#map-glyph-container").selectAll(`[id*="text-glyph-"]`).transition().text('-').duration(1000);
+      select("#map-glyph-container").selectAll(`[id='land-*']`).attr('fill', 'black');
+
+      glyphData.forEach((e) => {
+
+          select("main").select("#map-glyph-container").select(`#text-noise-max-${e.cc}`)
+              .transition()
+              .text(Math.round(e.noise_LA_max) + " db").duration(1000);
+
+          select("main").select("#map-glyph-container").select(`#rect-noise-max-${e.cc}`)
+              .transition()
+              .attr("width", e.noise_LA_max * 0.25).duration(1000);
+
+          select("main").select("#map-glyph-container").select(`#text-noise-min-${e.cc}`)
+              .transition()
+              .text(Math.round(e.noise_LA_min) + " db").duration(1000);
+
+          select("main").select("#map-glyph-container").select(`#rect-noise-min-${e.cc}`)
+              .transition()
+              .attr("width", e.noise_LA_min * 0.25).duration(1000);
+
+          select("main").select("#map-glyph-container").select(`#text-noise-avg-${e.cc}`)
+              .text(Math.round(e.noise_LAeq) + " db");
+
+          select("main").select("#map-glyph-container").select(`#rect-noise-avg-${e.cc}`)
+              .transition()
+              .attr("width", e.noise_LAeq * 0.25).duration(1000);
+
+          select("#map-glyph-container").select(`#land-${e.cc}`).transition().attr('fill', '#8FDDE7')
+              .attr("stroke-width", 2)
+              .attr("stroke-linejoin", "round").attr("stroke-color", "black")
+              .attr("opacity", 0.75).duration(1000);
+      });
+  }
+
+  async function initParticulateMap(type) {
+      var counter = 0;
+      var startTime = `${String(counter).padStart(2, '0')}:00:00`;
+      var endTime = `${String(counter + 1).padStart(2, '0')}:00:00`;
+      // Clear previous svg
+      select("#map_container").selectAll("svg").remove();
+      select("main").select("#map-particulate-container").select("#particulate-type").text(`Type: ${type}`);
+
+      // get data from flask-server
 
       // load map materials
       // europe.geojson is from https://github.com/leakyMirror/map-of-europe/tree/master/GeoJSON
       const europe = await json("./data/europe.geojson"); // contains all countries of europe
-      const countries = europe.features.map(d => d.properties.ISO2); 
+      const countries = europe.features.map(d => d.properties.ISO2);
       // capitals.geojson is from https://github.com/Stefie/geojson-world/blob/master/capitals.geojson
       let capitals = await json("./data/capitals.geojson"); // contains all captials of all countries
       // filter capitals which are in europe
       capitals.features = capitals.features.filter(d => countries.includes(d.properties.iso2) && d.properties.city != "Vatican City");
-
-      console.log(data, europe, capitals);
-
       const map_container = select("#map_container");
 
       const svg = map_container
           .append("svg")
-          .attr("id", "map")
+          .attr("id", "map-particulate")
           .attr("width", width)
           .attr("height", height);
 
       const map_g = svg.append("g");
       const data_g = svg.append("g");
 
-      const geo_projection = mercator()
-          .fitExtent([[margin.left, margin.top], [width - margin.right, height - margin.bottom]], 
-              europe.features[14]); // the 14. entry is germany.
+      const geo_projection = mercator().scale(700).center([15, 65]);
       const path = index(geo_projection);
 
-      map_g.append("path").datum(europe).attr("d", path)
-          .attr("id", "land")
-          .attr("stroke-width", 0.5)
-          .attr("stroke-linejoin", "round");
+      map_g.selectAll("path").data(europe.features).join("path")
+          .attr("d", path)
+          // set the color of each country
+          .attr("fill", function (d) {
+              return "gray";
+          })
+          .attr("id", (d) => { return "land-" + d.properties["ISO2"]; })
+          .attr("stroke-width", 2)
+          .attr("stroke-linejoin", "round").attr("stroke-color", "black");
 
-      const capitals_marker = map_g.selectAll("rect")
+      const country_markers = map_g.selectAll("rect")
           .data(capitals.features)
           .enter()
           .append("rect")
           .attr("x", d => geo_projection(d.geometry.coordinates)[0] - 5)
           .attr("y", d => geo_projection(d.geometry.coordinates)[1] - 5)
-          .attr("width", 10)
-          .attr("height", 10)
+          .attr("width", 2)
+          .attr("height", 2)
           .attr("shape-rendering", "crispEdges")
-          .attr("stroke", "black")
-          .attr("fill", "none");
+          .attr("fill", "black");
 
-      const city_labels = map_g.selectAll("text")
+      // https://www.d3-graph-gallery.com/graph/interactivity_tooltip.html
+      var Tooltip = select("#map_container")
+          .append("div")
+          .style("opacity", 0)
+          .attr("class", "tooltip")
+          .style("background-color", "white")
+          .style("border", "solid")
+          .style("border-width", "2px")
+          .style("border-radius", "5px")
+          .style("padding", "5px");
+
+      // Three function that change the tooltip when user hover / move / leave a cell
+      var mouseover = function (d) {
+          Tooltip
+              .style("opacity", 1);
+          select(this)
+              .style("stroke", "black")
+              .style("opacity", 1);
+      };
+      var mousemove = function (event) {
+          const countryCode = event.target.id.split('-').pop();
+          const hoveredCountry = particulateData.find(e => e.cc === countryCode);
+          var text = "No data found";
+          if (hoveredCountry) text = `Country:${event.target.textContent}<br/>Average ${type}: ${Math.round(hoveredCountry.P_AVG)}`;
+          var coords = pointer(event);
+          var mouse = [coords[0], coords[1]];
+          Tooltip
+              .html(text)
+              .style("left", (mouse[0]) + "px")
+              .style("top", (mouse[1] + 20) + "px");
+      };
+      var mouseleave = function (d) {
+          Tooltip
+              .style("opacity", 0);
+          select(this)
+              .style("stroke", "none")
+              .style("opacity", 0.8);
+      };
+
+      const country_labels = map_g.selectAll("text")
           .data(capitals.features)
           .enter()
           .append("text")
+          .attr('id', d => { return `text-land-${d.properties['iso2']}` })
           .attr("text-anchor", "middle")
           .attr("dominant-baseline", "central")
           .attr("x", d => geo_projection(d.geometry.coordinates)[0])
           .attr("y", d => geo_projection(d.geometry.coordinates)[1] - 14)
           .attr("font-size", 16)
-          .text(d => d.properties.city);
+          .text(d => d.properties.country)
+          .on("mouseover", mouseover)
+          .on("mousemove", mousemove)
+          .on("mouseleave", mouseleave);
 
-      const color = sequential(Reds)
-          .domain([0, max(data, d => d.P2)]);
+      // const response = await fetch("http://127.0.0.1:8080/api/v1/get_data/sds011/12:00:00/12:05:00");
+      // const data = await response.json();
 
-      data_g.selectAll("circle")
-          .data(data.sort((a, b) => ascending$1(a.P2, b.P2)))
-          .enter()
-          .append("circle")
-          .attr("cx", d => geo_projection([d.lon, d.lat])[0])
-          .attr("cy", d => geo_projection([d.lon, d.lat])[1])
-          .attr("r", 2)
-          .attr("opacity", 1)
-          .attr("fill", d => color(d.P2));
-
-      function zoomed({transform}) {
+      function zoomed({ transform }) {
           map_g.attr("transform", transform);
           map_g.select("path")
               .attr("stroke-width", 1 / transform.k);
           data_g.attr("transform", transform);
           data_g.selectAll("circle")
               .attr("r", 2 / transform.k);
-          city_labels.attr("font-size", 16 / transform.k);
-          capitals_marker.attr("stroke-width", 1 / transform.k);
+          country_labels.attr("font-size", 16 / transform.k);
+          country_markers.attr("stroke-width", 1 / transform.k);
       }
 
       const zoom$1 = zoom()
-          .scaleExtent([0.25, 16])
+          .scaleExtent([1, 5])
           .on("zoom", zoomed);
 
       svg.call(zoom$1);
@@ -6108,17 +6157,27 @@
           .append("div")
           .attr("id", "legend");
 
-      legend.append("b").text("sds011: P2");
+      legend.append("b").text(`sds011: ${type}`);
       const legend_svg = legend
           .append("svg")
-          .attr("width", 320)
+          .attr("width", 500)
           .attr("height", 40);
 
       drawLegend(legend_svg, color);
+      await addColorToCountries(type, startTime, endTime);
+
+      interval = setInterval(async function () {
+          counter++;
+          if (counter == 24) counter = 0;
+          startTime = `${String(counter).padStart(2, '0')}:00:00`;
+          endTime = `${String(counter + 1).padStart(2, '0')}:00:00`;
+          await addColorToCountries(type, startTime, endTime);
+      }, 5000);
+
   }
 
   // from https://observablehq.com/@d3/color-legend
-  function ramp(color, n=256) {
+  function ramp(color, n = 256) {
       const canvas = document.createElement("canvas");
       canvas.width = n;
       canvas.height = 1;
@@ -6131,7 +6190,7 @@
   }
 
   // from https://observablehq.com/@d3/color-legend
-  function drawLegend(svg, color, width=320) {
+  function drawLegend(svg, color, width = 500) {
       const n = Math.min(color.domain().length, color.range().length);
       const tickAdjust = g => g.selectAll(".tick line").attr("y1", -18);
       const x = color.copy().rangeRound(quantize(interpolate$1(0, width), n));
@@ -6148,12 +6207,339 @@
       svg.append("g")
           .attr("transform", `translate(0, ${18})`)
           .call(axisBottom(x)
-            .tickValues(x.ticks(5).slice(1)))
+              .tickValues(x.ticks(5).slice(1)))
           .call(tickAdjust)
           .call(g => g.select(".domain").remove());
   }
 
-  init();
+  async function initGlyphMap() {
+      var counter = 0;
+      var startTime = `${String(counter).padStart(2, '0')}:00:00`;
+      var endTime = `${String(counter + 1).padStart(2, '0')}:00:00`;
+      // Clear previous svg
+      select("#glyph-container").selectAll("svg").remove();
+
+      // get data from flask-server
+
+      // load map materials
+      // europe.geojson is from https://github.com/leakyMirror/map-of-europe/tree/master/GeoJSON
+      const europe = await json("./data/europe.geojson"); // contains all countries of europe
+      const countries = europe.features.map(d => d.properties.ISO2);
+      // capitals.geojson is from https://github.com/Stefie/geojson-world/blob/master/capitals.geojson
+      let capitals = await json("./data/capitals.geojson"); // contains all captials of all countries
+      // filter capitals which are in europe
+      capitals.features = capitals.features.filter(d => countries.includes(d.properties.iso2) && d.properties.city != "Vatican City");
+      const map_container = select("#glyph-container");
+
+      const svg = map_container
+          .append("svg")
+          .attr("id", "map-glyph")
+          .attr("width", width)
+          .attr("height", height);
+
+      const map_g = svg.append("g");
+      const data_g = svg.append("g");
+
+      const geo_projection = mercator().scale(700).center([15, 65]);
+      const path = index(geo_projection);
+
+      map_g.selectAll("path").data(europe.features).join("path")
+          .attr("d", path)
+          // set the color of each country
+          .attr("fill", function (d) {
+              return "lightgray";
+          })
+          .attr("id", (d) => { return "land-" + d.properties["ISO2"]; })
+          .attr("stroke-width", 2)
+          .attr("stroke-linejoin", "round").attr("stroke-color", "black");
+
+      const text_noise_min = map_g.append("g").selectAll("text")
+          .data(capitals.features)
+          .enter()
+          .append("text")
+          .attr("id", d => { return "text-noise-min-" + d.properties["iso2"] })
+          .attr("text-anchor", "middle")
+          .attr("dominant-baseline", "central")
+          .attr("x", d => geo_projection(d.geometry.coordinates)[0] - 5)
+          .attr("y", d => geo_projection(d.geometry.coordinates)[1] + 2)
+          .attr("font-size", 4);
+
+      map_g.selectAll("rect")
+          .data(capitals.features)
+          .enter()
+          .append("rect")
+          .attr("id", d => { return "rect-noise-min-" + d.properties["iso2"] })
+          .attr("x", d => geo_projection(d.geometry.coordinates)[0] - 5)
+          .attr("y", d => geo_projection(d.geometry.coordinates)[1] + 5)
+          .attr("width", 0)
+          .attr("height", 2)
+          .attr("shape-rendering", "crispEdges")
+          .attr("fill", "green");
+
+      const text_noise_avg = map_g.append("g").selectAll("text")
+          .data(capitals.features)
+          .enter()
+          .append("text")
+          .attr("id", d => { return "text-noise-avg-" + d.properties["iso2"] })
+          .attr("text-anchor", "middle")
+          .attr("dominant-baseline", "central")
+          .attr("x", d => geo_projection(d.geometry.coordinates)[0] - 5)
+          .attr("y", d => geo_projection(d.geometry.coordinates)[1] + 10)
+          .attr("font-size", 4);
+
+      map_g.append("g").selectAll("rect")
+          .data(capitals.features)
+          .enter()
+          .append("rect")
+          .attr("id", d => "rect-noise-avg-" + d.properties["iso2"])
+          .attr("x", d => geo_projection(d.geometry.coordinates)[0] - 5)
+          .attr("y", d => geo_projection(d.geometry.coordinates)[1] + 15)
+          .attr("width", 0)
+          .attr("height", 2)
+          .attr("shape-rendering", "crispEdges")
+          .attr("fill", "blue");
+
+      const text_noise_max = map_g.append("g").selectAll("text")
+          .data(capitals.features)
+          .enter()
+          .append("text")
+          .attr("id", d => { return "text-noise-max-" + d.properties["iso2"] })
+          .attr("text-anchor", "middle")
+          .attr("dominant-baseline", "central")
+          .attr("x", d => geo_projection(d.geometry.coordinates)[0] - 5)
+          .attr("y", d => geo_projection(d.geometry.coordinates)[1] + 20)
+          .attr("font-size", 4);
+
+      map_g.append("g").selectAll("rect")
+          .data(capitals.features)
+          .enter()
+          .append("rect")
+          .attr("id", d => "rect-noise-max-" + d.properties["iso2"])
+          .attr("x", d => geo_projection(d.geometry.coordinates)[0] - 5)
+          .attr("y", d => geo_projection(d.geometry.coordinates)[1] + 25)
+          .attr("width", 0)
+          .attr("height", 2)
+          .attr("shape-rendering", "crispEdges")
+          .attr("fill", "red");
+
+      // https://www.d3-graph-gallery.com/graph/interactivity_tooltip.html
+      select("#map-glyph-container")
+          .append("div")
+          .style("opacity", 0)
+          .attr("class", "tooltip")
+          .style("background-color", "white")
+          .style("border", "solid")
+          .style("width", "200px")
+          .style("border-width", "2px")
+          .style("border-radius", "5px")
+          .style("padding", "5px");
+
+      const country_labels = map_g.append("g").selectAll("text")
+          .data(capitals.features)
+          .enter()
+          .append("text")
+          .attr('id', d => { return `text-glyph-${d.properties['iso2']}` })
+          .attr("text-anchor", "middle")
+          .attr("dominant-baseline", "central")
+          .attr("x", d => geo_projection(d.geometry.coordinates)[0])
+          .attr("y", d => geo_projection(d.geometry.coordinates)[1] - 5)
+          .attr("font-size", 16)
+          .attr("font-weight", 800)
+          .text(d => d.properties.country);
+
+      function zoomed({ transform }) {
+          map_g.attr("transform", transform);
+          map_g.select("path")
+              .attr("stroke-width", 1 / transform.k);
+          data_g.attr("transform", transform);
+          data_g.selectAll("circle")
+              .attr("r", 2 / transform.k);
+          country_labels.attr("font-size", 16 / transform.k);
+          text_noise_min.attr("font-size", 16 / transform.k);
+          text_noise_max.attr("font-size", 16 / transform.k);
+          text_noise_avg.attr("font-size", 16 / transform.k);
+
+          // text_noise_min.attr("stroke-width", 1 / transform.k);
+          // text_noise_max.attr("stroke-width", 1 / transform.k);
+          // text_noise_avg.attr("stroke-width", 1 / transform.k);
+
+      }
+
+      const zoom$1 = zoom()
+          .scaleExtent([0.25, 16])
+          .on("zoom", zoomed);
+
+      svg.call(zoom$1);
+
+      setInterval(async function () {
+          counter++;
+          if (counter == 24) counter = 0;
+          startTime = `${String(counter).padStart(2, '0')}:00:00`;
+          endTime = `${String(counter + 1).padStart(2, '0')}:00:00`;
+          await addGlyphData(startTime, endTime);
+      }, 5000);
+  }
+
+
+  async function initHumidityMap(type) {
+      var counter = 0;
+      var startTime = `${String(counter).padStart(2, '0')}:00:00`;
+      var endTime = `${String(counter + 1).padStart(2, '0')}:00:00`;
+      // Clear previous svg
+      select("#humidity-container").selectAll("svg").remove();
+
+      // get data from flask-server
+      // load map materials
+      // europe.geojson is from https://github.com/leakyMirror/map-of-europe/tree/master/GeoJSON
+      const europe = await json("./data/europe.geojson"); // contains all countries of europe
+      const countries = europe.features.map(d => d.properties.ISO2);
+      // capitals.geojson is from https://github.com/Stefie/geojson-world/blob/master/capitals.geojson
+      let capitals = await json("./data/capitals.geojson"); // contains all captials of all countries
+      // filter capitals which are in europe
+      capitals.features = capitals.features.filter(d => countries.includes(d.properties.iso2) && d.properties.city != "Vatican City");
+      const map_container = select("#humidity-container");
+
+      const svg = map_container
+          .append("svg")
+          .attr("id", "map-humidity")
+          .attr("width", width)
+          .attr("height", height);
+
+      const map_g = svg.append("g");
+      const data_g = svg.append("g");
+
+      const geo_projection = mercator().scale(700).center([15, 65]);
+      const path = index(geo_projection);
+
+      map_g.selectAll("path").data(europe.features).join("path")
+          .attr("d", path)
+          // set the color of each country
+          .attr("fill", function (d) {
+              return "lightgray";
+          })
+          .attr("id", (d) => { return "land-" + d.properties["ISO2"]; })
+          .attr("stroke-width", 2)
+          .attr("stroke-linejoin", "round").attr("stroke-color", "black");
+
+      const country_markers = map_g.selectAll("circle")
+          .data(capitals.features)
+          .enter()
+          .append("circle")
+          .attr('id', d => { return `rect-land-${d.properties['iso2']}` })
+          .attr("cx", d => geo_projection(d.geometry.coordinates)[0] - 5)
+          .attr("cy", d => geo_projection(d.geometry.coordinates)[1] - 5)
+          .attr("r", 20)
+          .attr("fill", "#90e0ef")
+          .attr("opacity", 0);
+
+      // https://www.d3-graph-gallery.com/graph/interactivity_tooltip.html
+      var Tooltip = select("#humidity-container")
+          .append("div")
+          .style("opacity", 0)
+          .attr("class", "tooltip")
+          .style("background-color", "white")
+          .style("border", "solid")
+          .style("border-width", "2px")
+          .style("border-radius", "5px")
+          .style("padding", "5px");
+
+      // Three function that change the tooltip when user hover / move / leave a cell
+      var mouseover = function (d) {
+          Tooltip
+              .style("opacity", 1);
+          select(this)
+              .style("stroke", "black")
+              .style("opacity", 1);
+      };
+      var mousemove = function (event) {
+          const countryCode = event.target.id.split('-').pop();
+          const hoveredCountry = particulateData.find(e => e.cc === countryCode);
+          var text = "No data found";
+          if (hoveredCountry) text = `Country:${event.target.textContent}<br/>Average ${type}: ${Math.round(hoveredCountry.P_AVG)}`;
+          var coords = pointer(event);
+          var mouse = [coords[0], coords[1]];
+          Tooltip
+              .html(text)
+              .style("left", (mouse[0]) + "px")
+              .style("top", (mouse[1] + 20) + "px");
+      };
+      var mouseleave = function (d) {
+          Tooltip
+              .style("opacity", 0);
+          select(this)
+              .style("stroke", "none")
+              .style("opacity", 0.8);
+      };
+
+      const country_labels = map_g.selectAll("text")
+          .data(capitals.features)
+          .enter()
+          .append("text")
+          .attr('id', d => { return `text-land-${d.properties['iso2']}` })
+          .attr("text-anchor", "middle")
+          .attr("dominant-baseline", "central")
+          .attr("x", d => geo_projection(d.geometry.coordinates)[0])
+          .attr("y", d => geo_projection(d.geometry.coordinates)[1] - 14)
+          .attr("font-size", 16)
+          .text(d => d.properties.country)
+          .on("mouseover", mouseover)
+          .on("mousemove", mousemove)
+          .on("mouseleave", mouseleave);
+
+
+      map_g.append("g").selectAll("text")
+          .data(capitals.features)
+          .enter()
+          .append("text")
+          .attr('id', d => { return `text-humidity-${d.properties['iso2']}` })
+          .attr("text-anchor", "middle")
+          .attr("dominant-baseline", "central")
+          .attr("x", d => geo_projection(d.geometry.coordinates)[0])
+          .attr("y", d => geo_projection(d.geometry.coordinates)[1] - 7)
+          .attr("font-size", 8)
+          .text(d => d.properties.country);
+
+      // const response = await fetch("http://127.0.0.1:8080/api/v1/get_data/sds011/12:00:00/12:05:00");
+      // const data = await response.json();
+
+      function zoomed({ transform }) {
+          map_g.attr("transform", transform);
+          map_g.select("path")
+              .attr("stroke-width", 1 / transform.k);
+          data_g.attr("transform", transform);
+          data_g.selectAll("circle")
+              .attr("r", 2 / transform.k);
+          country_labels.attr("font-size", 16 / transform.k);
+          country_markers.attr("stroke-width", 1 / transform.k);
+      }
+
+      const zoom$1 = zoom()
+          .scaleExtent([1, 5])
+          .on("zoom", zoomed);
+
+      svg.call(zoom$1);
+
+      await addHumidityData(startTime, endTime);
+
+      interval = setInterval(async function () {
+          counter++;
+          if (counter == 24) counter = 0;
+          startTime = `${String(counter).padStart(2, '0')}:00:00`;
+          endTime = `${String(counter + 1).padStart(2, '0')}:00:00`;
+          await addHumidityData(startTime, endTime);
+      }, 5000);
+
+  }
+
+  initParticulateMap(particulateType);
+  initGlyphMap();
+  initHumidityMap();
+
+  document.getElementById("button-change-particulate-type").onclick = () => {
+      if (particulateType === "P1") { particulateType = "P2"; }
+      else { particulateType = "P1"; }    clearInterval(interval);
+      initParticulateMap(particulateType);
+  };
 
 })();
 //# sourceMappingURL=bundle.js.map
