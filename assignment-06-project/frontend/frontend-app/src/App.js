@@ -6,7 +6,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import * as React from 'react';
 import Container from '@mui/material/Container';
 import TemporalChart from './components/TemporalChart';
-
 function App() {
   return (
     <div className="App">
@@ -15,7 +14,7 @@ function App() {
         <Grid container spacing={2} direction="row" justifyContent="flex-start">
           {/* <Grid id="information" item md={6}>
             <Typography variant="h3">Title</Typography>
-            <Typography >Text</Typography>
+            <Typography >Text</T\ypography>
           </Grid> */}
           <Grid id="temporal-charts" item md={12}>
             <TemporalChart />

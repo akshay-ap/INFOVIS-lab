@@ -9,6 +9,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import PropTypes from 'prop-types';
 import CheckboxList from './CheckBoxList';
+import TemporalChartContext from './TemporalChartContext';
 
 const style = {
     position: 'absolute',
@@ -58,7 +59,7 @@ function a11yProps(index) {
 
 const TemporalChart = () => {
     const [indicator, setIndicator] = useState("Indicator");
-    const [countries, setCountries] = useState(null);
+    const [countries, setCountries] = useState([]);
     const [years, setYears] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -90,39 +91,40 @@ const TemporalChart = () => {
 
     return (<Paper>
         <div>
-            Temporal chart
-            <Button variant='contained' onClick={handleOpen}>Filter</Button>
-            <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-            >
-                <Paper sx={style}>
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
-                        Select filter parameters
-                    </Typography>
-                    <Box sx={{ width: '100%' }}>
-                        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                                <Tab label="Indicator" {...a11yProps(0)} />
-                                <Tab label="Countries" {...a11yProps(1)} />
-                                <Tab label="Year" {...a11yProps(2)} />
-                            </Tabs>
+            <TemporalChartContext.Provider value={{ countries: countries }}>
+                <Button variant='contained' onClick={handleOpen}>Filter</Button>
+                <Modal
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description"
+                >
+                    <Paper sx={style}>
+                        <Typography id="modal-modal-title" variant="h6" component="h2">
+                            Select filter parameters
+                        </Typography>
+                        <Box sx={{ width: '100%' }}>
+                            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                                    <Tab label="Indicator" {...a11yProps(0)} />
+                                    <Tab label="Countries" {...a11yProps(1)} />
+                                    <Tab label="Year" {...a11yProps(2)} />
+                                </Tabs>
+                            </Box>
+                            <TabPanel value={value} index={0}>
+                                <CheckboxList data={indicator} />
+                            </TabPanel>
+                            <TabPanel value={value} index={1}>
+                                <CheckboxList data={countries} />
+                            </TabPanel>
+                            <TabPanel value={value} index={2}>
+                                <CheckboxList data={years} />
+                            </TabPanel>
                         </Box>
-                        <TabPanel value={value} index={0}>
-                            <CheckboxList data={indicator} />
-                        </TabPanel>
-                        <TabPanel value={value} index={1}>
-                            <CheckboxList data={countries} />
-                        </TabPanel>
-                        <TabPanel value={value} index={2}>
-                            <CheckboxList data={years} />
-                        </TabPanel>
-                    </Box>
-                    <Button variant='contained' onClick={handleApply}>Apply</Button>
-                </Paper>
-            </Modal>
+                        <Button variant='contained' onClick={handleApply}>Apply</Button>
+                    </Paper>
+                </Modal>
+            </TemporalChartContext.Provider>
         </div>
 
     </Paper>)

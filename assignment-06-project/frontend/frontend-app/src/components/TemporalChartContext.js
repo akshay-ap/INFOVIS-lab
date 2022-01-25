@@ -2,8 +2,12 @@ import React from 'react';
 
 
 const temporalChartContext = React.createContext({
-    countries: null,
-    login: () => { },
-    logout: () => { },
+    selectedCountries: [],
+    setSelectedCountries: () => { },
+    selectedIndicator: "",
+    setSelectedIndicator: () => { },
+    selectedYears: [],
+    setSelectedYears: () => { },
 });
+
 export default temporalChartContext;
