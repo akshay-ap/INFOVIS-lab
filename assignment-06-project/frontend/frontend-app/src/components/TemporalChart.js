@@ -1,4 +1,4 @@
-import { Button, Typography } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 import * as React from 'react';
 import { useState, useEffect } from "react";
 import Paper from '@mui/material/Paper';
@@ -89,10 +89,25 @@ const TemporalChart = () => {
         })()
     }, []);
 
-    return (<Paper>
+    return (
         <div>
             <TemporalChartContext.Provider value={{ countries: countries }}>
+                <Typography variant='h2'>1. Temporal charts</Typography>
                 <Button variant='contained' onClick={handleOpen}>Filter</Button>
+                <Grid container>
+                    <Grid item md={6} spacing={2}>
+                        <Paper style={{ height: '400px', margin: '10px' }}> Chart 1</Paper>
+                    </Grid>
+                    <Grid item md={6}>
+                        <Paper style={{ height: '400px', margin: '10px' }}> Chart 2</Paper>
+                    </Grid>
+                    <Grid item md={6}>
+                        <Paper style={{ height: '400px', margin: '10px' }}> Chart 3</Paper>
+                    </Grid>
+                    <Grid item md={6}>
+                        <Paper style={{ height: '400px', margin: '10px' }}> Chart 4</Paper>
+                    </Grid>
+                </Grid>
                 <Modal
                     open={open}
                     onClose={handleClose}
@@ -126,8 +141,7 @@ const TemporalChart = () => {
                 </Modal>
             </TemporalChartContext.Provider>
         </div>
-
-    </Paper>)
+    )
 }
 
 export default TemporalChart;
