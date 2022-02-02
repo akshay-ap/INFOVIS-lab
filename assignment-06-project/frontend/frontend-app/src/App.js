@@ -9,14 +9,25 @@ import TemporalChart from './components/TemporalChart';
 import GeographicalChart from './components/GeographicalChart';
 import AppContext from './components/AppContext';
 import { useState, useEffect } from "react";
-import { getMetadataCountries, getMetadataIndicators } from './api';
+import { getMetadataCountries, getMetadataIndicators, getMetadataTopics } from './api';
 import FilterSelector from './components/FilterSelector';
 
 function App() {
 
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(true);
+
   const [indicators, setIndicators] = useState([]);
+  const [topics, setTopics] = useState(null);
+
+  const [selectingData, setSelectingData] = useState(false);
+  const [selectedTopics, setSelectedTopics] = useState(["Environment: Emissions"]);
+  const [selectedCountries, setSelectedCountries] = useState(["Belgium", "Australia", "Germany"]);
+  const [selectedIndicators, setSelectedIndicators] = useState(
+    ["CO2 emissions (kg per PPP $ of GDP)", "Agricultural nitrous oxide emissions (% of total)",
+      "PM2.5 air pollution, population exposed to levels exceeding WHO guideline value (% of total)",
+      "Energy related methane emissions (% of total)"]);
+
   const [years, setYears] = useState(null);
 
 
@@ -25,12 +36,15 @@ function App() {
       if (loading) {
         const data = await getMetadataCountries();
         const dataIndicators = await getMetadataIndicators();
+        const dataTopics = await getMetadataTopics();
 
         console.log("Countries", data)
         console.log("Indicators", dataIndicators)
+        console.log("Topics", dataTopics)
 
         setCountries(data);
         setIndicators(dataIndicators);
+        setTopics(dataTopics);
         // setIndicator(data["indicators"]);
         // setYears(data["years"]);
         setLoading(false);
@@ -41,7 +55,13 @@ function App() {
   return (
     <div className="App">
       <CssBaseline />
-      <AppContext.Provider value={{ countries: countries, indicators: indicators }}>
+      <AppContext.Provider value={{
+        countries: countries, indicators: indicators,
+        topics: topics,
+        selectedTopics: selectedTopics, setSelectedTopics: setSelectedTopics,
+        selectedCountries, setSelectedCountries,
+        loading, setLoading, selectingData, setSelectingData, selectedIndicators, setSelectedIndicators
+      }}>
 
         <Container maxWidth="l">
           <Grid container spacing={2} direction="row" justifyContent="flex-start">

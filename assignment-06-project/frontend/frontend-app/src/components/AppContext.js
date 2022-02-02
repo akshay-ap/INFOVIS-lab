@@ -6,12 +6,20 @@ const appContext = React.createContext({
     setCountires: () => { },
     indicators: [],
     setIndicators: () => { },
+    topics: [],
+    setTopics: () => { },
+    selectedTopics: [],
+    setSelectedTopics: () => { },
     selectedCountries: [],
     setSelectedCountries: () => { },
-    selectedIndicator: "",
-    setSelectedIndicator: () => { },
+    selectedIndicators: [],
+    setSelectedIndicators: () => { },
     selectedYears: [],
     setSelectedYears: () => { },
+    loading: true,
+    setLoading: () => { },
+    selectingData: false,
+    setSelectingData: () => { }
 });
 
 export default appContext;

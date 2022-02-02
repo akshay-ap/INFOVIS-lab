@@ -5,17 +5,21 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import AppContext from './AppContext';
+import Alert from '@mui/material/Alert';
+import { Button } from '@mui/material';
 
 export default function IndicatorCheckboxList() {
 
-    const [checked, setChecked] = React.useState([0]);
-    const { indicators } = useContext(AppContext);
+    const MAX_SELECTION_LIMIT = 4;
+
+    const { indicators, selectedTopics, selectedIndicators, setSelectedIndicators } = useContext(AppContext);
+    const filtertedIndicators = indicators.filter(e => selectedTopics.includes(e.topic));
 
     const handleToggle = (value) => () => {
-        const currentIndex = checked.indexOf(value);
-        const newChecked = [...checked];
+        const currentIndex = selectedIndicators.indexOf(value);
+        const newChecked = [...selectedIndicators];
 
         if (currentIndex === -1) {
             newChecked.push(value);
@@ -23,13 +27,24 @@ export default function IndicatorCheckboxList() {
             newChecked.splice(currentIndex, 1);
         }
 
-        setChecked(newChecked);
+        setSelectedIndicators(newChecked);
+    };
+
+    const clear = () => () => {
+        setSelectedIndicators([]);
     };
 
     return (
         <div style={{ maxHeight: 500, overflow: 'auto' }}>
+            {
+                selectedIndicators.length >= MAX_SELECTION_LIMIT ? <>
+                    <Alert severity="warning">Max allowed indicators {MAX_SELECTION_LIMIT}</Alert>
+                    <Button variant='contained' onClick={clear()}>Clear</Button>
+                </>
+                    : null
+            }
             <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-                {indicators.map(({ indicator_name }) => {
+                {filtertedIndicators.map(({ indicator_name }) => {
                     const labelId = `checkbox-list-label-${indicator_name}`;
 
                     return (
@@ -41,7 +56,7 @@ export default function IndicatorCheckboxList() {
                                 <ListItemIcon>
                                     <Checkbox
                                         edge="start"
-                                        checked={checked.indexOf(indicator_name) !== -1}
+                                        checked={selectedIndicators.indexOf(indicator_name) !== -1}
                                         tabIndex={-1}
                                         disableRipple
                                         inputProps={{ 'aria-labelledby': labelId }}

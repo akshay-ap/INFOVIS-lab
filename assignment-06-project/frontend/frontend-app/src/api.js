@@ -25,12 +25,23 @@ const getMetadataIndicators = async () => {
     return data
 }
 
+const getMetadataTopics = async () => {
+    var config = {
+        method: 'get',
+        url: host + '/data/metadata/topics',
+        headers: {}
+    };
+    const { data } = await axios(config)
+    const result = data.map(e => e.topic)
+    return [...new Set(result)]
+}
 
-const getTemporalChartData = async (countries, years, indicator) => {
-    var data = JSON.stringify({
+
+const getTemporalChartData = async (countries, years, indicators) => {
+    var query = JSON.stringify({
         "countries": countries,
         "years": years,
-        "indicator": indicator
+        "indicators": indicators
     });
 
     var config = {
@@ -39,15 +50,16 @@ const getTemporalChartData = async (countries, years, indicator) => {
         headers: {
             'Content-Type': 'application/json'
         },
-        data: data
+        data: query
     };
 
-    const result = await axios(config)
-    return result
+    const { data } = await axios(config)
+    return data
 }
 
 export {
     getTemporalChartData,
     getMetadataCountries,
-    getMetadataIndicators
+    getMetadataIndicators,
+    getMetadataTopics
 }

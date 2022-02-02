@@ -9,6 +9,8 @@ import PropTypes from 'prop-types';
 import Paper from '@mui/material/Paper';
 import CountryCheckboxList from './CountryCheckboxList';
 import IndicatorCheckboxList from './IndicatorCheckboxList';
+import TopicCheckboxList from './TopicCheckboxList';
+import AppContext from './AppContext';
 
 const style = {
     position: 'absolute',
@@ -57,18 +59,25 @@ function a11yProps(index) {
 
 const FilterSelector = () => {
     const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
+    const handleOpen = () => {
+        setSelectingData(true);
+        setOpen(true)
+    };
     const handleClose = () => setOpen(false);
+    const { setSelectingData } = useContext(AppContext);
 
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
+        setSelectingData(true);
         setValue(newValue);
     };
 
 
     const handleApply = (event) => {
+        setSelectingData(false);
         console.log("update ui")
+        handleClose();
     };
     return (
         <div>
@@ -86,15 +95,19 @@ const FilterSelector = () => {
                     <Box sx={{ width: '100%' }}>
                         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                                <Tab label="Topics" {...a11yProps(0)} />
                                 <Tab label="Indicator" {...a11yProps(0)} />
                                 <Tab label="Countries" {...a11yProps(1)} />
                                 <Tab label="Year" {...a11yProps(2)} />
                             </Tabs>
                         </Box>
                         <TabPanel value={value} index={0}>
-                            <IndicatorCheckboxList />
+                            <TopicCheckboxList />
                         </TabPanel>
                         <TabPanel value={value} index={1}>
+                            <IndicatorCheckboxList />
+                        </TabPanel>
+                        <TabPanel value={value} index={2}>
                             <CountryCheckboxList />
                         </TabPanel>
                         {/* <TabPanel value={value} index={2}>

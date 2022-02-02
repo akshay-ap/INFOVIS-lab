@@ -7,20 +7,18 @@ import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import { useContext, useState } from "react";
 import AppContext from './AppContext';
-import Alert from '@mui/material/Alert';
-import { Button } from '@mui/material';
 
-export default function CountryCheckboxList() {
+export default function TopicCheckboxList() {
 
-    const { countries, setSelectedCountries, selectedCountries } = useContext(AppContext);
-    const MAX_SELECTION_LIMIT = 4;
+    const { topics, selectedTopics, setSelectedTopics } = useContext(AppContext);
+    const MAX_SELECTION_LIMIT = 1;
 
     const handleToggle = (value) => () => {
 
         console.log("Selected country:", value)
 
-        const currentIndex = selectedCountries.indexOf(value);
-        const newChecked = [...selectedCountries];
+        const currentIndex = selectedTopics.indexOf(value);
+        const newChecked = [...selectedTopics];
 
         if (currentIndex === -1) {
             newChecked.push(value);
@@ -28,27 +26,21 @@ export default function CountryCheckboxList() {
             newChecked.splice(currentIndex, 1);
         }
 
-        setSelectedCountries(newChecked);
-        console.log("Selected country:", newChecked)
+        setSelectedTopics(newChecked);
+        console.log("Selected topics:", newChecked)
 
     };
 
     const clear = () => () => {
-        setSelectedCountries([]);
+        setSelectedTopics([]);
     };
 
     return (
         <div style={{ maxHeight: 500, overflow: 'auto' }}>
-            {
-                selectedCountries.length >= MAX_SELECTION_LIMIT ? <>
-                    <Alert severity="warning">Max allowed countries {MAX_SELECTION_LIMIT}</Alert>
-                    <Button variant='contained' onClick={clear()}>Clear</Button>
-                </>
-                    : null
-            }
+
 
             <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-                {countries.map(({ name }) => {
+                {topics.map((name) => {
                     const labelId = `checkbox-list-label-${name}`;
 
                     return (
@@ -60,7 +52,7 @@ export default function CountryCheckboxList() {
                                 <ListItemIcon>
                                     <Checkbox
                                         edge="start"
-                                        checked={selectedCountries.indexOf(name) !== -1}
+                                        checked={selectedTopics.indexOf(name) !== -1}
                                         tabIndex={-1}
                                         disableRipple
                                         inputProps={{ 'aria-labelledby': labelId }}

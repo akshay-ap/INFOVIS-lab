@@ -49,12 +49,13 @@ def get_metadata_topics():
 @app.route('/data/query/temporal-chart', methods=["POST"])
 def query_data():
     data = request.get_json()
-    indicator = data["indicator"]
+    indicators = data["indicators"]
     years = data["years"]
     countries = data["countries"]
 
-    logger.info("Received query for [%s] %s %s", indicator, years, countries)
+    logger.info("Received query for %s %s %s", indicators, years, countries)
     c = "'" + "', '".join(countries) + "'"
+    i = "'" + "', '".join(indicators) + "'"
 
     conn = sqlite3.connect('data/data.db')
 
@@ -63,7 +64,7 @@ def query_data():
         from WDIData 
         JOIN WDISeries ON WDIData.Indicator_Name = WDISeries.Indicator_Name
         where WDIData.Country_Name in ({c}) 
-        and WDISeries.Indicator_Name in ('{indicator}')
+        and WDISeries.Indicator_Name in ({i})
         '''
     logger.info("*"*100)
     logger.info(query)
@@ -72,6 +73,7 @@ def query_data():
     df_result = pd.read_sql(query, con = conn)
 
     result = json.loads(df_result.to_json(orient= 'records'))
+    logger.info(f"Result shape: [{df_result.shape}]")
     return jsonify(result), 200
 
 
