@@ -27,7 +27,7 @@ const TemporalChart = () => {
                     .domain(countries)
                     .range(d3.schemeSet2);
 
-                // addLegend();
+                addLegend(myColor);
                 selectedIndicators.forEach((i, index) => {
                     const chartData = result.filter(e => e["Indicator_Name"] === i);
                     drawChart(`#temporal-chart-${index}`, chartData, myColor)
@@ -150,8 +150,8 @@ const TemporalChart = () => {
                 .append("text")
                 .attr('x', (d, i) => 60 + i * 100)
                 .attr('y', 30)
-                .text(d => d.name)
-                .style("fill", d => myColor(d.name))
+                .text(d => d)
+                .style("fill", d => myColor(d))
                 .style("font-size", 15)
                 .on("click", function (event, d) {
                     // is the element currently visible ?
@@ -164,9 +164,9 @@ const TemporalChart = () => {
     return (
         <div>
             <Typography variant='h2'>1. Temporal charts</Typography>
-            {/* <div id="temporal-chart-1"></div> */}
+            <div id="temporal-chart-legend"></div>
             <Grid container>
-                <Grid id="temporal-chart-legend" item md={12}>s</Grid>
+                {/* <Grid id="temporal-chart-legend" item md={12}>s</Grid> */}
                 {selectedIndicators.map((element, index) =>
                     <Grid key={`temporal-chart-${index}`} item md={3}>
                         <Paper id={`temporal-chart-${index}`} style={{ height: '450px', margin: '10px' }}>
