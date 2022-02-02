@@ -97,8 +97,8 @@ const FilterSelector = () => {
                             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                                 <Tab label="Topics" {...a11yProps(0)} />
                                 <Tab label="Indicator" {...a11yProps(0)} />
-                                <Tab label="Countries" {...a11yProps(1)} />
-                                <Tab label="Year" {...a11yProps(2)} />
+                                {/* <Tab label="Countries" {...a11yProps(1)} /> */}
+                                {/* <Tab label="Year" {...a11yProps(2)} /> */}
                             </Tabs>
                         </Box>
                         <TabPanel value={value} index={0}>
@@ -107,9 +107,9 @@ const FilterSelector = () => {
                         <TabPanel value={value} index={1}>
                             <IndicatorCheckboxList />
                         </TabPanel>
-                        <TabPanel value={value} index={2}>
+                        {/* <TabPanel value={value} index={2}>
                             <CountryCheckboxList />
-                        </TabPanel>
+                        </TabPanel> */}
                         {/* <TabPanel value={value} index={2}>
                             <CheckboxList data={years} />
                         </TabPanel> */}

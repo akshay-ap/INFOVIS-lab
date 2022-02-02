@@ -37,8 +37,12 @@ def get_metadata_countries():
 @app.route('/data/metadata/topics')
 def get_metadata_topics():
     conn = sqlite3.connect('data/data.db')
+    # query = '''
+    # select TOPIC as topic, Indicator_Name as indicator_name from WDISERIES where topic like 'Environment%' order by topic asc;
+    # '''
+
     query = '''
-    select TOPIC as topic, Indicator_Name as indicator_name from WDISERIES where topic like 'Environment%' order by topic asc;
+    select TOPIC as topic, Indicator_Name as indicator_name from WDISERIES where CAN_BE_USED == True order by topic asc;
     '''
     df_result = pd.read_sql(query, con = conn)
     conn.close()

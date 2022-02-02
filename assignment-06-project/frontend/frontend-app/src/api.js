@@ -38,6 +38,7 @@ const getMetadataTopics = async () => {
 
 
 const getTemporalChartData = async (countries, years, indicators) => {
+    var c = ["Upper middle income", "Lower middle income", "High income", "Low income"]
     var query = JSON.stringify({
         "countries": countries,
         "years": years,

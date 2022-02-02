@@ -11,6 +11,7 @@ import AppContext from './components/AppContext';
 import { useState, useEffect } from "react";
 import { getMetadataCountries, getMetadataIndicators, getMetadataTopics } from './api';
 import FilterSelector from './components/FilterSelector';
+import { Typography } from '@mui/material';
 
 function App() {
 
@@ -21,12 +22,9 @@ function App() {
   const [topics, setTopics] = useState(null);
 
   const [selectingData, setSelectingData] = useState(false);
-  const [selectedTopics, setSelectedTopics] = useState(["Environment: Emissions"]);
-  const [selectedCountries, setSelectedCountries] = useState(["Belgium", "Australia", "Germany"]);
-  const [selectedIndicators, setSelectedIndicators] = useState(
-    ["CO2 emissions (kg per PPP $ of GDP)", "Agricultural nitrous oxide emissions (% of total)",
-      "PM2.5 air pollution, population exposed to levels exceeding WHO guideline value (% of total)",
-      "Energy related methane emissions (% of total)"]);
+  const [selectedTopics, setSelectedTopics] = useState([]);
+  const [selectedCountries, setSelectedCountries] = useState(["Upper middle income", "Lower middle income", "High income", "Low income"]);
+  const [selectedIndicators, setSelectedIndicators] = useState([]);
 
   const [years, setYears] = useState(null);
 
@@ -45,6 +43,13 @@ function App() {
         setCountries(data);
         setIndicators(dataIndicators);
         setTopics(dataTopics);
+        setSelectedTopics([dataTopics[0]]);
+        setSelectedIndicators([dataIndicators[0]["indicator_name"],
+        dataIndicators[1]["indicator_name"],
+        dataIndicators[2]["indicator_name"],
+        dataIndicators[3]["indicator_name"]
+        ]);
+
         // setIndicator(data["indicators"]);
         // setYears(data["years"]);
         setLoading(false);
@@ -69,7 +74,12 @@ function App() {
             <Typography variant="h3">Title</Typography>
             <Typography >Text</T\ypography>
           </Grid> */}
-            <Grid id="temporal-charts" item md={12}>
+            <Grid item md={12}>
+              {selectedIndicators.map(i => {
+                <><Typography>{i}</Typography></>
+              })}
+            </Grid>
+            <Grid item md={12}>
               <FilterSelector />
             </Grid>
             <Grid id="temporal-charts" item md={12}>

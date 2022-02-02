@@ -12,28 +12,36 @@ const TemporalChart = () => {
     const [data, setData] = useState(null);
     const YEAR_MIN = 2000;
     const YEAR_MAX = 2019;
+    const countries = selectedCountries;
 
     useEffect(() => {
         (async () => {
             if (!selectingData) {
                 const result = await getTemporalChartData(selectedCountries, [], selectedIndicators);
                 console.log("getTemporalChartData", result)
-                const chartData1 = result.filter(e => e["Indicator_Name"] === selectedIndicators[0]);
-                const chartData2 = result.filter(e => e["Indicator_Name"] === selectedIndicators[1]);
-                const chartData3 = result.filter(e => e["Indicator_Name"] === selectedIndicators[2]);
-                const chartData4 = result.filter(e => e["Indicator_Name"] === selectedIndicators[3]);
+                // const chartData2 = result.filter(e => e["Indicator_Name"] === selectedIndicators[1]);
+                // const chartData3 = result.filter(e => e["Indicator_Name"] === selectedIndicators[2]);
+                // const chartData4 = result.filter(e => e["Indicator_Name"] === selectedIndicators[3]);
 
-                console.log("getTemporalChartData chartData1", chartData1)
-                drawChart("#temporal-chart-1", chartData1, selectedCountries)
-                drawChart("#temporal-chart-2", chartData2, selectedCountries)
-                drawChart("#temporal-chart-3", chartData3, selectedCountries)
-                drawChart("#temporal-chart-4", chartData4, selectedCountries)
+                const myColor = d3.scaleOrdinal()
+                    .domain(countries)
+                    .range(d3.schemeSet2);
+
+                // addLegend();
+                selectedIndicators.forEach((i, index) => {
+                    const chartData = result.filter(e => e["Indicator_Name"] === i);
+                    drawChart(`#temporal-chart-${index}`, chartData, myColor)
+
+                })
+                // drawChart("#temporal-chart-2", chartData2, myColor)
+                // drawChart("#temporal-chart-3", chartData3, myColor)
+                // drawChart("#temporal-chart-4", chartData4, myColor)
             }
         })()
 
     }, [selectingData, selectedIndicators, selectedCountries]);
 
-    const drawChart = (divId, chartData, countries) => {
+    const drawChart = (divId, chartData, myColor) => {
         var transformedData = []
         var YMin = 0, YMax = 0;
 
@@ -51,11 +59,11 @@ const TemporalChart = () => {
             transformedData.push({ name: d["Country_Name"], values: temp })
         })
 
-        console.log("transformedData", transformedData)
+        console.log("transformedData", divId, transformedData)
 
         // set the dimensions and margins of the graph
         const margin = { top: 10, right: 100, bottom: 30, left: 30 },
-            width = 560 - margin.left - margin.right,
+            width = 460 - margin.left - margin.right,
             height = 400 - margin.top - margin.bottom;
 
         d3.select(divId).selectAll("*").remove();
@@ -70,9 +78,7 @@ const TemporalChart = () => {
         const dataReady = transformedData;
 
         // A color scale: one color for each group
-        const myColor = d3.scaleOrdinal()
-            .domain(countries)
-            .range(d3.schemeSet2);
+
 
         // Add X axis --> it is a date format
         const x = d3.scaleLinear()
@@ -90,17 +96,17 @@ const TemporalChart = () => {
             .call(d3.axisLeft(y));
 
         // Add the lines
-        // const line = d3.line()
-        //     .x(d => x(+d.time))
-        //     .y(d => y(+d.value))
-        // svg.selectAll("myLines")
-        //     .data(dataReady)
-        //     .join("path")
-        //     .attr("class", d => d.name)
-        //     .attr("d", d => line(d.values))
-        //     .attr("stroke", d => myColor(d.name))
-        //     .style("stroke-width", 4)
-        //     .style("fill", "none")
+        const line = d3.line()
+            .x(d => x(+d.time))
+            .y(d => y(+d.value))
+        svg.selectAll("myLines")
+            .data(dataReady)
+            .join("path")
+            .attr("class", d => d.name)
+            .attr("d", d => line(d.values))
+            .attr("stroke", d => myColor(d.name))
+            .style("stroke-width", 4)
+            .style("fill", "none")
 
         // Add the points
         svg
@@ -132,24 +138,27 @@ const TemporalChart = () => {
         //     .text(d => d.name)
         //     .style("fill", d => myColor(d.name))
         //     .style("font-size", 15)
+    }
 
+    const addLegend = (myColor) => {
         // Add a legend (TODO: interactive)
-        svg
-            .selectAll("myLegend")
-            .data(dataReady)
-            .join('g')
-            .append("text")
-            .attr('x', (d, i) => 60 + i * 100)
-            .attr('y', 30)
-            .text(d => d.name)
-            .style("fill", d => myColor(d.name))
-            .style("font-size", 15)
-            .on("click", function (event, d) {
-                // is the element currently visible ?
-                var currentOpacity = d3.selectAll("." + d.name).style("opacity")
-                // Change the opacity: from 0 to 1 or from 1 to 0
-                d3.selectAll("." + d.name).transition().style("opacity", currentOpacity === 1 ? 0 : 1)
-            })
+        const svg =
+            d3.select("body")
+                .select("#temporal-chart-legend")
+                .data(countries)
+                .join('g')
+                .append("text")
+                .attr('x', (d, i) => 60 + i * 100)
+                .attr('y', 30)
+                .text(d => d.name)
+                .style("fill", d => myColor(d.name))
+                .style("font-size", 15)
+                .on("click", function (event, d) {
+                    // is the element currently visible ?
+                    var currentOpacity = d3.selectAll("." + d).style("opacity")
+                    // Change the opacity: from 0 to 1 or from 1 to 0
+                    d3.selectAll("." + d).transition().style("opacity", currentOpacity === 1 ? 0 : 1)
+                })
     }
 
     return (
@@ -157,26 +166,14 @@ const TemporalChart = () => {
             <Typography variant='h2'>1. Temporal charts</Typography>
             {/* <div id="temporal-chart-1"></div> */}
             <Grid container>
-                <Grid item md={6}>
-                    <Paper id="temporal-chart-1" style={{ height: '450px', margin: '10px' }}>
-                        {selectedIndicators[0]}
-                    </Paper>
-                </Grid>
-                <Grid item md={6}>
-                    <Paper id="temporal-chart-2" style={{ height: '450px', margin: '10px' }}>
-                        {selectedIndicators[1]}
-                    </Paper>
-                </Grid>
-                <Grid item md={6}>
-                    <Paper id="temporal-chart-3" style={{ height: '450px', margin: '10px' }}>
-                        {selectedIndicators[2]}
-                    </Paper>
-                </Grid>
-                <Grid item md={6}>
-                    <Paper id="temporal-chart-4" style={{ height: '450px', margin: '10px' }}>
-                        {selectedIndicators[3]}
-                    </Paper>
-                </Grid>
+                <Grid id="temporal-chart-legend" item md={12}>s</Grid>
+                {selectedIndicators.map((element, index) =>
+                    <Grid key={`temporal-chart-${index}`} item md={3}>
+                        <Paper id={`temporal-chart-${index}`} style={{ height: '450px', margin: '10px' }}>
+                            {selectedIndicators[index]}
+                        </Paper>
+                    </Grid>
+                )}
             </Grid>
         </div>
     )
