@@ -5,13 +5,13 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
-import IconButton from '@mui/material/IconButton';
-import PropTypes from 'prop-types';
+import { useContext } from "react";
+import AppContext from './AppContext';
 
-export default function CheckboxList(props) {
-    const { data } = props;
-    console.log(data)
+export default function IndicatorCheckboxList() {
+
     const [checked, setChecked] = React.useState([0]);
+    const { indicators } = useContext(AppContext);
 
     const handleToggle = (value) => () => {
         const currentIndex = checked.indexOf(value);
@@ -29,25 +29,25 @@ export default function CheckboxList(props) {
     return (
         <div style={{ maxHeight: 500, overflow: 'auto' }}>
             <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-                {data.map((value) => {
-                    const labelId = `checkbox-list-label-${value}`;
+                {indicators.map(({ indicator_name }) => {
+                    const labelId = `checkbox-list-label-${indicator_name}`;
 
                     return (
                         <ListItem
-                            key={value}
+                            key={indicator_name}
                             disablePadding
                         >
-                            <ListItemButton role={undefined} onClick={handleToggle(value)} dense>
+                            <ListItemButton role={undefined} onClick={handleToggle(indicator_name)} dense>
                                 <ListItemIcon>
                                     <Checkbox
                                         edge="start"
-                                        checked={checked.indexOf(value) !== -1}
+                                        checked={checked.indexOf(indicator_name) !== -1}
                                         tabIndex={-1}
                                         disableRipple
                                         inputProps={{ 'aria-labelledby': labelId }}
                                     />
                                 </ListItemIcon>
-                                <ListItemText id={labelId} primary={`${value}`} />
+                                <ListItemText id={labelId} primary={`${indicator_name}`} />
                             </ListItemButton>
                         </ListItem>
                     );
@@ -56,7 +56,3 @@ export default function CheckboxList(props) {
         </div>
     );
 }
-
-CheckboxList.propTypes = {
-    data: PropTypes.array.isRequired,
-};

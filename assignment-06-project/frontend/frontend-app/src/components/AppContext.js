@@ -1,7 +1,11 @@
 import React from 'react';
 
 
-const temporalChartContext = React.createContext({
+const appContext = React.createContext({
+    countires: [],
+    setCountires: () => { },
+    indicators: [],
+    setIndicators: () => { },
     selectedCountries: [],
     setSelectedCountries: () => { },
     selectedIndicator: "",
@@ -10,4 +14,4 @@ const temporalChartContext = React.createContext({
     setSelectedYears: () => { },
 });
 
-export default temporalChartContext;
+export default appContext;

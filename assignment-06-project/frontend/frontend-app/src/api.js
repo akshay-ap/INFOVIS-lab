@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 const host = 'http://localhost:5000'
-const getMetadata = async () => {
+const getMetadataCountries = async () => {
     var config = {
         method: 'get',
-        url: host + '/data/metadata',
+        url: host + '/data/metadata/countries',
         headers: {}
     };
 
@@ -12,6 +12,19 @@ const getMetadata = async () => {
     return data
 
 }
+
+
+const getMetadataIndicators = async () => {
+    var config = {
+        method: 'get',
+        url: host + '/data/metadata/topics',
+        headers: {}
+    };
+
+    const { data } = await axios(config)
+    return data
+}
+
 
 const getTemporalChartData = async (countries, years, indicator) => {
     var data = JSON.stringify({
@@ -35,5 +48,6 @@ const getTemporalChartData = async (countries, years, indicator) => {
 
 export {
     getTemporalChartData,
-    getMetadata
+    getMetadataCountries,
+    getMetadataIndicators
 }
