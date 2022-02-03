@@ -13,7 +13,6 @@ const ShowTree = ({ data }) => {
 
         // append the svg object to the body of the page
         const svg = d3.select('body').select("#show-tree")
-
             .append("svg")
             .attr("width", width)
             .attr("height", height)
@@ -46,7 +45,15 @@ const ShowTree = ({ data }) => {
             .style("fill", 'none')
             .attr("stroke", '#ccc')
 
-
+        const makeId = () => {
+            let ID = "";
+            let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            for (var i = 0; i < 12; i++) {
+                ID += characters.charAt(Math.floor(Math.random() * 36));
+            }
+            return ID;
+        }
+        const idMap = {};
         // Add a circle for each node.
         svg.selectAll("g")
             .data(root.descendants())
@@ -56,11 +63,42 @@ const ShowTree = ({ data }) => {
             })
             .append("circle")
             .attr("r", 20)
+            .attr("id", (d) => {
+                const newId = `node-${makeId()}`;
+                console.log("creating node", newId)
+                idMap[newId] = d;
+                return newId;
+            })
             .style("fill", "#69b3a2")
             .attr("stroke", "black")
-            .style("stroke-width", 2)
+            .style("stroke-width", 2).on('mouseover', function (d, i) {
+                d3.select(this).transition()
+                    .duration('100')
+                    .attr("r", 7);
+            })
+            .on("mouseover", function (d) {
+                d3.select(this).transition()
+                    .duration('200')
+                    .attr("r", 40);
+            })
+            //     console.log("Mosue over", d.target.id)
+            //     d3.select('body').select(d.target.id).style("fill", "blue");
+            .on('mouseout', function (d, i) {
+                d3.select(this).transition()
+                    .duration('200')
+                    .attr("r", 20);
+            });
 
 
+        // .on("mouseover", function (d) {
+        //     console.log("Mosue over", d.target.id)
+        //     d3.select('body').select(d.target.id).style("fill", "blue");
+        // }).on("mouseout", function (d) {
+        //     console.log("mouseout", d.target.id)
+        //     d3.select('body').select(d.target.id).style("fill", "#69b3a2");
+        // });
+
+        console.log("Node id map:", idMap)
         setLoaded(true);
     }, [loaded])
 

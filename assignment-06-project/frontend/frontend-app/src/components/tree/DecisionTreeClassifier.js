@@ -21,11 +21,11 @@ const DecisionTreeClassifier = () => {
         setLoading(false);
     }
 
-    // useEffect(() => {
-    //     if (!loading && !result) {
-    //         submit();
-    //     }
-    // }, [loading, result])
+    useEffect(() => {
+        if (valid && !result) {
+            submit();
+        }
+    }, [valid])
 
     useEffect(() => {
         if (selectedIndicators.length >= 4) {
