@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { FormControl, Select, MenuItem, Slider, FormControlLabel, TextField, FormLabel, RadioGroup, Radio, InputLabel, Input, FormHelperText, Button, Typography, Grid } from '@mui/material';
+import { FormControl, FormControlLabel, TextField, FormLabel, RadioGroup, Radio, Button, Typography, Grid } from '@mui/material';
 import { trainModel } from '../../api';
 import AppContext from '../AppContext';
 import ShowTree from './ShowTree';

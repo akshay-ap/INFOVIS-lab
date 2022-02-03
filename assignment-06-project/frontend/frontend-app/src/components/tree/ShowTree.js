@@ -8,7 +8,6 @@ const ShowTree = ({ data, indicators }) => {
     const indicatorColors = d3.scaleOrdinal()
         .domain(indicators)
         .range(d3.schemeSet3);
-    // .range(["pink", "blue", "green", "yellow", "black", "grey", "darkgreen", "pink", "brown", "slateblue", "grey1", "orange"]);
 
     const createTree = (data) => {
         const width = 900;
@@ -62,7 +61,7 @@ const ShowTree = ({ data, indicators }) => {
         }
         const idMap = {};
 
-        const tooltip = d3.select('#show-tree').select("#my_dataviz")
+        const tooltip = d3.select('body').select("#my_dataviz2")
             .append("div")
             .style("opacity", 0)
             .attr("class", "tooltip")
@@ -168,8 +167,9 @@ const ShowTree = ({ data, indicators }) => {
                 <LegendIncomeGroups />
             </Grid>
         </Grid>
+        <div id="my_dataviz2"></div>
+
         <div id="show-tree">
-            <div id="my_dataviz"></div>
         </div>
     </div>)
 }

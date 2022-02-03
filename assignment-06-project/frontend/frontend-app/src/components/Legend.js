@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import * as d3 from "d3";
+import React from "react";
 import { incomeGroupColors, incomeGroups } from '../constants';
 import { Grid, Typography } from '@mui/material';
 

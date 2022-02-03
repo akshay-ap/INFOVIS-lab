@@ -2,8 +2,8 @@ import React from 'react';
 
 
 const appContext = React.createContext({
-    countires: [],
-    setCountires: () => { },
+    countries: [],
+    setcountries: () => { },
     indicators: [],
     setIndicators: () => { },
     topics: [],
