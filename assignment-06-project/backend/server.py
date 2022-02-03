@@ -4,6 +4,8 @@ import sqlite3
 from flask_cors import CORS
 from flask import Flask, request, jsonify
 import pandas as pd
+from tree_rules import rules
+
 app = Flask(__name__)
 CORS(app)
 import logging
@@ -134,18 +136,26 @@ def train_model():
     print(result.shape)
 
     result.drop('Country_Name', axis=1, inplace=True)
+
+
     print(df_data_cluster.shape)
 
     result.fillna(result.mean(), inplace=True)
     X = result.drop('Income_Group',axis=1)
     y = result[['Income_Group']]
+    
+    target_names = list(result['Income_Group'].unique())
+    feature_names = list(X.columns)
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3,random_state=42)
     clf_model = DecisionTreeClassifier(criterion="gini", random_state=42, max_depth=5, min_samples_leaf=5)   
     clf_model.fit(X_train,y_train)
     y_predict = clf_model.predict(X_test)
     accuracy = accuracy_score(y_test,y_predict)
-    return jsonify({'accuracy': accuracy}), 200
+
+    tree_rules = rules(clf_model,feature_names, target_names)
+
+    return jsonify({'accuracy': accuracy, 'tree_rules': tree_rules}), 200
 
 
 if __name__=='__main__':

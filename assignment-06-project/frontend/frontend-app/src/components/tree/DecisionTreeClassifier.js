@@ -19,8 +19,13 @@ const DecisionTreeClassifier = () => {
         console.log("Model accuracy", result);
         setResult(result)
         setLoading(false);
-
     }
+
+    // useEffect(() => {
+    //     if (!loading && !result) {
+    //         submit();
+    //     }
+    // }, [loading, result])
 
     useEffect(() => {
         if (selectedIndicators.length >= 4) {
@@ -35,7 +40,6 @@ const DecisionTreeClassifier = () => {
             <Typography textAlign={"left"}>Select the parameters for training the decision tree. The algorithm will use only the selected indicators from the filter.
                 If there are any empty values, they will be replaced with the mean value for that indicator.</Typography>
         </div>
-        <ShowTree />
 
         {
             !loading ? <FormControl>
@@ -49,6 +53,7 @@ const DecisionTreeClassifier = () => {
             result ? <div>
                 <Typography textAlign={"left"} variant='h5'>Result</Typography>
                 <Typography textAlign={"left"}>Accuracy: {((result['accuracy'] * 100).toFixed(2))}&#37;</Typography>
+                <ShowTree data={result['tree_rules']} />
             </div> : null
         }
 
