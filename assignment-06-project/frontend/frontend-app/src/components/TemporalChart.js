@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import Paper from '@mui/material/Paper';
 import AppContext from './AppContext';
 import { getTemporalChartData } from '../api'
+import { incomeGroupColors } from '../constants';
 import * as d3 from "d3";
 
 const TemporalChart = () => {
@@ -19,29 +20,20 @@ const TemporalChart = () => {
             if (!selectingData) {
                 const result = await getTemporalChartData(selectedCountries, [], selectedIndicators);
                 console.log("getTemporalChartData", result)
-                // const chartData2 = result.filter(e => e["Indicator_Name"] === selectedIndicators[1]);
-                // const chartData3 = result.filter(e => e["Indicator_Name"] === selectedIndicators[2]);
-                // const chartData4 = result.filter(e => e["Indicator_Name"] === selectedIndicators[3]);
 
-                const myColor = d3.scaleOrdinal()
-                    .domain(countries)
-                    .range(d3.schemeSet2);
-
-                // addLegend(myColor);
+                // addLegend(incomeGroupColors);
                 selectedIndicators.forEach((i, index) => {
                     const chartData = result.filter(e => e["Indicator_Name"] === i);
-                    drawChart(`#temporal-chart-${index}`, chartData, myColor)
+                    drawChart(`#temporal-chart-${index}`, chartData, incomeGroupColors)
 
                 })
-                // drawChart("#temporal-chart-2", chartData2, myColor)
-                // drawChart("#temporal-chart-3", chartData3, myColor)
-                // drawChart("#temporal-chart-4", chartData4, myColor)
+
             }
         })()
 
     }, [selectingData, selectedIndicators, selectedCountries]);
 
-    const drawChart = (divId, chartData, myColor) => {
+    const drawChart = (divId, chartData, incomeGroupColors) => {
         var transformedData = []
         var YMin = Number.MAX_VALUE, YMax = Number.MIN_VALUE;
 
@@ -106,7 +98,7 @@ const TemporalChart = () => {
             .join("path")
             .attr("class", d => d.name)
             .attr("d", d => line(d.values))
-            .attr("stroke", d => myColor(d.name))
+            .attr("stroke", d => incomeGroupColors(d.name))
             .style("stroke-width", 4)
             .style("fill", "none")
 
@@ -116,7 +108,7 @@ const TemporalChart = () => {
             .selectAll("myDots")
             .data(dataReady)
             .join('g')
-            .style("fill", d => myColor(d.name))
+            .style("fill", d => incomeGroupColors(d.name))
             .attr("class", d => d.name)
             // Second we need to enter in the 'values' part of this group
             .selectAll("myPoints")
@@ -138,11 +130,11 @@ const TemporalChart = () => {
         //     .attr("transform", d => `translate(${x(d.value.time)},${y(d.value.value)})`) // Put the text at the position of the last point
         //     .attr("x", 12) // shift the text a bit more right
         //     .text(d => d.name)
-        //     .style("fill", d => myColor(d.name))
+        //     .style("fill", d => incomeGroupColors(d.name))
         //     .style("font-size", 15)
     }
 
-    // const addLegend = (myColor) => {
+    // const addLegend = (incomeGroupColors) => {
     //     // Add a legend (TODO: interactive)
     //     d3.select("body")
     //         .select("#temporal-chart-legend").selectAll("*").remove();
@@ -155,7 +147,7 @@ const TemporalChart = () => {
     //             .attr('x', (d, i) => 60 + i * 100)
     //             .attr('y', 30)
     //             .text(d => d)
-    //             .style("fill", d => myColor(d))
+    //             .style("fill", d => incomeGroupColors(d))
     //             .style("font-size", 15)
     //             .on("click", function (event, d) {
     //                 // is the element currently visible ?

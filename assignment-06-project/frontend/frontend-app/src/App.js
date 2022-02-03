@@ -13,6 +13,8 @@ import { getMetadataCountries, getMetadataIndicators, getMetadataTopics } from '
 import FilterSelector from './components/FilterSelector';
 import { Typography } from '@mui/material';
 import DecisionTreeClassifier from './components/tree/DecisionTreeClassifier';
+import { incomeGroups } from './constants';
+import { LegendIncomeGroups } from './components/Legend';
 
 function App() {
 
@@ -24,7 +26,7 @@ function App() {
 
   const [selectingData, setSelectingData] = useState(false);
   const [selectedTopics, setSelectedTopics] = useState([]);
-  const [selectedCountries, setSelectedCountries] = useState(["Upper middle income", "Lower middle income", "High income", "Low income"]);
+  const [selectedCountries, setSelectedCountries] = useState(incomeGroups);
   const [selectedIndicators, setSelectedIndicators] = useState([]);
 
   const [years, setYears] = useState(null);
@@ -93,6 +95,9 @@ function App() {
             </Grid>
             <Grid item md={12}>
               <FilterSelector />
+            </Grid>
+            <Grid item md={12}>
+              <LegendIncomeGroups />
             </Grid>
             <Grid id="temporal-charts" item md={12}>
               <TemporalChart />

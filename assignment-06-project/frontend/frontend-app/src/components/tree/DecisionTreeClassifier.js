@@ -3,6 +3,7 @@ import { FormControl, InputLabel, Input, FormHelperText, Button, Typography } fr
 import { trainModel } from '../../api';
 import AppContext from '../AppContext';
 import ShowTree from './ShowTree';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const DecisionTreeClassifier = () => {
 
@@ -47,13 +48,13 @@ const DecisionTreeClassifier = () => {
                 <Input id="min_samples_leaf" aria-describedby="my-helper-text" />
                 <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
                 <Button variant='contained' disabled={!valid} onClick={submit}>Train</Button>
-            </FormControl> : <>Training</>
+            </FormControl> : <><CircularProgress /></>
         }
         {
             result ? <div>
                 <Typography textAlign={"left"} variant='h5'>Result</Typography>
                 <Typography textAlign={"left"}>Accuracy: {((result['accuracy'] * 100).toFixed(2))}&#37;</Typography>
-                <ShowTree data={result['tree_rules']} />
+                <ShowTree data={result['tree_rules']} indicators={selectedIndicators} />
             </div> : null
         }
 
