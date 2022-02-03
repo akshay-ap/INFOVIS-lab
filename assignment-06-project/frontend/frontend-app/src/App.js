@@ -12,6 +12,7 @@ import { useState, useEffect } from "react";
 import { getMetadataCountries, getMetadataIndicators, getMetadataTopics } from './api';
 import FilterSelector from './components/FilterSelector';
 import { Typography } from '@mui/material';
+import DecisionTreeClassifier from './components/tree/DecisionTreeClassifier';
 
 function App() {
 
@@ -68,22 +69,39 @@ function App() {
         loading, setLoading, selectingData, setSelectingData, selectedIndicators, setSelectedIndicators
       }}>
 
-        <Container maxWidth="l">
+        <Container>
           <Grid container spacing={2} direction="row" justifyContent="flex-start">
             {/* <Grid id="information" item md={6}>
             <Typography variant="h3">Title</Typography>
             <Typography >Text</T\ypography>
           </Grid> */}
             <Grid item md={12}>
-              {selectedIndicators.map(i => {
-                <><Typography>{i}</Typography></>
-              })}
+              <div style={{ marginLeft: '10px', marginTop: '30px' }}>
+                <Typography textAlign={"left"} variant='h3'>World Development Indicators</Typography>
+                <Typography textAlign={"left"}>Analysis and classification of countries into 4 income groups based on selected list of indicators.
+                </Typography>
+              </div>
+            </Grid>
+            <Grid item md={12}>
+              <div style={{ marginLeft: '10px' }}>
+                <Typography textAlign={"left"} variant='h4'>Overview</Typography>
+                <Typography textAlign={"left"}>The charts here visually are generated from the World Development Indicators dataset.
+                  The dataset consists yearly values various 1443 indicators divided in 90 topics for different countries and income groups.
+                  There are 4 income groups. We will analyse data from selected list of indicator from the year 2000 to 2019.
+                </Typography>
+              </div>
             </Grid>
             <Grid item md={12}>
               <FilterSelector />
             </Grid>
             <Grid id="temporal-charts" item md={12}>
               <TemporalChart />
+            </Grid>
+            <Grid id="geo-charts" item md={12}>
+
+            </Grid>
+            <Grid id="tree" item md={12}>
+              <DecisionTreeClassifier></DecisionTreeClassifier>
             </Grid>
             {/* <Grid id="geogprahical-mal" item md={12}>
             <GeographicalChart />

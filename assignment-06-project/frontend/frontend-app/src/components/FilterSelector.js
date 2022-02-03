@@ -7,7 +7,6 @@ import { Button, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import Paper from '@mui/material/Paper';
-import CountryCheckboxList from './CountryCheckboxList';
 import IndicatorCheckboxList from './IndicatorCheckboxList';
 import TopicCheckboxList from './TopicCheckboxList';
 import AppContext from './AppContext';

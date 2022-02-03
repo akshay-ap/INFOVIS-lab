@@ -58,9 +58,34 @@ const getTemporalChartData = async (countries, years, indicators) => {
     return data
 }
 
+
+
+const trainModel = async (countries, years, indicators) => {
+    var c = ["Upper middle income", "Lower middle income", "High income", "Low income"]
+    var query = JSON.stringify({
+        "countries": countries,
+        "years": years,
+        "indicators": indicators
+    });
+
+    var config = {
+        method: 'post',
+        url: host + '/model/train',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        data: query
+    };
+
+    const { data } = await axios(config)
+    return data
+}
+
+
 export {
     getTemporalChartData,
     getMetadataCountries,
     getMetadataIndicators,
-    getMetadataTopics
+    getMetadataTopics,
+    trainModel
 }
