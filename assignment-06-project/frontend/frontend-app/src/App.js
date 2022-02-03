@@ -98,14 +98,11 @@ function App() {
               <TemporalChart />
             </Grid>
             <Grid id="geo-charts" item md={12}>
-
+              <GeographicalChart />
             </Grid>
             <Grid id="tree" item md={12}>
               <DecisionTreeClassifier />
             </Grid>
-            {/* <Grid id="geogprahical-mal" item md={12}>
-            <GeographicalChart />
-          </Grid> */}
           </Grid>
         </Container>
       </AppContext.Provider>

@@ -80,7 +80,7 @@ const FilterSelector = () => {
     };
     return (
         <div>
-            <Button variant='contained' onClick={handleOpen}>Filter</Button>
+            <Button variant='contained' onClick={handleOpen}>SELECT INDICATORS</Button>
             <Modal
                 open={open}
                 onClose={handleClose}

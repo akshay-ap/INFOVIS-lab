@@ -1,0 +1,34 @@
+|--- Access to electricity (% of population) <= 99.98
+|   |--- Access to electricity (% of population) <= 78.68
+|   |   |--- Access to electricity, rural (% of rural population) <= 20.02
+|   |   |   |--- Aquaculture production (metric tons) <= 2239.03
+|   |   |   |   |--- Crop production index (2014-2016 = 100) <= 46.82
+|   |   |   |   |   |--- class: Low income
+|   |   |   |   |--- Crop production index (2014-2016 = 100) >  46.82
+|   |   |   |   |   |--- class: Low income
+|   |   |   |--- Aquaculture production (metric tons) >  2239.03
+|   |   |   |   |--- class: Lower middle income
+|   |   |--- Access to electricity, rural (% of rural population) >  20.02
+|   |   |   |--- Energy use (kg of oil equivalent per capita) <= 487.99
+|   |   |   |   |--- class: Lower middle income
+|   |   |   |--- Energy use (kg of oil equivalent per capita) >  487.99
+|   |   |   |   |--- class: Lower middle income
+|   |--- Access to electricity (% of population) >  78.68
+|   |   |--- Aquaculture production (metric tons) <= 35.49
+|   |   |   |--- class: High income
+|   |   |--- Aquaculture production (metric tons) >  35.49
+|   |   |   |--- Electric power consumption (kWh per capita) <= 596.85
+|   |   |   |   |--- class: Lower middle income
+|   |   |   |--- Electric power consumption (kWh per capita) >  596.85
+|   |   |   |   |--- Electricity production from natural gas sources (% of total) <= 41.17
+|   |   |   |   |   |--- class: Upper middle income
+|   |   |   |   |--- Electricity production from natural gas sources (% of total) >  41.17
+|   |   |   |   |   |--- class: Lower middle income
+|--- Access to electricity (% of population) >  99.98
+|   |--- Energy use (kg of oil equivalent per capita) <= 1733.04
+|   |   |--- class: High income
+|   |--- Energy use (kg of oil equivalent per capita) >  1733.04
+|   |   |--- GDP per unit of energy use (constant 2017 PPP $ per kg of oil equivalent) <= 4.70
+|   |   |   |--- class: High income
+|   |   |--- GDP per unit of energy use (constant 2017 PPP $ per kg of oil equivalent) >  4.70
+|   |   |   |--- class: High income

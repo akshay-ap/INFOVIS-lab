@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { FormControl, InputLabel, Input, FormHelperText, Button, Typography } from '@mui/material';
 import { trainModel } from '../../api';
 import AppContext from '../AppContext';
+import ShowTree from './ShowTree';
+
 const DecisionTreeClassifier = () => {
 
     const [loading, setLoading] = useState(false);
@@ -27,11 +29,14 @@ const DecisionTreeClassifier = () => {
     }, [selectedIndicators])
 
     return (<div>
+        <hr />
         <div style={{ marginLeft: '10px' }}>
             <Typography textAlign={"left"} variant='h4'>Decision tree classifier</Typography>
             <Typography textAlign={"left"}>Select the parameters for training the decision tree. The algorithm will use only the selected indicators from the filter.
                 If there are any empty values, they will be replaced with the mean value for that indicator.</Typography>
         </div>
+        <ShowTree />
+
         {
             !loading ? <FormControl>
                 <InputLabel htmlFor="my-input">Email address</InputLabel>
