@@ -101,7 +101,7 @@ function App() {
 
             </Grid>
             <Grid id="tree" item md={12}>
-              <DecisionTreeClassifier></DecisionTreeClassifier>
+              <DecisionTreeClassifier />
             </Grid>
             {/* <Grid id="geogprahical-mal" item md={12}>
             <GeographicalChart />
