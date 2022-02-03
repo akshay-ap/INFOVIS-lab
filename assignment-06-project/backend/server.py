@@ -5,6 +5,7 @@ from flask_cors import CORS
 from flask import Flask, request, jsonify
 import pandas as pd
 from tree_rules import rules
+import traceback
 
 app = Flask(__name__)
 CORS(app)
@@ -92,70 +93,93 @@ def query_data():
 
 @app.route('/model/train', methods=["POST"])
 def train_model():
-    data = request.get_json()
-    indicators = data["indicators"]
-    years = data["years"]
-    countries = data["countries"]
+    try:
+        data = request.get_json()
 
-    logger.info("Received model train request for %s %s %s", indicators, years, countries)
-    c = "'" + "', '".join(countries) + "'"
-    i = "'" + "', '".join(indicators) + "'"
+        logger.info("Body %s", data)
 
+        indicators = data["indicators"]
+        years = data["years"]
+        countries = data["countries"]
+        parameters = data.get("parameters",{
+            'criterion': "gini",
+            'max_depth': 4,
+            'min_samples_leaf': 5,
+            'random_stateint': 42
+        })
 
-    query = f'''
-       select WDISeries.Topic, WDICountry.Income_Group, WDIData.*
-        from WDIData 
-        JOIN WDISeries ON WDIData.Indicator_Name = WDISeries.Indicator_Name
-        JOIN WDICountry ON WDICountry.Country_Code = WDIData.Country_Code
-        where 
-        WDISeries.Indicator_Name in ({i})
-        --WDIData.Country_Name in ('Afghanistan', 'Canada', 'Ecuador', 'Germany') 
-        and WDICountry.Income_Group is not NULL;
-        '''
-    
-    logger.info("*"*100)
-    logger.info(query)
-    logger.info("*"*100)
-    conn = sqlite3.connect('data/data.db')
+        logger.info("Received model train request for %s %s %s", indicators, years, countries)
 
-    df_data_cluster = pd.read_sql(query, con = conn)
-    non_year_cols = ["Country_Name", "Country_Code", "Income_Group", "Indicator_Name", "Topic", "Indicator_Code"]
-    dd = df_data_cluster.melt(id_vars= non_year_cols, 
-            var_name="Year", 
-            value_name="Value")
-
-    logger.info(f"Dataset size before filtering: {dd.shape}")
-    logger.info(f"Count of empty values in the dataset: {dd.isnull().sum().sum()}")
-
-    years = [str(i) for i in range(year_min, year_max +1)]
-    dd = dd[dd['Year'].isin(years)]
-
-    logger.info(f"Dataset size after filtering: {dd.shape}")
-    result = dd.groupby(non_year_cols)["Value"].mean().round(2).reset_index()[["Indicator_Name","Country_Name", "Income_Group", "Value"]]
-    result = result.groupby(['Country_Name' ,'Income_Group','Indicator_Name'])['Value'].first().unstack().reset_index()
-    print(result.shape)
-
-    result.drop('Country_Name', axis=1, inplace=True)
+        c = "'" + "', '".join(countries) + "'"
+        i = "'" + "', '".join(indicators) + "'"
 
 
-    print(df_data_cluster.shape)
+        query = f'''
+        select WDISeries.Topic, WDICountry.Income_Group, WDIData.*
+            from WDIData 
+            JOIN WDISeries ON WDIData.Indicator_Name = WDISeries.Indicator_Name
+            JOIN WDICountry ON WDICountry.Country_Code = WDIData.Country_Code
+            where 
+            WDISeries.Indicator_Name in ({i})
+            --WDIData.Country_Name in ('Afghanistan', 'Canada', 'Ecuador', 'Germany') 
+            and WDICountry.Income_Group is not NULL;
+            '''
+        
+        logger.info("*"*100)
+        logger.info(query)
+        logger.info("*"*100)
+        conn = sqlite3.connect('data/data.db')
 
-    result.fillna(result.mean(), inplace=True)
-    X = result.drop('Income_Group',axis=1)
-    y = result[['Income_Group']]
-    
-    target_names = list(result['Income_Group'].unique())
-    feature_names = list(X.columns)
+        df_data_cluster = pd.read_sql(query, con = conn)
+        non_year_cols = ["Country_Name", "Country_Code", "Income_Group", "Indicator_Name", "Topic", "Indicator_Code"]
+        dd = df_data_cluster.melt(id_vars= non_year_cols, 
+                var_name="Year", 
+                value_name="Value")
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3,random_state=42)
-    clf_model = DecisionTreeClassifier(criterion="gini", random_state=42, max_depth=5, min_samples_leaf=5)   
-    clf_model.fit(X_train,y_train)
-    y_predict = clf_model.predict(X_test)
-    accuracy = accuracy_score(y_test,y_predict)
+        logger.info(f"Dataset size before filtering: {dd.shape}")
+        logger.info(f"Count of empty values in the dataset: {dd.isnull().sum().sum()}")
 
-    tree_rules = rules(clf_model,feature_names, target_names)
+        years = [str(i) for i in range(year_min, year_max +1)]
+        dd = dd[dd['Year'].isin(years)]
 
-    return jsonify({'accuracy': accuracy, 'tree_rules': tree_rules}), 200
+        logger.info(f"Dataset size after filtering: {dd.shape}")
+        result = dd.groupby(non_year_cols)["Value"].mean().round(2).reset_index()[["Indicator_Name","Country_Name", "Income_Group", "Value"]]
+        result = result.groupby(['Country_Name' ,'Income_Group','Indicator_Name'])['Value'].first().unstack().reset_index()
+        logger.info(result.shape)
+
+        result.drop('Country_Name', axis=1, inplace=True)
+
+        logger.info(df_data_cluster.shape)
+
+        result.fillna(result.mean(), inplace=True)
+        X = result.drop('Income_Group',axis=1)
+        y = result[['Income_Group']]
+
+        target_names = list(result['Income_Group'].unique())
+        feature_names = list(X.columns)
+
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3,random_state=42)
+
+        criterion = parameters.get('criterion', "gini")
+        random_state = int(parameters.get('random_state', 42))
+        max_depth = int(parameters.get('max_depth', 5))
+        min_samples_leaf = int(parameters.get('min_samples_leaf', 5))
+
+        logger.info("Model parameters criterion=%s random_state=%s max_depth=%s min_samples_leaf=%s", criterion, random_state, max_depth, min_samples_leaf)
+
+
+        clf_model = DecisionTreeClassifier(criterion=criterion, random_state=random_state, max_depth=max_depth, min_samples_leaf=min_samples_leaf)   
+        clf_model.fit(X_train,y_train)
+        y_predict = clf_model.predict(X_test)
+        accuracy = accuracy_score(y_test,y_predict)
+
+        tree_rules = rules(clf_model,feature_names, target_names)
+
+        return jsonify({'accuracy': accuracy, 'tree_rules': tree_rules}), 200
+    except Exception as err:
+        
+        traceback.print_tb(err.__traceback__)
+        return jsonify({'status': 'failed', 'error': str(err)}), 400
 
 
 if __name__=='__main__':

@@ -60,11 +60,13 @@ const getTemporalChartData = async (countries, years, indicators) => {
 
 
 
-const trainModel = async (countries, years, indicators) => {
+const trainModel = async (countries, years, indicators, formValues) => {
+    console.log("formValues", formValues)
     var query = JSON.stringify({
         "countries": countries,
         "years": years,
-        "indicators": indicators
+        "indicators": indicators,
+        "parameters": formValues
     });
 
     var config = {

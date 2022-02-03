@@ -5,18 +5,16 @@ import { LegendIncomeGroups, LegendIndicators } from '../Legend';
 import { Grid } from "@mui/material";
 
 const ShowTree = ({ data, indicators }) => {
-    const [loaded, setLoaded] = useState(false);
     const indicatorColors = d3.scaleOrdinal()
         .domain(indicators)
         .range(d3.schemeSet3);
     // .range(["pink", "blue", "green", "yellow", "black", "grey", "darkgreen", "pink", "brown", "slateblue", "grey1", "orange"]);
 
-
-    useEffect(() => {
-        if (loaded) return;
-        // set the dimensions and margins of the graph
+    const createTree = (data) => {
         const width = 900;
         const height = 800;
+
+        d3.select('body').select("#show-tree").selectAll("*").remove();
 
         // append the svg object to the body of the page
         const svg = d3.select('body').select("#show-tree")
@@ -156,8 +154,9 @@ const ShowTree = ({ data, indicators }) => {
                 }
                 return d.data['name'];
             });
-        setLoaded(true);
-    }, [loaded])
+    }
+
+    createTree(data);
 
     return (<div>
 
