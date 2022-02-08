@@ -198,8 +198,10 @@ const TemporalChart = () => {
                 {/* <Grid id="temporal-chart-legend" item md={12}>s</Grid> */}
                 {selectedIndicators.map((element, index) =>
                     <Grid key={`temporal-chart-${index}`} item md={4}>
-                        <Paper style={{ margin: '10px' }}>
-                            {selectedIndicators[index]}
+                        <Paper style={{ margin: '10px', padding: '10px' }}>
+                            <Typography style={{ padding: '10px', height: '60px' }}>
+                                {selectedIndicators[index]}
+                            </Typography>
                             <div id={`temporal-chart-${index}`} ></div>
                         </Paper>
                     </Grid>

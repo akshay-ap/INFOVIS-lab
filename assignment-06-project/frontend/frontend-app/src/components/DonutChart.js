@@ -39,8 +39,6 @@ const DonutChart = () => {
 
             data[countries[i]['income_group']]++;
         }
-        console.log("=donot==============", data)
-
 
         // Compute the position of each group on the pie:
         const pie = d3.pie()

@@ -97,15 +97,11 @@ function App() {
             <Grid id="donut-chart" item md={12}>
               <DonutChart />
             </Grid>
-            <Grid id="geo-charts" item md={9}>
-              <GeographicalChart />
-            </Grid>
             <Grid item md={3}>
               <div style={{ marginTop: '30px' }}>
                 <LegendIncomeGroups />
               </div>
             </Grid>
-
             <Grid item md={12}>
               <FilterSelector />
             </Grid>
@@ -115,6 +111,9 @@ function App() {
 
             <Grid id="tree" item md={12}>
               <DecisionTreeClassifier />
+            </Grid>
+            <Grid id="geo-charts" item md={9}>
+              <GeographicalChart />
             </Grid>
           </Grid>
         </Container>
