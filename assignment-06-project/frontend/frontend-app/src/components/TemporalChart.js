@@ -15,6 +15,35 @@ const TemporalChart = () => {
     const YEAR_MAX = 2019;
     const countries = selectedCountries;
 
+    function shortenNumber(num, decimalPlaces) {
+        var str,
+            suffix = '';
+
+        decimalPlaces = decimalPlaces || 0;
+        num = +num;
+
+        var factor = Math.pow(10, decimalPlaces);
+
+
+        //99999 -> 99.9K
+
+        if (num < 1000) {
+            str = num;
+        } else if (num < 1000000) {
+            str = Math.floor(num / (1000 / factor)) / factor;
+            suffix = 'K';
+        } else if (num < 1000000000) {
+            str = Math.floor(num / (1000000 / factor)) / factor;
+            suffix = 'M';
+        } else if (num < 1000000000000) {
+            str = Math.floor(num / (1000000000 / factor)) / factor;
+            suffix = 'B';
+        } else if (num < 1000000000000000) {
+            str = Math.floor(num / (1000000000000 / factor)) / factor;
+            suffix = 'T';
+        }
+        return str + suffix;
+    }
     useEffect(() => {
         (async () => {
             if (!selectingData) {
@@ -54,8 +83,8 @@ const TemporalChart = () => {
         console.log("transformedData", divId, transformedData)
 
         // set the dimensions and margins of the graph
-        const margin = { top: 10, right: 100, bottom: 30, left: 30 },
-            width = 360 - margin.left - margin.right,
+        const margin = { top: 10, right: 100, bottom: 30, left: 50 },
+            width = 400 - margin.left - margin.right,
             height = 300 - margin.top - margin.bottom;
 
         d3.select(divId).selectAll("*").remove();
@@ -86,7 +115,7 @@ const TemporalChart = () => {
             .domain([YMin, YMax])
             .range([height, 0]);
         svg.append("g")
-            .call(d3.axisLeft(y));
+            .call(d3.axisLeft(y).tickFormat(d3.format(".2s")));
 
         // Add the lines
         const line = d3.line()
@@ -161,35 +190,6 @@ const TemporalChart = () => {
     //             })
     // }
 
-    function shortenNumber(num, decimalPlaces) {
-        var str,
-            suffix = '';
-
-        decimalPlaces = decimalPlaces || 0;
-        num = +num;
-
-        var factor = Math.pow(10, decimalPlaces);
-
-
-        //99999 -> 99.9K
-
-        if (num < 1000) {
-            str = num;
-        } else if (num < 1000000) {
-            str = Math.floor(num / (1000 / factor)) / factor;
-            suffix = 'K';
-        } else if (num < 1000000000) {
-            str = Math.floor(num / (1000000 / factor)) / factor;
-            suffix = 'M';
-        } else if (num < 1000000000000) {
-            str = Math.floor(num / (1000000000 / factor)) / factor;
-            suffix = 'B';
-        } else if (num < 1000000000000000) {
-            str = Math.floor(num / (1000000000000 / factor)) / factor;
-            suffix = 'T';
-        }
-        return str + suffix;
-    }
 
     return (
         <div>
