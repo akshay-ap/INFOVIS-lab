@@ -14,6 +14,7 @@ const ShowTree = ({ data, indicators }) => {
         const height = 800;
 
         d3.select('body').select("#show-tree").selectAll("*").remove();
+        d3.select('body').select("#my_dataviz2").selectAll("*").remove();
 
         // append the svg object to the body of the page
         const svg = d3.select('body').select("#show-tree")
@@ -61,8 +62,10 @@ const ShowTree = ({ data, indicators }) => {
         }
         const idMap = {};
 
+
         const tooltip = d3.select('body').select("#my_dataviz2")
             .append("div")
+            .attr('id', 'tree-toolip')
             .style("opacity", 0)
             .attr("class", "tooltip")
             .style("background-color", "white")
@@ -168,7 +171,6 @@ const ShowTree = ({ data, indicators }) => {
             </Grid>
         </Grid>
         <div id="my_dataviz2"></div>
-
         <div id="show-tree">
         </div>
     </div>)

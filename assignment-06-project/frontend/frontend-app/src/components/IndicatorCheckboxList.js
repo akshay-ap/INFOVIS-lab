@@ -8,11 +8,11 @@ import Checkbox from '@mui/material/Checkbox';
 import { useContext, useState } from "react";
 import AppContext from './AppContext';
 import Alert from '@mui/material/Alert';
-import { Button } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 
 export default function IndicatorCheckboxList() {
 
-    const MAX_SELECTION_LIMIT = 4;
+    const MAX_SELECTION_LIMIT = 10;
 
     const { indicators, selectedTopics, selectedIndicators, setSelectedIndicators } = useContext(AppContext);
     const filtertedIndicators = indicators.filter(e => selectedTopics.includes(e.topic));
@@ -38,10 +38,13 @@ export default function IndicatorCheckboxList() {
         <div style={{ maxHeight: 500, overflow: 'auto' }}>
             {
                 selectedIndicators.length >= MAX_SELECTION_LIMIT ? <>
-                    <Alert severity="warning">Max allowed indicators {MAX_SELECTION_LIMIT}</Alert>
+                    <Alert severity="warning">More than {MAX_SELECTION_LIMIT} indicators selected</Alert>
                     <Button variant='contained' onClick={clear()}>Clear</Button>
                 </>
-                    : null
+                    : <>
+                        <Typography>{selectedIndicators.length} indicators selected</Typography>
+                        <Button variant='contained' onClick={clear()}>Clear</Button>
+                    </>
             }
             <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
                 {filtertedIndicators.map(({ indicator_name }) => {

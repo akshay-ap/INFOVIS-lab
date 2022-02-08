@@ -46,11 +46,11 @@ function App() {
         setCountries(data);
         setIndicators(dataIndicators);
         setTopics(dataTopics);
-        setSelectedTopics([dataTopics[0]]);
-        setSelectedIndicators([dataIndicators[0]["indicator_name"],
-        dataIndicators[1]["indicator_name"],
-        dataIndicators[2]["indicator_name"],
-        dataIndicators[3]["indicator_name"]
+        setSelectedTopics(["Economic Policy & Debt: Balance of payments: Capital & financial account",
+          "Education: Participation", "Environment: Energy production & use"]);
+        setSelectedIndicators(["Foreign direct investment, net outflows (BoP, current US$)",
+          "School enrollment, primary (% gross)",
+          "Access to electricity (% of population)", "Secondary education, pupils"
         ]);
 
         // setIndicator(data["indicators"]);

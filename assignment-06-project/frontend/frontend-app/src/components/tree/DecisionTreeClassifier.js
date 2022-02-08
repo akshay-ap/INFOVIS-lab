@@ -50,7 +50,7 @@ const DecisionTreeClassifier = () => {
     }, [valid])
 
     useEffect(() => {
-        if (selectedIndicators.length >= 4) {
+        if (selectedIndicators.length >= 1) {
             setValid(true);
         }
     }, [selectedIndicators])
