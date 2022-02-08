@@ -79,7 +79,7 @@ const TemporalChart = () => {
 
         svg.append("g")
             .attr("transform", `translate(0, ${height})`)
-            .call(d3.axisBottom(x).ticks(4));
+            .call(d3.axisBottom(x).ticks(4).tickFormat(d3.format("d")));
 
         // Add Y axis
         const y = d3.scaleLinear()
