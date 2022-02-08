@@ -72,7 +72,7 @@ function App() {
       }}>
 
         <Container>
-          <Grid container spacing={2} direction="row" justifyContent="flex-start">
+          <Grid container spacing={4} direction="row" justifyContent="flex-start">
             {/* <Grid id="information" item md={6}>
             <Typography variant="h3">Title</Typography>
             <Typography >Text</T\ypography>
@@ -93,18 +93,22 @@ function App() {
                 </Typography>
               </div>
             </Grid>
+            <Grid id="geo-charts" item md={9}>
+              <GeographicalChart />
+            </Grid>
+            <Grid item md={3}>
+              <div style={{ marginTop: '30px' }}>
+                <LegendIncomeGroups />
+              </div>
+            </Grid>
+
             <Grid item md={12}>
               <FilterSelector />
-            </Grid>
-            <Grid item md={12}>
-              <LegendIncomeGroups />
             </Grid>
             <Grid id="temporal-charts" item md={12}>
               <TemporalChart />
             </Grid>
-            <Grid id="geo-charts" item md={12}>
-              <GeographicalChart />
-            </Grid>
+
             <Grid id="tree" item md={12}>
               <DecisionTreeClassifier />
             </Grid>

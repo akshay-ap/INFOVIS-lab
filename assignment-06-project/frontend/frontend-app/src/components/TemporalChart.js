@@ -190,7 +190,7 @@ const TemporalChart = () => {
     return (
         <div>
             <div style={{ marginLeft: '10px' }}>
-                <Typography textAlign={"left"} variant='h4'>Indicators values 4 income groups</Typography>
+                <Typography textAlign={"left"} variant='h4'>Indicators values by income groups</Typography>
                 <Typography textAlign={"left"}>Each chart represents one indicator. </Typography>
             </div>
             <div id="temporal-chart-legend"></div>

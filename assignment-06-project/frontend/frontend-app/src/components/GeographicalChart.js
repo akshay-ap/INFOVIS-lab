@@ -24,7 +24,6 @@ const GeographicalChart = () => {
             .data(worldMap.features)
             .join("path")
             .attr("fill", d => {
-                console.log("d", d)
                 const found = countries.find(element => element['code'] === d['id']);
                 if (!found) {
                     console.log("Income group of country unknown:", d.properties['name'])
@@ -52,9 +51,8 @@ const GeographicalChart = () => {
 
 
     return (<div>
-        <hr />
         <div style={{ marginLeft: '10px' }}>
-            <Typography textAlign={"left"} variant='h4'>Indicators values by countries</Typography>
+            <Typography textAlign={"left"} variant='h4'>Countries by income group</Typography>
         </div>
         <div id="#geo-map-container">
             <svg id="my_dataviz" width="800" height="500"></svg>

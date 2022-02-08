@@ -14,7 +14,7 @@ const LegendIncomeGroups = () => {
                             <rect width="20" height="20" fill={incomeGroupColors(element)} />
                         </svg>
                     </Grid>
-                    <Grid item md={6}>
+                    <Grid item md={8}>
                         <Typography textAlign={"left"}>{incomeGroups[index]}</Typography>
                     </Grid>
                 </Grid>
