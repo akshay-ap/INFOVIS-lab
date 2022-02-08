@@ -118,6 +118,10 @@ const TemporalChart = () => {
             .attr("cy", d => y(d.value))
             .attr("r", 5)
             .attr("stroke", "white")
+            .attr('opacity', d => {
+                if (d.value === null) return 0.0;
+                else return 0.7;
+            })
 
         // // Add a label at the end of each line
         // svg
