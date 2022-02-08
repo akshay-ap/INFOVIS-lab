@@ -15,6 +15,7 @@ import { Typography } from '@mui/material';
 import DecisionTreeClassifier from './components/tree/DecisionTreeClassifier';
 import { incomeGroups } from './constants';
 import { LegendIncomeGroups } from './components/Legend';
+import DonutChart from './components/DonutChart';
 
 function App() {
 
@@ -92,6 +93,9 @@ function App() {
                   There are 4 income groups. We will analyse data from selected list of indicator from the year 2000 to 2019.
                 </Typography>
               </div>
+            </Grid>
+            <Grid id="donut-chart" item md={12}>
+              <DonutChart />
             </Grid>
             <Grid id="geo-charts" item md={9}>
               <GeographicalChart />
