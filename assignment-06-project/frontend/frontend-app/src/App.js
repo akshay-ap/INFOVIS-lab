@@ -6,6 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import * as React from 'react';
 import Container from '@mui/material/Container';
 import TemporalChart from './components/TemporalChart';
+import TemporalChartCountry from './components/TemporalChartCountry';
 import GeographicalChart from './components/GeographicalChart';
 import AppContext from './components/AppContext';
 import { useState, useEffect } from "react";
@@ -31,6 +32,7 @@ function App() {
   const [selectedIndicators, setSelectedIndicators] = useState([]);
 
   const [years, setYears] = useState(null);
+  const [userSelectedCountries, setUserSelectedCountries] = useState([]);
 
 
   useEffect(() => {
@@ -69,6 +71,8 @@ function App() {
         topics: topics,
         selectedTopics: selectedTopics, setSelectedTopics: setSelectedTopics,
         selectedCountries, setSelectedCountries,
+        userSelectedCountries: userSelectedCountries,
+        setUserSelectedCountries: setUserSelectedCountries,
         loading, setLoading, selectingData, setSelectingData, selectedIndicators, setSelectedIndicators
       }}>
 
@@ -97,23 +101,25 @@ function App() {
             <Grid id="donut-chart" item md={12}>
               <DonutChart />
             </Grid>
-            <Grid item md={3}>
-              <div style={{ marginTop: '30px' }}>
-                <LegendIncomeGroups />
-              </div>
-            </Grid>
             <Grid item md={12}>
               <FilterSelector />
             </Grid>
             <Grid id="temporal-charts" item md={12}>
               <TemporalChart />
             </Grid>
-
             <Grid id="tree" item md={12}>
               <DecisionTreeClassifier />
             </Grid>
             <Grid id="geo-charts" item md={9}>
               <GeographicalChart />
+            </Grid>
+            <Grid item md={3}>
+              <div style={{ marginTop: '30px' }}>
+                <LegendIncomeGroups />
+              </div>
+            </Grid>
+            <Grid id="temporal-charts-country" item md={12}>
+              <TemporalChartCountry />
             </Grid>
           </Grid>
         </Container>

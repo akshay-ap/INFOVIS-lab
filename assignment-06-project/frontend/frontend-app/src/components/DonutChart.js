@@ -60,12 +60,12 @@ const DonutChart = () => {
         svg
             .selectAll('allSlices')
             .data(data_ready)
-            .join('path')
+            .join('path').transition()
             .attr('d', arc)
             .attr('fill', d => incomeGroupColors(d.data[0]))
             .attr("stroke", "white")
             .style("stroke-width", "2px")
-            .style("opacity", 0.7)
+            .style("opacity", 0.7).duration(2000)
 
         // Add the polylines between chart and labels:
         svg
@@ -73,6 +73,7 @@ const DonutChart = () => {
             .data(data_ready)
             .join('polyline')
             .attr("stroke", "black")
+            .transition()
             .style("fill", "none")
             .attr("stroke-width", 1)
             .attr('points', function (d) {
@@ -82,7 +83,7 @@ const DonutChart = () => {
                 const midangle = d.startAngle + (d.endAngle - d.startAngle) / 2 // we need the angle to see if the X position will be at the extreme right or extreme left
                 posC[0] = radius * 0.95 * (midangle < Math.PI ? 1 : -1); // multiply by 1 or -1 to put it on the right or on the left
                 return [posA, posB, posC]
-            })
+            }).duration(2000)
 
         // Add the polylines between chart and labels:
         svg
@@ -108,7 +109,7 @@ const DonutChart = () => {
         }
     }, [countries])
 
-    return (<div id="donut-chart">yay</div>)
+    return (<div id="donut-chart"></div>)
 }
 
 export default DonutChart

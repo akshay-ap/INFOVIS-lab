@@ -1,36 +1,33 @@
-import { Grid, Typography } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 import * as React from 'react';
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import Paper from '@mui/material/Paper';
 import AppContext from './AppContext';
 import { getTemporalChartData } from '../api'
-import { incomeGroupColors } from '../constants';
 import * as d3 from "d3";
-import PropTypes from 'prop-types'
+import { LegendCountry } from './Legend';
+const TemporalChartCountry = () => {
 
-const TemporalChart = () => {
-
-    const { selectingData, selectedIndicators, selectedCountries } = useContext(AppContext);
+    const { selectingData, selectedIndicators, userSelectedCountries, setUserSelectedCountries } = useContext(AppContext);
     const YEAR_MIN = 2000;
     const YEAR_MAX = 2019;
+    const countryNames = userSelectedCountries.map(e => e.name);
+    const countryColors = d3.scaleOrdinal().domain(countryNames).range(d3.schemeTableau10);
 
     useEffect(() => {
         (async () => {
             if (!selectingData) {
-                const result = await getTemporalChartData(selectedCountries, [], selectedIndicators);
-                console.log("getTemporalChartData income_groups", result)
+                const result = await getTemporalChartData(countryNames, [], selectedIndicators);
+                console.log("getTemporalChartData countries", result)
 
-                // addLegend(incomeGroupColors);
                 selectedIndicators.forEach((i, index) => {
                     const chartData = result.filter(e => e["Indicator_Name"] === i);
-                    drawChart(`#temporal-chart-${index}`, chartData, incomeGroupColors)
-
+                    drawChart(`#temporal-chart-country-${index}`, chartData, countryColors)
                 })
-
             }
         })()
 
-    }, [selectingData, selectedIndicators, selectedCountries]);
+    }, [selectingData, selectedIndicators, userSelectedCountries]);
 
     const drawChart = (divId, chartData, incomeGroupColors) => {
         var transformedData = []
@@ -50,7 +47,7 @@ const TemporalChart = () => {
             transformedData.push({ name: d["Country_Name"], values: temp })
         })
 
-        console.log("transformedData", divId, transformedData)
+        console.log("country-temporalchart-data", divId, transformedData)
 
         // set the dimensions and margins of the graph
         const margin = { top: 10, right: 100, bottom: 30, left: 50 },
@@ -66,10 +63,6 @@ const TemporalChart = () => {
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`);
-        const dataReady = transformedData;
-
-        // A color scale: one color for each group
-
 
         // Add X axis --> it is a date format
         const x = d3.scaleLinear()
@@ -93,11 +86,11 @@ const TemporalChart = () => {
             .y(d => y(+d.value))
 
         svg.selectAll("myLines")
-            .data(dataReady)
+            .data(transformedData)
             .join("path")
             .attr("class", d => d.name)
             .attr("d", d => line(d.values))
-            .attr("stroke", d => incomeGroupColors(d.name))
+            .attr("stroke", d => countryColors(d.name))
             .style("stroke-width", 4)
             .style("fill", "none")
 
@@ -105,9 +98,9 @@ const TemporalChart = () => {
         svg
             // First we need to enter in a group
             .selectAll("myDots")
-            .data(dataReady)
+            .data(transformedData)
             .join('g')
-            .style("fill", d => incomeGroupColors(d.name))
+            .style("fill", d => countryColors(d.name))
             .attr("class", d => d.name)
             // Second we need to enter in the 'values' part of this group
             .selectAll("myPoints")
@@ -127,10 +120,11 @@ const TemporalChart = () => {
     return (
         <div>
             <div style={{ marginLeft: '10px' }}>
-                <Typography textAlign={"left"} variant='h4'>Indicators values by income groups</Typography>
+                <Typography textAlign={"left"} variant='h4'>Indicators values by selected country</Typography>
                 <Typography textAlign={"left"}>Each chart represents one indicator. </Typography>
             </div>
             <div id="temporal-chart-legend"></div>
+            <LegendCountry countryColors={countryColors} countries={userSelectedCountries} />
             <Grid container>
                 {selectedIndicators.map((element, index) =>
                     <Grid key={`temporal-chart-${index}`} item md={4}>
@@ -138,14 +132,21 @@ const TemporalChart = () => {
                             <Typography style={{ padding: '10px', height: '60px' }}>
                                 {selectedIndicators[index]}
                             </Typography>
-                            <div id={`temporal-chart-${index}`} ></div>
+                            <div id={`temporal-chart-country-${index}`} />
                         </Paper>
                     </Grid>
                 )}
             </Grid>
+            {userSelectedCountries.length >= 1 ?
+                <Grid item md={12}>
+                    <Button variant='contained' onClick={() => {
+                        setUserSelectedCountries([]);
+                    }}>Clear</Button>
+                </Grid> : null
+            }
         </div>
     )
 }
 
 
-export default TemporalChart;
+export default TemporalChartCountry;

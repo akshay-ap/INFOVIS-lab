@@ -19,7 +19,10 @@ const appContext = React.createContext({
     loading: true,
     setLoading: () => { },
     selectingData: false,
-    setSelectingData: () => { }
+    setSelectingData: () => { },
+    userSelectedCountries: [],
+    setUserSelectedCountries: () => { },
+
 });
 
 export default appContext;

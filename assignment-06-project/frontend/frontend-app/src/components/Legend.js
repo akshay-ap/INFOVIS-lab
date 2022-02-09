@@ -44,7 +44,32 @@ const LegendIndicators = ({ indicatorColors, indicators }) => {
     </div >)
 }
 
+
+const LegendCountry = ({ countryColors, countries }) => {
+    return (<div id='legend-indicators'>
+        <Typography style={{ marginLeft: '10px' }} variant="h5" textAlign={"left"}>Legend (country)</Typography>
+        <Grid container>
+            {countries.map((element, index) =>
+                <Grid container key={`legend-indicators-${index}`} item md={12}>
+                    <Grid item md={1}>
+                        <svg width="20" height="20">
+                            <rect width="20" height="20" fill={countryColors(element.name)} />
+                        </svg>
+                    </Grid>
+                    <Grid item md={2}>
+                        <Typography textAlign={"left"}>{element.name}</Typography>
+                    </Grid>
+                    <Grid item md={2}>
+                        <Typography textAlign={"left"}>{element['income_group']}</Typography>
+                    </Grid>
+                </Grid>
+            )}
+        </Grid>
+    </div >)
+}
+
 export {
     LegendIncomeGroups,
-    LegendIndicators
+    LegendIndicators,
+    LegendCountry
 }
