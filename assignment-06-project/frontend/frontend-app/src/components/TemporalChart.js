@@ -68,9 +68,6 @@ const TemporalChart = () => {
             .attr("transform", `translate(${margin.left},${margin.top})`);
         const dataReady = transformedData;
 
-        // A color scale: one color for each group
-
-
         // Add X axis --> it is a date format
         const x = d3.scaleLinear()
             .domain([YEAR_MIN, YEAR_MAX + 1])
@@ -115,12 +112,53 @@ const TemporalChart = () => {
             .join("circle")
             .attr("cx", d => x(d.time))
             .attr("cy", d => y(d.value))
-            .attr("r", 5)
+            .attr("id", d => {
+                return `circle-indicator-income-group-${d.time}`
+            })
+            .attr("r", 7)
             .attr("stroke", "white")
             .attr('opacity', d => {
                 if (d.value === null) return 0.0;
                 else return 0.7;
+            }).on("mouseover", function (event, d) {
+                // console.log("mouseover", this.id)
+
+            }).on('mouseleave', function (event, d) {
+
             })
+
+        svg.selectAll("myText")
+            .data(dataReady)
+            .join("g").selectAll("myPoints")
+            .data(d => d.values)
+            .attr("transform", function (d) {
+                return `translate(${d.y},${d.x})`
+            })
+            .join("text")
+            .attr("x", d => x(d.time))
+            .attr("y", d => y(d.value))
+            .attr("id", (d) => {
+                const newId = `text-indicator-income-group-${d.time}`;
+                return newId;
+            })
+            .style("fill", (d) => {
+                return "black";
+            })
+            .text((d) => {
+                if (d.value === null) return '';
+                else return d3.format(".2s")(d.value);
+            }).attr('opacity', 0)
+            .style("cursor", "default").on("mouseover", function (event, d) {
+                d3.selectAll(`#text-indicator-income-group-${d.time}`).attr('opacity', 1);
+                d3.selectAll(`#circle-indicator-income-group-${d.time}`).transition()
+                    .duration('200')
+                    .attr("r", 15);
+            }).on('mouseleave', function (event, d) {
+                d3.selectAll(`#text-indicator-income-group-${d.time}`).attr('opacity', 0);
+                d3.selectAll(`#circle-indicator-income-group-${d.time}`).transition()
+                    .duration('200')
+                    .attr("r", 7);
+            });
     }
 
 
