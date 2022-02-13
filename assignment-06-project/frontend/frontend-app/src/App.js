@@ -92,7 +92,7 @@ function App() {
             <Grid item md={12}>
               <div style={{ marginLeft: '10px' }}>
                 <Typography textAlign={"left"} variant='h4'>Overview</Typography>
-                <Typography textAlign={"left"}>The charts here visually are generated from the World Development Indicators dataset.
+                <Typography textAlign={"left"}>The charts here are generated from the World Development Indicators dataset.
                   The dataset consists yearly values various 1443 indicators divided in 90 topics for different countries and income groups.
                   There are 4 income groups. We will analyse data from selected list of indicator from the year 2000 to 2019.
                 </Typography>
