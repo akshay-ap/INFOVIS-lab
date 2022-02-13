@@ -121,7 +121,6 @@ def train_model():
             JOIN WDICountry ON WDICountry.Country_Code = WDIData.Country_Code
             where 
             WDISeries.Indicator_Name in ({i})
-            --WDIData.Country_Name in ('Afghanistan', 'Canada', 'Ecuador', 'Germany') 
             and WDICountry.Income_Group is not NULL;
             '''
         
