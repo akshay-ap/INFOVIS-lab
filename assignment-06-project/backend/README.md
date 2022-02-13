@@ -5,15 +5,23 @@
 
 # Setup
 
-1. Create virtual environment
+- Create virtual environment
 
 ```bash
 python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ```
 
-2. Activate virtual environment
+- Start and run jupyter notebook
 
 ```bash
-source venv/bin/activate
+jupyter notebook
 ```
 
+
+- Start server
+
+```bash
+python3 server.py
+```
